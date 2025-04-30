@@ -20,15 +20,27 @@
     h1 {
       font-size: 3em;
       margin: 0;
+      font-family: "Andale Mono", monospace;
     }
     p {
       font-size: 1.2em;
       max-width: 600px;
       margin-top: 1em;
     }
-    a {
-      color: #0ff;
-      text-decoration: none;
+    .social-icons {
+      display: flex;
+      gap: 1.5em;
+      margin-top: 1.5em;
+    }
+    .social-icons a img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .social-icons a img:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
     }
   </style>
 </head>
@@ -37,6 +49,19 @@
   <p>Poet. Technologist. Systems Builder.<br>
      Memetic experiments in stories and systems.<br>
      Also just a dude tryna survive the Singularity<br>
-  <p><a href="https://www.linkedin.com/in/michaelxmachina" target="_blank">LinkedIn</a> | <a href="https://www.instagram.com/michaelxmachina" target="_blank">Instagram</a></p>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/michaelxmachina" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://www.instagram.com/michaelxmachina" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
+    </a>
+    <a href="https://x.com/michaelxmachina" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/twitterx.png" alt="X (Twitter)">
+    </a>
+    <a href="https://youtube.com/@michaelxmachina" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube">
+    </a>
+  </div>
 </body>
 </html>
