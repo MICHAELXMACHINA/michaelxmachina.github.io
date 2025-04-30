@@ -5,18 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MICHAELXMACHINA</title>
   <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
     body {
       font-family: sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 2rem;
-      min-height: 100vh;
-      margin: 0;
       background-color: #000;
       color: #fff;
       text-align: center;
+      padding: 1rem;
+      box-sizing: border-box;
     }
     h1 {
       font-size: clamp(2.5rem, 5vw, 4rem);
@@ -47,14 +52,14 @@
       box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
     }
     .logo {
-  width: clamp(400px, 90vw, 500px);
-  height: auto;
-  margin-bottom: 1.5rem;
+      width: clamp(400px, 95vw, 500px);
+      height: auto;
+      margin-bottom: 1.5rem;
     }
   </style>
 </head>
 <body>
-  <img src="assets/mxmlogo.png" alt="michaelxmachina logo" class="logo" />
+  <img src="assets/mxmlogo.png" alt="MichaelxMachina Logo" class="logo" />
   <p>Poet. Technologist. Systems Builder.<br><br>
      Memetic experiments in stories and systems.<br>
      Also just a dude tryna survive the Singularity</p>
