@@ -21,6 +21,12 @@
       text-align: center;
       padding: 0.5rem;
       box-sizing: border-box;
+      font-size: 1.1rem; /* slightly larger */
+    }
+    h1 {
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      margin: 0.2em 0 0.3em;
+      font-weight: 600;
     }
     p {
       font-size: clamp(1rem, 2.5vw, 1.25rem);
@@ -50,14 +56,43 @@
       height: auto;
       margin-bottom: 1.5rem;
     }
+    .nav-links {
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
+      font-size: clamp(1rem, 2vw, 1.1rem);
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 0.4em;
+      transition: all 0.2s ease;
+      padding: 0.5em 1.2em;
+      border: 1px solid white;
+      border-radius: 999px;
+      background-color: rgba(255, 255, 255, 0.05);
+      font-weight: 500;
+      display: inline-block;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.85;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
   </style>
 </head>
 <body>
   <img src="assets/mxmlogo.png" alt="MichaelxMachina Logo" class="logo" />
-  <p><strong>Memetic Engineer</strong><br>
-     Stories and systems for surviving the Singularity.<br>
-     Poetics and protocols for the posthuman frontier.
-     </p>
+  <h1>Memetic Engineer</h1>
+  <p>
+    Stories and systems to survive the Singularity.<br>
+    Poetics and protocols for posthuman prosperity.
+  </p>
+  <div class="nav-links">
+    <a href="https://symantic.studio" target="_blank">Strategy</a>
+    <a href="https://inverseK.com" target="_blank">Poetry</a>
+    <a href="https://gear.science" target="_blank">Tools</a>
+  </div>
   <div class="social-icons">
     <a href="https://www.linkedin.com/in/michaelxmachina" target="_blank">
       <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
