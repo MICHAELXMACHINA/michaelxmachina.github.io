@@ -62,11 +62,61 @@
       transform: scale(1.15);
       box-shadow: 0 0 6px rgba(218, 218, 218, 0.5);
     }
+    .tagline {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      grid-template-rows: auto auto auto;
+      column-gap: 0.7em;
+      row-gap: 0.05em;
+      margin: 0.5em 0 1em;
+      width: clamp(340px, 78vw, 560px);
+      max-width: 95vw;
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      font-weight: 600;
+      align-items: baseline;
+      justify-content: center;
+    }
+    .cell.left {
+      text-align: right;
+      justify-self: end;
+      align-self: baseline;
+      white-space: nowrap;
+    }
+    .cell.right {
+      text-align: left;
+      justify-self: start;
+      align-self: baseline;
+      white-space: nowrap;
+    }
+    .cell.major {
+      font-size: 1.38em;
+    }
+    .cell.minor {
+      font-size: 0.75em;
+    }
+    .cell.mid {
+      font-weight: 300;
+      font-size: 0.55em;
+      color: #888;
+      letter-spacing: 0.05em;
+      text-align: center;
+      justify-self: center;
+      align-self: baseline;
+    }
+    .cell.mid.x {
+      font-size: 1.6em;
+      font-weight: 700;
+      color: #dadada;
+      letter-spacing: normal;
+    }
+    .cell.empty {
+      visibility: hidden;
+    }
     .logo {
-      width: clamp(400px, 95vw, 500px);
+      width: clamp(400px, 105vw, 500px);
       height: auto;
-      margin-top: 2.25rem;
-      margin-bottom: 1.25rem;
+      margin-top: .5rem;
+      margin-bottom: .5rem;
     }
     .nav-links {
       display: flex;
@@ -102,18 +152,19 @@
   </style>
 </head>
 <body>
-  <img src="assets/mxmlogo.jpeg" alt="MichaelxMachina Logo" class="logo" />
-  <h1>Stories & Systems<br>
-  <h2>For Compassionate Alignment</h2>
-  <h3>Of All Sensing Systems</h3>
-  <h3><i>From Carbon To Silicon</i></h3>
-  <p>
-    MICHAELXMACHINA work in progress.<br>
-    Past work below.
-  </p>
-  <div class="nav-links">
-    <a href="https://inverseK.com/services" target="_blank">TECHNICAL POETRY</a>
-    <a href="https://symantic.studio" target="_blank">NARRATIVE STRATEGY</a>
+  <img src="assets/mxmlogo.png" alt="MichaelxMachina Logo" class="logo" />
+  <div class="tagline">
+    <span class="cell left major">stories</span>
+    <span class="cell mid x">X</span>
+    <span class="cell right major">systems</span>
+
+    <span class="cell empty">·</span>
+    <span class="cell mid">for</span>
+    <span class="cell empty">·</span>
+
+    <span class="cell left minor">sovereign</span>
+    <span class="cell mid"></span>
+    <span class="cell right minor">singularity</span>
   </div>
   <div class="social-icons">
     <a href="https://www.linkedin.com/in/michaelxmachina" target="_blank">
@@ -128,6 +179,14 @@
     <a href="https://youtube.com/@michael.x.machina" target="_blank">
       <img src="https://img.icons8.com/ios-filled/50/dadada/youtube-play.png" alt="YouTube">
     </a>
+  </div>  
+  <p>
+    michaelXmachina work in progress.<br>
+    Past work below.
+  </p>
+  <div class="nav-links">
+    <a href="https://inverseK.com/services" target="_blank">TECHNICAL POETRY</a>
+    <a href="https://symantic.studio" target="_blank">NARRATIVE STRATEGY</a>
   </div>
 </body>
 </html>
