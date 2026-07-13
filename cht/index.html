@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>michaelXmachina — videos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Work Sans', sans-serif;
+      background-color: #060606;
+      color: #dadada;
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 2rem);
+    }
+    .home-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+      color: #777;
+      text-decoration: none;
+    }
+    .home-link:hover { color: #dadada; }
+    h1 {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 500;
+      margin: 0 0 1.5rem;
+      color: #dadada;
+    }
+    /* responsive 16:9 embed frame — works for YouTube and Google Drive */
+    .video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #111;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    /* hero — the main video, full width and visually dominant */
+    .hero .video {
+      border-radius: 12px;
+      box-shadow: 0 0 0 1px #222, 0 20px 50px rgba(0,0,0,0.5);
+    }
+    .spacer {
+      height: clamp(2.5rem, 6vw, 4rem);
+      border-bottom: 1px solid #222;
+      margin-bottom: clamp(2.5rem, 6vw, 4rem);
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem 2rem;
+    }
+    @media (max-width: 640px) {
+      .video-grid { grid-template-columns: 1fr; }
+    }
+    .cap-title {
+      margin: 0.6rem 0 0;
+      font-size: 0.9rem;
+      color: #ccc;
+      font-weight: 500;
+    }
+    .cap-sub {
+      margin: 0.15rem 0 0;
+      font-size: 0.8rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="home-link" href="/">&larr; michaelXmachina</a>
+    <h1>CHT Emerging Voices Fellowship | Application Video</h1>
+
+    <!-- HERO — the main video. Swap the src below.
+         YouTube: https://www.youtube.com/embed/VIDEO_ID (add ?start=SECONDS to begin partway in)
+         Drive:   https://drive.google.com/file/d/FILE_ID/preview
+                  (file must be shared "Anyone with the link can view") -->
+    <div class="hero">
+      <div class="video">
+        <iframe
+          src=""
+          title="CHT application video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <!-- Additional videos. To add more, duplicate one of the grid items below. -->
+    <div class="video-grid">
+
+      <div>
+        <div class="video">
+          <iframe
+            src="https://drive.google.com/file/d/1zu28guyQiZefFQfTQFU5tgkHwYi507PF/preview"
+            title="CHT Rap Translation video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="cap-title">CHT Rap Translation video</p>
+        <p class="cap-sub">mentioned in Writing Sample cover letter</p>
+      </div>
+
+      <div>
+        <div class="video">
+          <iframe
+            src="https://drive.google.com/file/d/1NUf3CeZThbPM5proFNphCK6bC7LlOcuz/preview"
+            title="Original Video (Tristan's VO)"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="cap-title">Original Video (Tristan's VO)</p>
+      </div>
+
+      <div>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/hRJ65o_pL0k?start=2059"
+            title="Regenerative Roadshow"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="cap-title">Regenerative Roadshow</p>
+        <p class="cap-sub">Davos Climate Hub, 2025</p>
+      </div>
+
+      <div>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/6FQ6UUzdwOw"
+            title="Hamilton Anti-Vax Parody"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="cap-title">Hamilton Anti-Vax Parody</p>
+        <p class="cap-sub">(Pro-COVID-Vaccine PSA)</p>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
