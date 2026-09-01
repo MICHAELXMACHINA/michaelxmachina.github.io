@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Brand strategy and content for purpose-driven companies. Past work with Astroscale, Matter Venture Partners, Everyday Dose, Ursa Major, Meritech Capital, OfferFit, Merlyn Mind, and Veryfi.">
+  <meta name="robots" content="noindex">
+  <title>Brand Strategy &amp; Content — michaelXmachina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper:#070707;
+      --ink:#eceae4;
+      --body:#a3a29c;
+      --dim:#6a6963;
+      --line:#1e1e1c;
+      --display:'Archivo', 'Helvetica Neue', Arial, sans-serif;
+      --sans:'Work Sans', -apple-system, sans-serif;
+      --max:1080px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--paper); color: var(--body);
+      font-family: var(--sans); font-weight: 300;
+      font-size: 1.02rem; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+
+    /* ---------- hero ---------- */
+    header { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(3rem, 7vw, 5rem); }
+    h1 {
+      margin: 0; color: var(--ink);
+      font-family: var(--display); font-weight: 600;
+      font-size: clamp(2.3rem, 6.4vw, 4.5rem);
+      line-height: 1.02; letter-spacing: -0.035em;
+      max-width: 22ch;
+    }
+    .clarify {
+      margin: clamp(1.75rem, 4vw, 2.5rem) 0 0;
+      max-width: 56ch; font-size: clamp(1.05rem, 1.6vw, 1.22rem); line-height: 1.5;
+    }
+    .clarify b { color: var(--ink); font-weight: 400; }
+
+    /* ---------- offering ---------- */
+    .offer { padding: 0 0 clamp(3rem, 7vw, 4.5rem); }
+    .disc-head { border-top: 1px solid var(--line); padding-top: 1.5rem; margin-bottom: clamp(1.75rem, 4vw, 2.75rem); }
+    .disc-head h2 {
+      margin: 0; color: var(--ink); font-family: var(--display); font-weight: 600;
+      font-size: clamp(1.7rem, 4vw, 2.6rem); line-height: 1; letter-spacing: -0.03em;
+    }
+    .tiers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.75rem, 4vw, 3rem); }
+    @media (max-width: 780px) { .tiers { grid-template-columns: 1fr; gap: 2.25rem; } }
+    .tier h3 {
+      margin: 0 0 0.5rem; color: var(--ink); font-family: var(--display);
+      font-weight: 500; font-size: 1.18rem; letter-spacing: -0.015em;
+    }
+    .tier .says { margin: 0; font-size: 0.98rem; color: var(--body); }
+    .tier ul { margin: 0.9rem 0 0; padding: 0.9rem 0 0; list-style: none; border-top: 1px solid var(--line); }
+    .tier li { font-size: 0.92rem; color: var(--dim); line-height: 1.8; }
+
+    /* ---------- clients marquee ---------- */
+    .clients-label {
+      margin: 0 0 1.1rem; font-size: 0.86rem; color: var(--dim);
+    }
+    .marquee {
+      --gap: clamp(2.75rem, 5.5vw, 5rem);
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+      padding: clamp(1.75rem, 4vw, 2.5rem) 0; overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    }
+    .m-track { display: flex; width: max-content; animation: slide 46s linear infinite; }
+    .marquee:hover .m-track { animation-play-state: paused; }
+    .m-row { display: flex; align-items: center; gap: var(--gap); margin: 0; padding: 0 var(--gap) 0 0; list-style: none; }
+    .m-row a { display: block; }
+    .m-row img {
+      display: block; width: auto; height: var(--h, 24px);
+      filter: brightness(0) invert(1); opacity: 0.66; transition: opacity 0.3s ease;
+    }
+    .m-row a:hover img { opacity: 1; }
+    @keyframes slide { to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) {
+      .m-track { animation: none; width: 100%; }
+      .m-row { flex-wrap: wrap; row-gap: 1.75rem; }
+      .m-row + .m-row { display: none; }
+    }
+
+    /* ---------- work ---------- */
+    .sec-head { border-top: 1px solid var(--line); padding: clamp(3rem, 7vw, 5rem) 0 clamp(1.75rem, 3.5vw, 2.5rem); }
+    .sec-head h2 {
+      margin: 0; color: var(--ink); font-family: var(--display); font-weight: 600;
+      font-size: clamp(1.7rem, 4vw, 2.6rem); line-height: 1; letter-spacing: -0.03em;
+    }
+
+    .case { padding: 0 0 clamp(3.5rem, 8vw, 5.5rem); }
+    .case h3 {
+      margin: 0 0 0.85rem; font-family: var(--display); font-weight: 500;
+      font-size: clamp(1.35rem, 2.6vw, 1.8rem); line-height: 1.1; letter-spacing: -0.02em;
+    }
+    .case h3 a { color: var(--ink); text-decoration: none; }
+    .case h3 a:hover { color: #fff; }
+    .shot { display: block; width: 100%; background: #101010; }
+    .shot img { display: block; width: 100%; height: auto; }
+    .under { margin: 1.25rem 0 0; font-size: 0.93rem; color: var(--dim); line-height: 1.9; max-width: 78ch; }
+    .under .r { color: var(--body); }
+    .under a { color: var(--dim); text-decoration: none; border-bottom: 1px solid var(--line); }
+    .under a:hover { color: var(--ink); }
+
+    /* ---------- also ---------- */
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2.25rem, 5vw, 3.5rem); }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+    .grid h4 { margin: 0 0 0.7rem; font-family: var(--display); font-weight: 500; font-size: 1.22rem; line-height: 1.1; letter-spacing: -0.02em; }
+    .grid h4 a { color: var(--ink); text-decoration: none; }
+    .grid h4 a:hover { color: #fff; }
+
+    footer { padding: clamp(3rem, 7vw, 5rem) 0 4rem; }
+    .ask { color: #8a7b52; }
+  </style>
+</head>
+<body>
+
+<header class="wrap">
+  <h1>Authentic branding and content for purpose-driven companies.</h1>
+  <p class="clarify">
+    I help founders and executives <b>refine their brand story</b>, turn it into a framework their
+    team can run on, and tell that story when it needs telling.
+  </p>
+</header>
+
+<div class="wrap">
+
+  <section class="offer">
+    <div class="disc-head"><h2>Brand Strategy</h2></div>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Identity</h3>
+        <p class="says">The foundations of the brand.</p>
+        <ul>
+          <li>Purpose</li>
+          <li>Vision</li>
+          <li>Mission</li>
+          <li>Values</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <h3>Positioning</h3>
+        <p class="says">The perception to achieve, and the research-backed white space that makes it winnable.</p>
+        <ul>
+          <li>Market Landscape</li>
+          <li>Competitive Analysis</li>
+          <li>Differentiators</li>
+          <li>Positioning Statement</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <h3>Expression</h3>
+        <p class="says">How the brand looks, sounds, and tells its story.</p>
+        <ul>
+          <li>Brand Story</li>
+          <li>Brand Personality</li>
+          <li>Brand Voice</li>
+          <li>Messaging</li>
+          <li>Tagline</li>
+          <li>Manifesto</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="offer">
+    <div class="disc-head"><h2>Content</h2></div>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Strategy</h3>
+        <p class="says">How the refined brand shows up across marketing touchpoints.</p>
+      </div>
+      <div class="tier">
+        <h3>Copywriting</h3>
+        <p class="says">Crafting the actual language across those touchpoints.</p>
+      </div>
+      <div class="tier">
+        <h3>Video</h3>
+        <p class="says">Occasional. Bringing the story to life beyond language — motion graphics and film.</p>
+      </div>
+    </div>
+  </section>
+
+  <p class="clients-label">Select Clients</p>
+  <section class="marquee" aria-label="Select clients">
+    <div class="m-track">
+      <ul class="m-row">
+        <li><a href="https://astroscale.com/" target="_blank" rel="noopener"><img src="/assets/work/logos/astroscale.svg" alt="Astroscale" style="--h:26px"></a></li>
+        <li><a href="https://mattervp.com/" target="_blank" rel="noopener"><img src="/assets/work/logos/matter.svg" alt="Matter Venture Partners" style="--h:15px"></a></li>
+        <li><a href="https://everydaydose.com/" target="_blank" rel="noopener"><img src="/assets/work/logos/everyday-dose.svg" alt="Everyday Dose" style="--h:42px"></a></li>
+        <li><a href="https://www.ursamajor.com/" target="_blank" rel="noopener"><img src="/assets/work/logos/ursa-major.svg" alt="Ursa Major" style="--h:24px"></a></li>
+        <li><a href="https://www.meritechcapital.com/" target="_blank" rel="noopener"><img src="/assets/work/logos/meritech.svg" alt="Meritech Capital" style="--h:17px"></a></li>
+        <li><a href="https://www.braze.com/" target="_blank" rel="noopener"><img src="/assets/work/logos/braze.png" alt="Braze" style="--h:30px"></a></li>
+        <li><a href="https://www.merlyn.org/" target="_blank" rel="noopener"><img src="/assets/work/logos/merlyn-mind.svg" alt="Merlyn Mind" style="--h:15px"></a></li>
+        <li><a href="https://veryfi.com/" target="_blank" rel="noopener"><img src="/assets/work/logos/veryfi.svg" alt="Veryfi" style="--h:26px"></a></li>
+      </ul>
+      <ul class="m-row" aria-hidden="true">
+        <li><a href="https://astroscale.com/" target="_blank" rel="noopener" tabindex="-1"><img src="/assets/work/logos/astroscale.svg" alt="" style="--h:26px"></a></li>
+        <li><a href="https://mattervp.com/" target="_blank" rel="noopener" tabindex="-1"><img src="/assets/work/logos/matter.svg" alt="" style="--h:15px"></a></li>
+        <li><a href="https://everydaydose.com/" target="_blank" rel="noopener" tabindex="-1"><img src="/assets/work/logos/everyday-dose.svg" alt="" style="--h:42px"></a></li>
+        <li><a href="https://www.ursamajor.com/" target="_blank" rel="noopener" tabindex="-1"><img src="/assets/work/logos/ursa-major.svg" alt="" style="--h:24px"></a></li>
+        <li><a href="https://www.meritechcapital.com/" target="_blank" rel="noopener" tabindex="-1"><img src="/assets/work/logos/meritech.svg" alt="" style="--h:17px"></a></li>
+        <li><a href="https://www.braze.com/" target="_blank" rel="noopener" tabindex="-1"><img src="/assets/work/logos/braze.png" alt="" style="--h:30px"></a></li>
+        <li><a href="https://www.merlyn.org/" target="_blank" rel="noopener" tabindex="-1"><img src="/assets/work/logos/merlyn-mind.svg" alt="" style="--h:15px"></a></li>
+        <li><a href="https://veryfi.com/" target="_blank" rel="noopener" tabindex="-1"><img src="/assets/work/logos/veryfi.svg" alt="" style="--h:26px"></a></li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<main class="wrap">
+
+  <div class="sec-head"><h2>Featured Work</h2></div>
+
+  <section class="case">
+    <h3><a href="https://astroscale.com/" target="_blank" rel="noopener">Astroscale</a></h3>
+    <a class="shot" href="https://astroscale.com/" target="_blank" rel="noopener">
+      <img src="/assets/work/astroscale.jpg" alt="Astroscale website">
+    </a>
+    <p class="under">
+      <span class="r">Brand Strategy · Content Strategy · Copywriting</span><br>
+      Global brand and US brand · <span class="ask">years to confirm</span>
+    </p>
+    <!-- BLURB SLOT — per-client write-up, ideally expandable. Repeat in each .case.
+    <div class="blurb"><p>…</p></div>
+    -->
+  </section>
+
+  <section class="case">
+    <h3><a href="https://mattervp.com/" target="_blank" rel="noopener">Matter Venture Partners</a></h3>
+    <a class="shot" href="https://mattervp.com/" target="_blank" rel="noopener">
+      <img src="/assets/work/matter.jpg" alt="Matter Venture Partners website">
+    </a>
+    <p class="under">
+      <span class="r">Brand Strategy · Content Strategy · Copywriting</span><br>
+      With Dakotomy · Backed by Kleiner Perkins · Raised a $300M first fund, Mar 2024 —
+      <a href="https://techcrunch.com/2024/03/28/wen-hsieh-matter-venture-partners-300m-fund/" target="_blank" rel="noopener">TechCrunch</a>
+    </p>
+  </section>
+
+  <section class="case">
+    <h3><a href="https://everydaydose.com/" target="_blank" rel="noopener">Everyday Dose</a></h3>
+    <a class="shot" href="https://everydaydose.com/" target="_blank" rel="noopener">
+      <img src="/assets/work/everyday-dose.jpg" alt="Everyday Dose website">
+    </a>
+    <p class="under">
+      <span class="r">Brand Strategy · Content Strategy · Copywriting · Operations</span><br>
+      Established brand and messaging foundations in Year 1, then messaging across site, social,
+      product, and merchandise through Years 1–3 and Year 5 · Worked closely with the founder,
+      core executive team, and the marketing and design teams
+    </p>
+  </section>
+
+  <section class="case">
+    <h3><a href="https://www.ursamajor.com/" target="_blank" rel="noopener">Ursa Major</a></h3>
+    <a class="shot" href="https://www.ursamajor.com/" target="_blank" rel="noopener">
+      <img src="/assets/work/ursa-major.jpg" alt="Ursa Major website">
+    </a>
+    <p class="under">
+      <span class="r">Brand Strategy · Content Strategy · Copywriting</span><br>
+      With Future Works · Closed a $138M Series D, Nov 2023 —
+      <a href="https://spacenews.com/ursa-major-closes-138-million-series-d-and-d-1-financings/" target="_blank" rel="noopener">SpaceNews</a>
+    </p>
+  </section>
+
+  <div class="sec-head"><h2>Also</h2></div>
+
+  <section class="grid">
+
+    <div>
+      <h4><a href="https://www.meritechcapital.com/" target="_blank" rel="noopener">Meritech Capital</a></h4>
+      <a class="shot" href="https://www.meritechcapital.com/" target="_blank" rel="noopener">
+        <img src="/assets/work/meritech.jpg" alt="Meritech Capital website">
+      </a>
+      <p class="under"><span class="r">Content Strategy · Copywriting</span><br>
+        Late-stage venture firm whose portfolio speaks for itself · With Future Works &amp; Dakotomy</p>
+    </div>
+
+    <div>
+      <h4><a href="https://www.braze.com/" target="_blank" rel="noopener">OfferFit</a></h4>
+      <a class="shot" href="https://www.braze.com/" target="_blank" rel="noopener">
+        <img src="/assets/work/offerfit.jpg" alt="OfferFit website">
+      </a>
+      <p class="under"><span class="r">Brand Strategy · Content Strategy · Copywriting</span><br>
+        Since acquired by Braze · With Dakotomy · Raised $25M, Nov 2023 —
+        <a href="https://venturebeat.com/automation/offerfit-gets-25m-to-kill-a-b-testing-for-marketing-with-machine-learning-personalization/" target="_blank" rel="noopener">VentureBeat</a></p>
+    </div>
+
+    <div>
+      <h4><a href="https://www.merlyn.org/" target="_blank" rel="noopener">Merlyn Mind</a></h4>
+      <a class="shot" href="https://www.merlyn.org/" target="_blank" rel="noopener">
+        <img src="/assets/work/merlyn-mind.jpg" alt="Merlyn Mind website">
+      </a>
+      <p class="under"><span class="r">Brand Strategy · Copywriting</span><br>With Future Works</p>
+    </div>
+
+    <div>
+      <h4><a href="https://veryfi.com/" target="_blank" rel="noopener">Veryfi</a></h4>
+      <a class="shot" href="https://veryfi.com/" target="_blank" rel="noopener">
+        <img src="/assets/work/veryfi.jpg" alt="Veryfi website">
+      </a>
+      <p class="under"><span class="r">Brand Strategy · Content Strategy · Copywriting</span><br>With Future Works &amp; Dakotomy</p>
+    </div>
+
+  </section>
+</main>
+
+<footer class="wrap"></footer>
+
+</body>
+</html>
