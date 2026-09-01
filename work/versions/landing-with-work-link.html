@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>landing — proposal (past-work -> /work)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 80vh;
+      overflow-x: hidden;
+    }
+    body {
+      --tagline-scale: clamp(1.25rem, 3vw, 1.75rem);
+      font-family: 'Work Sans', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #060606;
+      color: #dadada;
+      text-align: center;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      font-size: 1.1rem; /* slightly larger */
+    }
+    h1 {
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      margin: 0.2em 0 0.2em;
+      margin-bottom: 0.25em;
+      font-weight: 600;
+      line-height: 1.1;
+    }
+    h2 {
+      font-size: clamp(1.25rem, 2vw, 1.75rem);
+      margin: 0.2em 0 0.2em;
+      font-weight: 400;
+    }
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      max-width: 95vw;
+      margin-top:  0em;
+      margin-bottom: 0.75em;
+      line-height: 1.1;
+    }
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5em;
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+    .social-icons a img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .social-icons a img:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 6px rgba(218, 218, 218, 0.5);
+    }
+    .tagline {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      grid-template-rows: auto auto auto;
+      column-gap: 0.5em;
+      row-gap: 0;
+      margin: 0.25em 0 0.5em;
+      width: min(70vw, 480px);
+      max-width: 92vw;
+      font-size: var(--tagline-scale);
+      font-weight: 600;
+      align-items: baseline;
+      justify-content: center;
+    }
+    .cell.left {
+      text-align: right;
+      justify-self: end;
+      align-self: baseline;
+      white-space: nowrap;
+    }
+    .cell.right {
+      text-align: left;
+      justify-self: start;
+      align-self: baseline;
+      white-space: nowrap;
+    }
+    .cell.major {
+      font-size: 1.38em;
+    }
+    .cell.minor {
+      font-size: 0.75em;
+    }
+    .cell.mid {
+      font-weight: 300;
+      font-size: 0.65em;
+      color: #777;
+      letter-spacing: 0.05em;
+      text-align: center;
+      justify-self: center;
+      align-self: baseline;
+    }
+    .cell.mid.x {
+      font-size: 1.6em;
+      font-weight: 700;
+      color: #dadada;
+      letter-spacing: normal;
+    }
+    .cell.empty {
+      visibility: hidden;
+    }
+    .logo {
+      width: calc(var(--tagline-scale) * 18);
+      max-width: 95vw;
+      height: auto;
+      margin-top: .5rem;
+      margin-bottom: .25rem;
+    }
+    .one-liner {
+      font-size: clamp(0.85rem, 2.2vw, 1rem);
+      color: #aaa;
+      font-weight: 400;
+      margin: 0.25em 0 1.25em;
+      max-width: 85vw;
+      line-height: 1.4;
+      font-style: italic;
+      letter-spacing: 0.01em;
+    }
+    .past-work {
+      margin-top: 1.5rem;
+      padding-top: 0.75rem;
+      padding-bottom: 1.5rem;
+      border-top: 1px solid #222;
+      font-size: 0.75rem;
+      color: #555;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      align-items: center;
+    }
+    .past-work-label {
+      color: #444;
+      letter-spacing: 0.08em;
+      text-transform: lowercase;
+    }
+    .past-work-links {
+      display: flex;
+      gap: 0.75em;
+      align-items: center;
+    }
+    .past-work a {
+      color: #555;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      font-family: 'Work Sans', sans-serif;
+    }
+    .past-work a::before { content: '[ '; }
+    .past-work a::after  { content: ' ]'; }
+    .past-work a:hover {
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <img src="/assets/mxmlogo.jpeg" alt="MichaelxMachina Logo" class="logo" />
+  <div class="tagline">
+    <span class="cell left major">stories</span>
+    <span class="cell mid x">X</span>
+    <span class="cell right major">systems</span>
+
+    <span class="cell empty">·</span>
+    <span class="cell mid">for</span>
+    <span class="cell empty">·</span>
+
+    <span class="cell left minor">sovereign</span>
+    <span class="cell mid"></span>
+    <span class="cell right minor">singularity</span>
+  </div>
+  <p class="one-liner">we can't stop The Coming Wave<br>but we can learn to surfvive it</p>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/michaelxmachina" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/dadada/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://www.instagram.com/michaelxmachina" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/dadada/instagram-new.png" alt="Instagram">
+    </a>
+    <a href="https://x.com/michaelxmachina" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/dadada/twitterx.png" alt="X (Twitter)">
+    </a>
+    <a href="https://youtube.com/@michael.x.machina" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/dadada/youtube-play.png" alt="YouTube">
+    </a>
+  </div>
+  <!-- PROPOSAL — not adopted. Restores the block M hid on 2026-07-13, with
+       "narrative strategy" repointed at /work.
+
+       Both original targets are dead as of 2026-09-01:
+         https://inverseK.com/services  -> 404  (and "inverse K" was deprecated
+                                                 as an identity in July 2026)
+         https://symantic.studio        -> 404
+       So "technical poetry" has no live destination and is omitted here rather
+       than restored broken. M decides whether it returns, and pointing where. -->
+  <div class="past-work">
+    <span class="past-work-label">past work</span>
+    <div class="past-work-links">
+      <a href="/work">narrative strategy</a>
+    </div>
+  </div>
+</body>
+</html>
