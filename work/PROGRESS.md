@@ -58,7 +58,7 @@ Current headline stacks two pairs: *authentic* + *purpose-driven* (modifiers), *
 
 Ordered by value. Do ONE per pass, snapshot, log, commit. Do not redesign wholesale.
 
-1. **Verify the marquee actually scrolls** with the browser pane displayed. Fix if not.
+1. ~~**Verify the marquee actually scrolls**~~ — code hardened and bug fixed (pass 02-11). **Still needs M's eyes on actual motion**, since rAF cannot run while the pane is hidden. If it does not move for him, the remaining suspects are: `mask-image` on the scroll container, or `overflow-x: auto` being overridden at his viewport width.
 2. **Responsive pass** — check 390px, 768px, 1440px. Fix anything that breaks. Mobile is likely where this is weakest.
 3. **Scroll reveals** — one orchestrated staggered reveal using IntersectionObserver (pattern in `design-research.md` §4). Understated: opacity + small translate, once, no loops. Must respect `prefers-reduced-motion`.
 4. **Headline variants** — build 3 full-page snapshots into `versions/` with different headline+subline combinations so M can compare them side by side rather than imagining them.
@@ -71,3 +71,4 @@ Ordered by value. Do ONE per pass, snapshot, log, commit. Do not redesign wholes
 | Time | Pass | What changed |
 |---|---|---|
 | 01-55 | — | Queue established; v1 and v2 snapshotted |
+| 02-11 | 1 — marquee | Proved rAF is fully suspended while the browser pane is hidden (0 frames in 600ms) — that alone explains the unobservable motion; the scroll math dry-ran clean (wraps correctly, position stays in [0, half)). Found and fixed a real latent bug: with no layout box, writing `scrollLeft` silently fails, so `pos` drifted ahead of reality and the seam-rebase would slam the band to its end on first paint or on pane reveal. Now guarded on `clientWidth`, seam-rebase only fires during user scrolling, and a `visibilitychange` handler resyncs so it resumes instead of jumping. Verified: no slam while hidden, all 18 logos load. **NOT verified: visible motion** — needs the pane displayed. Snapshot: `versions/v3-marquee-hardened.html` |
