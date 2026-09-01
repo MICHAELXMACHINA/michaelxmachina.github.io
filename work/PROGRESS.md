@@ -53,3 +53,21 @@ Current headline stacks two pairs: *authentic* + *purpose-driven* (modifiers), *
 - **Marquee auto-scroll unverified.** Rebuilt as a real scroll container (drag/scroll left-right, no hover snap-back). Could not confirm motion — the browser pane was hidden, which suspends `requestAnimationFrame` and reports zero width. **Check this first.**
 - Braze logo is the only raster (PNG); soft if the band ever scales up.
 - Meritech + Braze ship dark-only logos, so the whole band is forced white via CSS filter. Ursa Major's orange and Matter's green are flattened as a side effect.
+
+## Overnight queue (work top-down, one item per pass)
+
+Ordered by value. Do ONE per pass, snapshot, log, commit. Do not redesign wholesale.
+
+1. **Verify the marquee actually scrolls** with the browser pane displayed. Fix if not.
+2. **Responsive pass** — check 390px, 768px, 1440px. Fix anything that breaks. Mobile is likely where this is weakest.
+3. **Scroll reveals** — one orchestrated staggered reveal using IntersectionObserver (pattern in `design-research.md` §4). Understated: opacity + small translate, once, no loops. Must respect `prefers-reduced-motion`.
+4. **Headline variants** — build 3 full-page snapshots into `versions/` with different headline+subline combinations so M can compare them side by side rather than imagining them.
+5. **Section rhythm** — the four featured cases are currently identical blocks. Vary deliberately (full-bleed vs contained, or a density shift) per `design-research.md` §2.
+6. **Landing page** (`/index.html`) — M said to consider it. Do NOT change its content or tagline. Only candidate change: restore the commented-out `past-work` block to link `/work`. Snapshot before touching, and flag it rather than assuming.
+7. **A DESIGN.md** — tokens, type scale, spacing, named direction. This is the durable artifact; it feeds every later session and M's own service offering.
+
+## Pass log
+
+| Time | Pass | What changed |
+|---|---|---|
+| 01-55 | — | Queue established; v1 and v2 snapshotted |
