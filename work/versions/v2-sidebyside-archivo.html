@@ -336,27 +336,17 @@
   el.addEventListener('scroll', function () { idle = 90; }, { passive: true });
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  // scrollLeft is integer-quantized, so sub-pixel steps must accumulate in a
-  // float and be written back whole — otherwise the increment rounds to zero.
-  var pos = 1, SPEED = 0.45;
   function step() {
-    var half = row1.getBoundingClientRect().width;
+    var half = row1.scrollWidth;
     if (half > 0) {
-      if (idle > 0) { idle--; pos = el.scrollLeft; }
-      else if (!paused) {
-        pos += SPEED;
-        if (pos >= half) pos -= half;
-        el.scrollLeft = pos;
-      } else {
-        pos = el.scrollLeft;
-      }
-      // user dragged past either seam — rebase without a visible jump
-      if (el.scrollLeft >= half * 2 - 2) { pos = el.scrollLeft - half; el.scrollLeft = pos; }
-      else if (el.scrollLeft <= 0) { pos = half; el.scrollLeft = pos; }
+      if (!paused && idle <= 0) el.scrollLeft += 0.4;
+      else if (idle > 0) idle--;
+      if (el.scrollLeft >= half) el.scrollLeft -= half;      // seamless wrap forward
+      else if (el.scrollLeft <= 0) el.scrollLeft += half;    // and backward
     }
     requestAnimationFrame(step);
   }
-  if (!reduce) { el.scrollLeft = pos; requestAnimationFrame(step); }
+  if (!reduce) { el.scrollLeft = 1; requestAnimationFrame(step); }
 })();
 </script>
 
