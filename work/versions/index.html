@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>/work — version review</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#070707;--raised:#0b0b0a;--ink:#eceae4;--body:#a3a29c;--dim:#6a6963;--line:#1e1e1c;
+        --display:'Archivo','Helvetica Neue',Arial,sans-serif;--sans:'Work Sans',sans-serif;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--body);font-family:var(--sans);font-weight:300;
+       font-size:1rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{width:min(100% - 2.5rem,1180px);margin-inline:auto}
+  h1{margin:0;font-family:var(--display);font-weight:600;font-size:clamp(1.6rem,3.4vw,2.3rem);
+     letter-spacing:-.03em;color:var(--ink);line-height:1}
+  .lede{margin:1rem 0 0;max-width:62ch}
+  header{padding:clamp(2.5rem,6vw,4rem) 0 clamp(1.75rem,4vw,2.5rem)}
+  h2{margin:0 0 1.5rem;font-family:var(--display);font-weight:600;font-size:1.3rem;
+     letter-spacing:-.02em;color:var(--ink)}
+  section{padding:clamp(2rem,5vw,3rem) 0;border-top:1px solid var(--line)}
+  .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.25rem,3vw,2rem)}
+  @media(max-width:900px){.cards{grid-template-columns:1fr}}
+  .card{background:var(--raised);border:1px solid var(--line);padding:clamp(1.25rem,2.5vw,1.75rem);
+        display:flex;flex-direction:column}
+  .tag{font-size:.72rem;color:var(--dim);margin:0 0 1rem}
+  /* headline shown at real weight and tracking, scaled to fit the card */
+  .hl{margin:0 0 .9rem;font-family:var(--display);font-weight:600;color:var(--ink);
+      font-size:clamp(1.35rem,2vw,1.7rem);line-height:1.04;letter-spacing:-.035em}
+  .sl{margin:0 0 1.4rem;font-size:.92rem;color:var(--body)}
+  .note{margin:0 0 1.4rem;font-size:.85rem;color:var(--dim)}
+  .note b{color:#8a7b52;font-weight:400}
+  .card a.open{margin-top:auto;align-self:start;color:var(--ink);text-decoration:none;
+     border:1px solid var(--line);padding:.55rem .9rem;font-size:.85rem}
+  .card a.open:hover{border-color:var(--body)}
+  table{width:100%;border-collapse:collapse;font-size:.9rem}
+  td,th{text-align:left;padding:.7rem 1rem .7rem 0;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--dim);font-weight:400;font-size:.8rem}
+  td a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+  td a:hover{border-bottom-color:var(--ink)}
+  footer{padding:2.5rem 0 4rem;font-size:.85rem;color:var(--dim)}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <h1>/work — version review</h1>
+  <p class="lede">Headline directions first, rendered in the real typeface so the type is comparable
+    without opening three tabs. Progression snapshots below. Everything links to the full page.</p>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2>Headline directions</h2>
+  <div class="cards">
+
+    <div class="card">
+      <p class="tag">A · current live</p>
+      <p class="hl">Authentic branding and content for purpose-driven companies.</p>
+      <p class="sl">I help founders and executives refine their brand story, turn it into a framework
+        their team can run on, and tell that story when it needs telling.</p>
+      <p class="note">Your wording throughout. Still carries two competing modifiers —
+        <em>authentic</em> and <em>purpose-driven</em> make nearly the same claim, so one is idle.</p>
+      <a class="open" href="hv-a-branding-content.html">Open A</a>
+    </div>
+
+    <div class="card">
+      <p class="tag">B · word swap only</p>
+      <p class="hl">Brand strategy and storytelling for purpose-driven companies.</p>
+      <p class="sl">I help founders and executives refine their brand story, turn it into a framework
+        their team can run on, and tell that story when it needs telling.</p>
+      <p class="note">Isolates one change: the deliverables become <em>brand strategy and
+        storytelling</em>, and <em>authentic</em> drops so a single modifier works.
+        "Content" is a commodity word; "storytelling" is yours.
+        <b>My wording, not yours.</b></p>
+      <a class="open" href="hv-b-strategy-storytelling.html">Open B</a>
+    </div>
+
+    <div class="card">
+      <p class="tag">C · idea-led</p>
+      <p class="hl">What a company stands for, and how it says it.</p>
+      <p class="sl">Brand strategy and storytelling for purpose-driven companies. I work with founders
+        and executive teams to refine the story, build the framework that carries it, and tell it.</p>
+      <p class="note">One pair instead of two, mapping exactly onto the Brand / Content columns
+        below it. Service list moves to the subline where it still gets read. Weaker for search,
+        stronger for a page reached mid-conversation. <b>My wording, not yours.</b></p>
+      <a class="open" href="hv-c-stands-for.html">Open C</a>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Progression</h2>
+  <table>
+    <tr><th>Version</th><th>What changed</th></tr>
+    <tr><td><a href="v1-serif-tabs.html">v1</a></td>
+        <td>Instrument Serif display, Brand/Content stacked, tab row under each heading, name and one-liner above the image. Serif rejected as too curvy and tall.</td></tr>
+    <tr><td><a href="v2-sidebyside-archivo.html">v2</a></td>
+        <td>Archivo display. Brand Strategy and Content side by side. Image-first with the title below. Marquee rebuilt as a scroll container.</td></tr>
+    <tr><td><a href="v3-marquee-hardened.html">v3</a></td>
+        <td>Marquee guarded against zero-width scroll writes and seam-slam; visibility resync.</td></tr>
+    <tr><td><a href="v4-responsive.html">v4</a></td>
+        <td>44px touch targets on logo links; component lists collapse to one column under 520px.</td></tr>
+    <tr><td><a href="v5-scroll-reveals.html">v5</a></td>
+        <td>Staggered scroll reveals across 15 blocks, with a no-JS gate, a 2s failsafe, and reduced-motion handling.</td></tr>
+    <tr><td><a href="/work/">live</a></td>
+        <td>Current working page.</td></tr>
+  </table>
+</section>
+
+</div>
+
+<footer class="wrap">Notes and open questions live in <code>work/PROGRESS.md</code>.</footer>
+
+</body>
+</html>
