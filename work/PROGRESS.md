@@ -9,6 +9,36 @@ tags: [mxm-site, portfolio, iteration-log]
 
 # /work — iteration log
 
+## Overnight summary — 2026-09-01, passes 01-55 to 05-11
+
+Seven queue items, all complete. Nine commits. Nothing pushed. **Live `index.html` untouched.**
+
+**What changed on the page:** a full-bleed lead case so the four projects stop reading as one
+repeated template; staggered scroll reveals across 15 blocks; mobile fixes (44px tap targets,
+component lists collapsing under 520px); a marquee bug fix that mattered — `scrollLeft` writes
+fail silently with no layout box, so the position drifted and the band would slam to its end.
+
+**What's there for you to review, in order:**
+1. `work/versions/index.html` — start here. Three headline directions rendered side by side in
+   the real typeface, plus a progression table linking every snapshot.
+2. `DESIGN.md` — the durable artifact. Tokens, scale, motion, and rules, extracted from what
+   actually ships.
+3. The Pass log below — what each pass did and, specifically, what it could not verify.
+
+**Three things need you:**
+- **The headline.** Three comparable pages are built. B and C are my wording and labelled as
+  such in the UI itself.
+- **The landing page.** Both links in the past-work block you hid in July are now 404s, and
+  "inverse K" is a retired identity. Proposal built as a snapshot, not adopted.
+- **Astroscale years** — the only unknown still marked on the page.
+
+**One thing I could never verify:** the marquee actually moving, and the reveals actually
+animating. A hidden browser pane suspends `requestAnimationFrame` and freezes computed styles
+mid-transition, at every viewport size. I proved the CSS resolves correctly and the logic is
+sound by other means, but the first thing worth doing is opening the page and watching it.
+
+---
+
 Live preview: `http://localhost:8123/work/` (python http.server on 8123, run from repo root)
 Snapshots: `work/versions/` — open any of them directly to compare.
 
@@ -36,7 +66,7 @@ Snapshots: `work/versions/` — open any of them directly to compare.
 - [ ] **Astroscale years** — the only remaining `.ask` marker on the page.
 - [ ] **Matter one-liner** — M wants their thesis described beyond "backed by Kleiner Perkins". Needs their portfolio checked.
 - [ ] **Landing page link — DECISION NEEDED.** Compare `versions/landing-current.html` against `versions/landing-with-work-link.html`. Two sub-decisions: (a) does the past-work block come back at all (M hid it deliberately on 2026-07-13); (b) "technical poetry" pointed at `inverseK.com/services`, which is now a 404 for a deprecated identity — drop it, or repoint it where? Note this touches the live homepage of michaelxmachina.com, so it stays unadopted until M says.
-- [ ] **Font** — Archivo is the current pick after Instrument Serif was rejected as "too curvy and tall". Alternates: Newsreader, Bricolage Grotesque, Work Sans at extreme weights.
+- [x] ~~**Font**~~ — Archivo, locked in `DESIGN.md`. Was: Archivo is the current pick after Instrument Serif was rejected as "too curvy and tall". Alternates: Newsreader, Bricolage Grotesque, Work Sans at extreme weights.
 
 ## The naming problem (M's open question)
 
@@ -72,6 +102,7 @@ Ordered by value. Do ONE per pass, snapshot, log, commit. Do not redesign wholes
 | Time | Pass | What changed |
 |---|---|---|
 | 01-55 | — | Queue established; v1 and v2 snapshotted |
+| 05-11 | 7 — DESIGN.md | Wrote `/DESIGN.md` at the repo root. Every value extracted programmatically from the built page rather than invented: the six color tokens, the fluid type scale (h1 through component lists, with the ~4.4× h1-to-body jump noted), the four breakpoints and what each does, motion timing with its three failsafes, image and logo handling including why logo heights are hand-tuned, a11y floors, and the writing + process rules. Named the direction explicitly — "quiet editorial, near-black, type-led" — with a forbid list, since a fixed target is what stops output drifting to the generic average. 134 lines. |
 | 04-41 | 6 — landing page | **Live `index.html` NOT modified** — verified clean with `git diff`. Built two snapshots instead so the decision is yours: `versions/landing-current.html` (as it stands, past-work hidden) and `versions/landing-with-work-link.html` (the proposal). **Material finding: both links in the block M hid on 2026-07-13 are dead as of today** — `inverseK.com/services` returns 404 and `symantic.studio` returns 404. On top of that, "inverse K" was deprecated as an identity in the July 2026 CHT finalize pass (per `mXm/memory.md`). So restoring that block verbatim would publish two broken links and a retired identity on the homepage. The proposal therefore restores only "narrative strategy", repointed at `/work`, and omits "technical poetry" rather than shipping it broken — where that one should point, or whether it returns at all, is M's call. Verified the proposal renders: past-work block visible, `/work` resolves 200, logo loads, tagline and one-liner untouched. Snapshots only; nothing adopted. |
 | 04-11 | 5 — section rhythm | The four featured cases read as one repeated template. Broke it with a single deliberate move rather than restructuring all four: **the lead project (Astroscale) now bleeds to the viewport edges** while its title and notes stay on the 1080px text column, and its title steps up to 38.4px against 28.8px for the rest. Everything after it stays contained, so the eye gets a density shift instead of four identical blocks. Used `overflow-x: clip` on html/body rather than `hidden` — `hidden` would turn body into a scroll container and break `position: sticky` and scroll anchoring if we add either later. Below 700px the bleed reverts to contained: at phone widths the gutter is too small for a bleed to read as anything but a broken alignment. Verified at 1440 (lead image 1440px from left:0, contained images 1080px at left:180, title aligned to the text column, no horizontal scroll) and at 375 (lead matches the others exactly, left:20 width:335, no horizontal scroll, all 15 reveal blocks intact). Snapshot: `versions/v6-section-rhythm.html` |
 | 03-41 | 4 — headline variants | Built three full-page snapshots differing ONLY in the hero, so each is a real page you can scroll rather than a line to imagine: **A** `hv-a-branding-content` (current live, your wording), **B** `hv-b-strategy-storytelling` (isolates one change — deliverables become "brand strategy and storytelling", "authentic" dropped so a single modifier works), **C** `hv-c-stands-for` (idea-led: "What a company stands for, and how it says it", service list demoted to the subline). Each variant page gets its own `<title>` so the browser tabs stay distinguishable while comparing. Also built **`work/versions/index.html`** — a review index rendering all three headlines in the real typeface at real tracking, side by side, each with its rationale and tradeoff, plus a progression table linking v1–v5 and the live page. Verified: all 9 links return 200, the three h1s are distinct, no horizontal overflow at 1440 (3-col cards) or 375 (1-col, table fits). **B and C are my wording and are labelled as such in the UI itself**, not just in this log. Review entry point: `http://localhost:8123/work/versions/` |
