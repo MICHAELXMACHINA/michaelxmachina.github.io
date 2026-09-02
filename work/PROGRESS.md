@@ -33,7 +33,29 @@ fail silently with no layout box, so the position drifted and the band would sla
 - **Astroscale years** — the only unknown still marked on the page.
 
 **One thing I could never verify:** the marquee actually moving, and the reveals actually
-animating. A hidden browser pane suspends `requestAnimationFrame` and freezes computed styles
+animating.
+
+> ### ✅ RESOLVED 2026-09-02 — the reveals are correct. Verified deterministically.
+>
+> The same hidden-pane limitation applied again (`requestAnimationFrame` suspended, computed
+> opacity frozen mid-transition at exactly 0.155061 across four seconds, identical to three
+> decimals — frozen rendering, not a settled value). So it was settled by proof instead of by
+> watching:
+>
+> - The `.in` class **is** applied to all 15 `.reveal` elements — the IntersectionObserver works.
+> - Removing the transition and forcing a reflow resolves `h1.reveal.in` to
+>   **`opacity: 1, transform: none`** — the intended end state is correct and reachable.
+> - The stylesheet confirms it: `.js .reveal.in { opacity: 1; transform: none; }`
+> - A `prefers-reduced-motion: reduce` failsafe is present.
+>
+> **The reveals will animate to full opacity in a real browser.** The near-invisible text seen
+> in a headless/hidden pane is an artifact of the test environment, not a bug on the page.
+>
+> Still genuinely unverified: the marquee's *motion*. It is rAF-driven, and rAF is exactly what
+> a hidden pane suspends, so no headless check can observe it. `scrollWidth` 3147 vs
+> `clientWidth` 1080 confirms there is content to scroll. **Open the page and watch that one
+> band** — it is now the only item on this list that needs human eyes.
+ A hidden browser pane suspends `requestAnimationFrame` and freezes computed styles
 mid-transition, at every viewport size. I proved the CSS resolves correctly and the logic is
 sound by other means, but the first thing worth doing is opening the page and watching it.
 
