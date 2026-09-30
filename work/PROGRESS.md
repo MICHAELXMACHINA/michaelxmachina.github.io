@@ -9,6 +9,13 @@ tags: [mxm-site, portfolio, iteration-log]
 
 # /work — iteration log
 
+## Published and verified, 2026-09-30 04:55 WEST
+
+Codex `01a0f04a-ec53-7b00-91e5-fa68140faedc`, gpt-6.1-sol/high, exact runtime witness. Website commit `e4cae9b254355c524cedce5fbda32a8996eaf78e` was pushed under Michael's explicit overnight publication authority. GitHubPages reports built, no error. HTTPS `/work/`, `/cv/`, bothCVPDFs and the homepage return200 and match the local published bytes by SHA256. The homepage diff against origin was empty. RootCortex CV/application commit is `04a47d3`; its earlier baseline is `aee1f68`. The rootCortex repository was not pushed. No search-fix files were committed.
+
+The portfolio and solidCV deliverables are complete for Michael's preliminary review. Authentic writing samples, his covervideo and personal application facts still need him. The private application desk holds preparation only. Michael supplied `https://app.80000hours.org/` and his sign-in email; the assistant tab is prepared and email sign-in requested. Authentication remains pending. No stored profile has been read or Fable output generated. Continue there after Michael completes sign-in; do not infer an assistant model merely from his description. No application submitted.
+
+
 ## Ready to publish, 2026-09-30 04:51 WEST
 
 Codex `01a0f04a-ec53-7b00-91e5-fa68140faedc`, gpt-6.1-sol/high, exact session metadata and turn-context witness. Michael resumed implementation after the model/scope discussion. Existing authorization covers portfolio/CV checkpoints and portfolio publication; no application submission or correspondence.
