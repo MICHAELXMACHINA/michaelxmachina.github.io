@@ -9,9 +9,38 @@ tags: [mxm-site, portfolio, iteration-log]
 
 # /work — iteration log
 
+
+## Supervisor acceptance, 2026-09-30 05:30 WEST
+
+Codex parent `01a0f04a-ec53-7b00-91e5-fa68140faedc`, effective `gpt-6.1-sol` / high, witnessed through this exact session's metadata and turn context. Astra worker `01a0f07b-d185-7651-954b-48d956bc152f` ran `gpt-6-astra` / xhigh.
+
+The parent independently reviewed the portfolio at actual 1280px and 375px. Document width matched each viewport, all 13 image occurrences loaded, project navigation worked, and both service disclosures opened by keyboard. General and final AI Risk CV page renders are clean; each PDF has two tagged Letter pages and readable extracted text. The local role editor toggles 53 editable regions and returns to reading mode. No universal recruitment-parser guarantee is claimed.
+
+Michael selected AI Risk as the primary application and consideration for the general Engagement Manager role too. The public role PDF now targets AI Risk. The richer, bespoke application page remains a private local prototype at `/Users/mac/cortex/action/positioning/good-impressions/application-page.html`; it is not included in this website publication. It uses real client screenshots and links existing performance recordings. Its phone thumbnail defect was repaired and independently rechecked at 335 by 188.44px. The required cover video and actual sent writing samples still need Michael.
+
+Publication is pending the scoped commit, push and live-byte verification below. The existing homepage has no diff. Remotion and unrelated work are preserved.
+
+
+## Astra design and implementation pass, 2026-09-30 05:17 WEST
+
+Codex worker `01a0f07b-d185-7651-954b-48d956bc152f`, parent `01a0f04a-ec53-7b00-91e5-fa68140faedc`. Effective model `gpt-6-astra`, reasoning `xhigh`, witnessed in this exact session's `session_meta` and `turn_context` before substantive work. Original document authorship is retained above.
+
+Michael requested a more ambitious portfolio and CV, with direct attention to the hiring audience. This supersedes the earlier restraint-only design scope. The homepage and all Remotion/animation projects remain untouched.
+
+- Rebuilt the portfolio with a forest-black ground, pale green accent, oversized Archivo headline and a four-project visual index. Featured work uses varied full-width and split layouts, including a pale Matter panel. Services follow the evidence. The layout uses the nine existing client screenshots; no generated imagery or new client assets were introduced.
+- Every featured project shows Michael's strategy/content/copy role beside its image. Known collaborators remain credited at the relevant project. The introductory image note distinguishes the client websites from Michael's contribution. Removed funding-news links because company funding is not a measured result of his work. Client names, source dates and collaboration facts remain unchanged.
+- Simplified the page to native HTML/CSS with no JavaScript dependency. The old auto-moving client band is replaced by linked project previews, so visible proof appears before service descriptions. Smooth anchor movement and image hover movement respect reduced-motion preferences. Native service disclosures remain keyboard-operable HTML controls; the supervisor will confirm actual browser behavior.
+- Both CV variants now lead with substantial Symantic engagement evidence. All four final PDF pages were rendered and inspected; each PDF is tagged, two Letter pages, has embedded fonts and a verified extraction sequence. Details and hiring/parser rationale are in `/Users/mac/cortex/action/positioning/cv/README.md`.
+- Source checks found valid HTML nesting and zero duplicate IDs, missing anchor targets, missing local project images or empty image alt text. All nine images, the portfolio, static CV and both PDF routes returned HTTP 200 locally. Editor script syntax and scoped git whitespace checks pass. Worker browser setup found no available browser; the parent owns live viewport, focus and interaction checks. No worker browser pass is claimed.
+- Incoming portfolio is preserved at `versions/2026-09-30-before-astra.html`; incoming CV sources/PDFs are in the CV `versions/` folder. Existing dirty entries in this log were preserved. The public static CV and both public PDFs are prepared, not published by this worker.
+
+Next owner: the parent checks the actual browser layout, requests any necessary repairs, then integrates, commits and publishes under Michael's prior authority. No application submission or correspondence occurred. The source build/export helpers and page renders remain private under the CV `qa/` directory.
+
 ## Published and verified, 2026-09-30 04:55 WEST
 
 Codex `01a0f04a-ec53-7b00-91e5-fa68140faedc`, gpt-6.1-sol/high, exact runtime witness. Website commit `e4cae9b254355c524cedce5fbda32a8996eaf78e` was pushed under Michael's explicit overnight publication authority. GitHubPages reports built, no error. HTTPS `/work/`, `/cv/`, bothCVPDFs and the homepage return200 and match the local published bytes by SHA256. The homepage diff against origin was empty. RootCortex CV/application commit is `04a47d3`; its earlier baseline is `aee1f68`. The rootCortex repository was not pushed. No search-fix files were committed.
+
+Final typography follow-up `ffe68540bd21adcb7677acfd37e145bc64f1396c` keeps purpose-driven together across line breaks. Its GitHubPages build succeeded and latest live HTML matched by SHA256. Actual375px layout remains375px wide.
 
 The portfolio and solidCV deliverables are complete for Michael's preliminary review. Authentic writing samples, his covervideo and personal application facts still need him. The private application desk holds preparation only. Michael supplied `https://app.80000hours.org/` and his sign-in email; the assistant tab is prepared and email sign-in requested. Authentication remains pending. No stored profile has been read or Fable output generated. Continue there after Michael completes sign-in; do not infer an assistant model merely from his description. No application submitted.
 

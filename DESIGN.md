@@ -9,6 +9,32 @@ tags: [mxm-site, design-system, tokens]
 
 # michaelXmachina — design system
 
+## Current direction, 2026-09-30 05:17 WEST
+
+Codex worker `01a0f07b-d185-7651-954b-48d956bc152f`, parent `01a0f04a-ec53-7b00-91e5-fa68140faedc`. Effective model `gpt-6-astra`, reasoning `xhigh`, witnessed in this exact session's `session_meta` and `turn_context` before substantive work. Original document authorship is retained above.
+
+Michael's September 30 request for an ambitious portfolio and CV supersedes the earlier "quiet editorial" constraint. The current direction is an editorial studio portfolio with large typography and actual client work. Design should help a reviewer identify the client, Michael's contribution and the evidence quickly.
+
+| Element | Current implementation |
+|---|---|
+| Type | Archivo 500 for display; Work Sans for body. Hero `clamp(3.5rem, 7.85vw, 7.1rem)`, up to 8rem on very wide screens. Case titles 2.4-4rem. Body 1rem with 1.6 line height. |
+| Dark palette | Ground `#11140f`, raised `#1b2018`, headings `#f1f1e7`, body `#c8cec0`, secondary `#a7b09d`, lines `#394232`, accent `#d7ef9b`. |
+| Light project panel | Matter uses `#e9ecdf` with dark `#20291c` headings and `#34402d` body. |
+| Layout | Maximum 1280px; 3rem desktop gutters per side, 1.5rem below 1000px, 1.25rem below 640px. Four linked project previews become two columns on phones. |
+| Work order | Astroscale, Matter Venture Partners, Everyday Dose, Ursa Major, then Meritech, OfferFit, Merlyn Mind, Veryfi and Civic. |
+| Evidence | Existing screenshots retain their natural aspect ratios in featured projects. My-role labels and collaborator credits sit with the work. Company fundraising news is omitted. |
+| Interaction | Sticky native navigation, project anchors, native service disclosures and image hover movement. No page JavaScript. Reduced motion disables smooth scrolling and transitions. |
+| Services | After the projects, so the first screen contains work evidence and hiring links. |
+| CV | Archivo/Work Sans, white print pages, terracotta `#a74832`, 40pt name, 18pt Symantic heading, 10.5pt body. A single main reading order with explicit two-page pagination. |
+
+The portfolio carries imagery. The CV carries selectable text and linked evidence. Avoid decorative AI images, implied authorship of collaborators' visual design, fabricated outcome metrics and keyword stuffing. This is not a new brand-name decision; Symantic Studio remains the source spelling.
+
+Browser acceptance belongs to the parent because this worker could not connect to a browser. PDF visual inspection and extraction checks are complete. See `work/PROGRESS.md` and the CV README for the current verification state.
+
+## Historical design specification, September 1-21
+
+The following preserves the previous direction and measurements. Its color, type, layout and motion specifications are superseded by the current section above.
+
 Extracted from the built `/work` page, not invented. Every value below is what actually
 ships. When this file and the CSS disagree, the CSS is wrong — fix it here first, then there.
 
