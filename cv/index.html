@@ -1,0 +1,95 @@
+<!doctype html><html lang="en" data-theme="paper"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Michael Ketigian | CV</title><meta name="robots" content="noindex"><link rel="canonical" href="https://michaelxmachina.com/cv/"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600&family=Work+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"><style>
+:root { --accent:#a74832; --scale:1; --density:1; --display:"Archivo",Arial,sans-serif; --sans:"Work Sans",Arial,sans-serif; }
+[data-theme=paper] { --paper:#f6f3ed; --ink:#232522; --body:#3c403b; --dim:#656b63; --line:#d7d6cc; }
+[data-theme=night] { --paper:#181b18; --ink:#f5f1e9; --body:#ddd9d1; --dim:#b4b9ad; --line:#43493e; }
+* { box-sizing:border-box; } html { font-size:calc(16px * var(--scale)); }
+body { margin:0; background:var(--paper); color:var(--body); font:400 1rem/1.5 var(--sans); -webkit-font-smoothing:antialiased; }
+a { color:inherit; text-decoration:none; } a:hover { text-decoration:underline; text-decoration-color:var(--accent); text-underline-offset:3px; }
+p { margin:0; } .cv { max-width:900px; margin:0 auto; padding:3.4rem 3rem 7rem; }
+.page { display:flex; flex-direction:column; }
+.masthead { padding:0 0 1.5rem; border-bottom:2px solid var(--ink); }
+.eyebrow { color:var(--accent); font:600 .77rem/1.4 var(--display); letter-spacing:.03em; margin-bottom:.6rem; }
+h1 { margin:0; font:600 clamp(2.4rem,6.5vw,3.5rem)/1.05 var(--display); letter-spacing:-.04em; color:var(--ink); }
+.tagline { margin-top:.65rem; font:500 1.08rem/1.4 var(--sans); color:var(--ink); }
+.contact { display:flex; flex-wrap:wrap; gap:.25rem 1.15rem; font-size:.81rem; margin-top:.85rem; color:var(--dim); }
+.contact a { border-bottom:1px solid var(--line); }
+.lede { font-size:1.05rem; line-height:1.5; max-width:44em; margin-top:1.15rem; }
+section { margin-top:calc(1.6rem * var(--density)); }
+h2 { margin:0 0 1rem; color:var(--accent); font:600 .82rem/1.2 var(--display); letter-spacing:.015em; }
+.entry { display:grid; grid-template-columns:7rem 1fr; gap:1.25rem; padding-bottom:calc(1.1rem * var(--density)); }
+.entry:last-child { padding-bottom:0; }
+.rail { font-size:.8rem; line-height:1.5; color:var(--dim); padding-top:.1rem; }
+.when { font-weight:500; color:var(--ink); }
+h3 { margin:0; font:600 1.13rem/1.3 var(--display); letter-spacing:-.02em; color:var(--ink); }
+.role { font-size:.87rem; font-weight:500; margin:.13rem 0 .45rem; color:var(--ink); }
+.body { font-size:.91rem; line-height:1.5; } .body + .body { margin-top:.35rem; }
+.entry ul { margin:.4rem 0 0; padding-left:1.05rem; font-size:.91rem; line-height:1.5; } li + li { margin-top:.32rem; } li::marker { color:var(--accent); }
+.education { padding-top:1.25rem; border-top:1px solid var(--line); }
+.honors { font-size:.83rem; color:var(--dim); margin-top:.35rem; }
+.page-top { display:flex; justify-content:space-between; border-bottom:2px solid var(--ink); padding-bottom:.9rem; font:500 .83rem/1.4 var(--display); color:var(--dim); }
+.page-top span:first-child { color:var(--ink); }
+.page + .page { margin-top:3.5rem; padding-top:2.5rem; border-top:1px solid var(--line); }
+.intro { font-size:.96rem; margin-bottom:1rem; max-width:44em; }
+.skills { font-size:.94rem; line-height:1.6; }
+.gallery { display:grid; grid-template-columns:1fr 1fr; gap:1rem 1.5rem; }
+.tile { position:relative; border-top:1px solid var(--line); padding-top:.8rem; }
+.yr { color:var(--accent); font:500 .76rem/1.2 var(--sans); }
+h4 { font:600 1rem/1.3 var(--display); color:var(--ink); margin:.25rem 0 .4rem; letter-spacing:-.015em; }
+.tile p { font-size:.87rem; line-height:1.5; } .thumb { display:none; }
+.footer { margin-top:2rem; padding-top:.7rem; border-top:1px solid var(--line); display:flex; justify-content:space-between; color:var(--dim); font-size:.73rem; }
+/* Editor chrome (never printed) ------------------------------------- */
+.toolbar {
+  position: fixed; left: 50%; bottom: 1.1rem; transform: translateX(-50%); z-index: 20;
+  display: flex; align-items: center; gap: .35rem; padding: .35rem .45rem;
+  background: #141413; color: #eceae4; border-radius: 999px; font: 500 13px/1 var(--sans);
+  box-shadow: 0 6px 24px rgba(0,0,0,.18);
+}
+.toolbar button, .toolbar label {
+  font: inherit; color: inherit; background: transparent; border: 0; cursor: pointer;
+  padding: .5rem .7rem; border-radius: 999px; display: inline-flex; align-items: center; gap: .35rem;
+}
+.toolbar button:hover, .toolbar label:hover { background: #2a2a27; }
+.toolbar button.on { background: var(--accent); color: #fff; }
+.toolbar .div { width: 1px; height: 18px; background: #3a3a36; margin: 0 .15rem; }
+.toolbar .sw { width: 16px; height: 16px; padding: 0; border-radius: 50%; border: 2px solid transparent; }
+.toolbar .sw.on { border-color: #eceae4; }
+.toolbar input[type=color] { width: 18px; height: 18px; border: 0; padding: 0; background: none; cursor: pointer; }
+.toolbar .grp { display: none; align-items: center; gap: .25rem; }
+body.editing .toolbar .grp { display: inline-flex; }
+.toast {
+  position: fixed; left: 50%; bottom: 4.4rem; transform: translateX(-50%); z-index: 21;
+  background: #141413; color: #eceae4; font: 13px/1.3 var(--sans); padding: .55rem .9rem; border-radius: 6px;
+  opacity: 0; transition: opacity .25s; pointer-events: none;
+}
+.toast.show { opacity: 1; }
+
+body.editing .cv [contenteditable="true"] { outline: none; }
+body.editing .cv p:hover, body.editing .cv h1:hover, body.editing .cv h2:hover,
+body.editing .cv h3:hover, body.editing .cv h4:hover, body.editing .cv li:hover,
+body.editing .cv .rail:hover { box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 45%, transparent); border-radius: 2px; }
+.tile-tools, .add-tile { display: none; }
+body.editing .tile-tools {
+  display: flex; gap: .25rem; position: absolute; top: .4rem; right: .4rem; z-index: 3;
+}
+.tile-tools button, .add-tile {
+  font: 500 11px/1 var(--sans); background: #141413; color: #eceae4; border: 0; border-radius: 999px;
+  padding: .35rem .55rem; cursor: pointer;
+}
+body.editing .add-tile { display: inline-block; margin-top: 1rem; }
+
+
+@media(max-width:700px) { .cv { padding:2rem 1.3rem 6rem; } .entry { grid-template-columns:1fr; gap:.3rem; } .rail { display:flex; gap:.75rem; } .gallery { grid-template-columns:1fr; } .toolbar { max-width:calc(100vw - 1rem); overflow-x:auto; } .page-top { gap:1rem; } }
+@page { size:Letter; margin:.55in .65in; }
+@media print {
+ html { font-size:10.4pt; } body { --paper:#fff; --ink:#232522; --body:#3c403b; --dim:#656b63; --line:#d7d6cc; background:#fff !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+ .cv { padding:0; max-width:none; } .page { min-height:9.85in; } .page + .page { break-before:page; margin:0; padding:0; border:0; }
+ .masthead { padding-bottom:.7rem; } h1 { font-size:32pt; } .tagline { font-size:11.2pt; margin-top:.45rem; } .contact { font-size:8.6pt; margin-top:.6rem; } .lede { font-size:10.4pt; margin-top:.8rem; }
+ section { margin-top:1.05rem; } h2 { font-size:8.6pt; margin-bottom:.8rem; } .entry { grid-template-columns:6.4rem 1fr; gap:1rem; padding-bottom:.5rem; break-inside:avoid; }
+ .rail { font-size:8.4pt; } h3 { font-size:11.5pt; } .role { font-size:9.2pt; margin-bottom:.2rem; } .body,.entry ul { font-size:10.4pt; line-height:1.36; }
+ .education { padding-top:.75rem; padding-bottom:.6rem; } .honors { font-size:9pt; } .intro,.skills { font-size:10.4pt; } .tile { break-inside:avoid; } .tile p { font-size:10.4pt; line-height:1.36; } h4 { font-size:11pt; } .gallery { gap:1.15rem 1.6rem; } .footer { margin-top:auto; font-size:8pt; }
+ .toolbar,.toast,.tile-tools,.add-tile { display:none!important; }
+}
+
+.public-tools{max-width:900px;margin:auto;padding:1.5rem 3rem 0;display:flex;gap:2rem;font-size:.85rem;color:var(--dim)}.public-tools a{min-height:44px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:.3em}@media(max-width:700px){.public-tools{padding:1rem 1.3rem 0}}@media print{.public-tools{display:none}}
+</style></head><body><nav class="public-tools" aria-label="CV navigation"><a href="/work/">← Selected work</a><a href="ketigian-cv.pdf" download>Download CV ↗</a></nav><main class="cv" id="cv"><div class="page"><header class="masthead"><p class="eyebrow">Strategy · Operations · Communication</p><h1>Michael Ketigian</h1><p class="tagline">Brand and messaging strategist, engineer by training</p><p class="contact"><a href="mailto:m@mxm.ac">m@mxm.ac</a><a href="https://michaelxmachina.com/work/">michaelxmachina.com/work/</a><a href="https://linkedin.com/in/michaelxmachina">LinkedIn</a><span>Lisbon, Portugal</span></p><p class="lede">Brand and content consultant, operations leader and poet. Combines technical fluency with clear writing and experience leading teams to deliver client work.</p></header><section><h2>Professional experience</h2><article class="entry"><div class="rail"><div class="when">2020-present</div><div>Remote</div></div><div><h3>Symantic Studio</h3><p class="role">Owner/Operator, Independent Consultant</p><ul><li>Brand, content and product strategy and copywriting. Technology clients include Astroscale, Ursa Major, Matter Venture Partners, Meritech Capital, Merlyn Mind, OfferFit, Civic and Veryfi.</li><li>Everyday Dose, 2021-2026 recurring engagements: brand/messaging lead and operations for the functional coffee company.</li></ul></div></article><article class="entry"><div class="rail"><div class="when">2018-2019</div><div>Remote</div></div><div><h3>Good Market</h3><p class="role">Project Manager, Operations</p><p class="body">Sourced and managed a distributed software development team to launch a nonprofit digital marketplace for people-and-planet-first businesses.</p></div></article><article class="entry"><div class="rail"><div class="when">2016-2018</div><div>Colombo</div></div><div><h3>Independent Consultant</h3><p class="role">Branding, Writing &amp; Operations</p><p class="body">Branding and copywriting, freelance journalism, and the launch and management of a coworking space with a local partner.</p></div></article><article class="entry"><div class="rail"><div class="when">2013-2015</div><div>New York</div></div><div><h3>Hackerati</h3><p class="role">Director of Operations</p><p class="body">Led business development, marketing, recruiting and events, reporting to the cofounders. The software consultancy served Huffington Post, Viacom, SMEs and startups.</p><p class="body">Led Agile engineering and design teams as a Scrum-certified project manager. Coordinated and presented at two UN events.</p></div></article><article class="entry"><div class="rail"><div class="when">2012</div><div>New York</div></div><div><h3>Mini-Circuits</h3><p class="role">RF &amp; Microwave Engineer</p><p class="body">Developed and tested RF and microwave components for a global manufacturer.</p></div></article></section><section class="education"><h2>Education</h2><article class="entry"><div class="rail"><div class="when">2012</div><div>New York</div></div><div><h3>The Cooper Union for the Advancement of Science and Art</h3><p class="role">Bachelor of Science in Engineering</p><p class="body">Focus on electrical engineering and integrated systems.</p><p class="honors">Full-tuition scholarship · Dean's List</p></div></article></section><p class="footer"><span>Michael Ketigian</span><span>1 / 2</span></p></div><div class="page"><div class="page-top"><span>Michael Ketigian</span><span>Independent work &amp; communication</span></div><section><h2>Areas of practice</h2><p class="skills">Brand and content strategy · Copywriting · Business development · Operations · Engineering team management · Agile project delivery · Public speaking and performance · AI workflow design</p></section><section><h2>Independent AI systems work</h2><article class="entry"><div class="rail"><div class="when">2026</div><div>Lisbon</div></div><div><h3>neXus</h3><p class="role">Independent project, product owner &amp; architect</p><p class="body">Directs AI agents as an engineering team to develop an orchestration and project-management system. Sets goals, designs workflows and verifies results; agents write the code.</p><ul><li>Experiments with multi-provider continuity, local voice interaction, session tracking and records of which agent produced work.</li><li>Studies failures in everyday use, including incomplete work reported as finished and drift from instructions, and tests human oversight and review processes.</li></ul></div></article></section><section><h2>Selected performances &amp; talks</h2><p class="intro">Poetry and rap at technology, climate and impact forums, 2014-present. Turns complex ideas and live discussions into language an audience can follow.</p><div class="gallery" id="gallery"><a class="tile" href="https://www.youtube.com/watch?v=hRJ65o_pL0k&amp;t=2059s" target="_blank" rel="noopener"><figure class="thumb"></figure><span class="yr">Jan 2025</span><h4>Climate Hub, Davos</h4><p>"Regenerative Roadshow," a performative keynote led by Chad Frischmann of Project Drawdown and RegenIntel. Served as his rap translator.</p></a><a class="tile" href="https://www.youtube.com/watch?v=3vpj7Xq4Ip4" target="_blank" rel="noopener"><figure class="thumb"></figure><span class="yr">2020</span><h4>UN General Assembly</h4><p>Composed a live Rap Up during the main Digital Cooperation event and performed it as the closing.</p></a><div class="tile"><figure class="thumb"></figure><span class="yr">2019</span><h4>UN General Assembly</h4><p>Opening rap at the SDG Action Zone and Rap Up at the SDG Media Zone, New York.</p></div><a class="tile" href="https://ideaweek2019.sched.com/moderator/m214" target="_blank" rel="noopener"><figure class="thumb"></figure><span class="yr">2019</span><h4>IDEA Week, Notre Dame</h4><p>Moderated a blockchain and entrepreneurship panel. Performed a Rap Up opening for Bill Nye.</p></a><a class="tile" href="https://www.youtube.com/watch?v=5OIPL1Wc6g0" target="_blank" rel="noopener"><figure class="thumb"></figure><span class="yr">2016</span><h4>TEDxColombo</h4><p>"Unleash Your Inner Artist," Colombo, Sri Lanka.</p></a><a class="tile" href="https://michaelxmachina.com/work/" target="_blank" rel="noopener"><figure class="thumb"></figure><span class="yr">Selected work</span><h4>Selected client work</h4><p>Brand and content work for technology companies at michaelxmachina.com/work/.</p></a></div></section><p class="footer"><span>m@mxm.ac · michaelxmachina.com/work/</span><span>2 / 2</span></p></div></main>
+</body></html>

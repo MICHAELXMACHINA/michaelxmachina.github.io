@@ -9,6 +9,32 @@ tags: [mxm-site, portfolio, iteration-log]
 
 # /work — iteration log
 
+## Ready to publish, 2026-09-30 04:51 WEST
+
+Codex `01a0f04a-ec53-7b00-91e5-fa68140faedc`, gpt-6.1-sol/high, exact session metadata and turn-context witness. Michael resumed implementation after the model/scope discussion. Existing authorization covers portfolio/CV checkpoints and portfolio publication; no application submission or correspondence.
+
+- Refined the existing editorial page, preserving Symantic Studio, client order, image proportions and the homepage. Shorter strategy/storytelling headline, clearer byline/subline, contact links, CV navigation, skip link and sharing metadata. Compressed case/service prose against supplied facts, removed unsupported product-health promises and vague industry-superiority phrasing. Snapshot: `versions/2026-09-30-refined.html`.
+- CV production: native Sol 6.1/medium, witnessed child `01a0f057-00fe-7a92-9ff4-0ac20d3e0e7a`. General and Growth & Advocacy variants each have two tagged Letter pages, embedded fonts and 10.4pt body. Parent visually reviewed all four pages and inspected extracted text. Public copies in `/cv/` contain only the static general CV and the two PDFs. Editable sources remain at `/Users/mac/cortex/action/positioning/cv/`.
+- Private application packet: `/Users/mac/cortex/action/positioning/good-impressions/application-prep.html`. Official current role/form requirements, draft answers, authentic-sample selection guidance and a short video outline. No EA affiliation, advertising expertise, results metrics, availability or start date invented. Public form exposes page 1 of 2; further requirements may remain.
+- Models actually used: Luna/medium source discovery, `01a0f04c-6d7c-71f0-9b62-347c81580f88`; selective Opus 5.5/high judgment, `abc8169c-beb5-4254-9ac6-553c89147c97`, actual model confirmed by CLI modelUsage, effort requested/env-declared. Parent accepted useful readability/client-focus suggestions and rejected unverified universal AI-safety/commit-count claims. Michael offered the 80,000 Hours Fable assistant; URL/login remain pending. No further Opus use or external assistant prompts occurred.
+- Browser evidence: actual 375px and 1280px layouts showed no document overflow. Both services open via Enter/Space with a visible focus outline. All nine project images, static CV and PDFs return HTTP200 locally. Editor toggles59 contenteditable regions, then returns to reading. Exact768/1440 overrides did not take effect and are not counted as current passes. Portable-save browser automation timed out; the retained download code was inspected but no automated download result is claimed. PDF production itself is verified.
+- Search repair separately completed by user-requested Sol6.1/high, `01a0f052-9f3c-7222-838b-0861d90abfad`. Root cause: client hardcoded private-network address while service listened on loopback. Original topic command and a selected Claude source page were independently recovered. Worker59 targeted tests passed. No service restart, bind/auth change or search-fix commit. Record: `/Users/mac/cortex/ops/observatory/SESSION-CATCHUP.md`.
+- Storage interruption resolved under Michael's cleanup authority. No local TimeMachine snapshots existed. Cleared generatedGo compiler cache, freeingabout1.8GB. Remotion, animation sources and finished videos untouched.
+
+Next: commit the scoped portfolio/CV outputs, publish the existing GitHubPages main branch, verify live artifact bytes/status, and record the deployment. Tomorrow Michael reviews details, selects/redacts actual sent writing samples, records his video, confirms factual answers and submits the application.
+
+
+## Awaiting scope and model agreement, 2026-09-30 04:18 WEST
+
+Codex `01a0f04a-ec53-7b00-91e5-fa68140faedc`, gpt-6.1-sol/high, exact runtime witness. Michael steered the active request: discuss the intended work and decide which models to use before further implementation. Implementation and publication are held pending that agreement; this is a conversation checkpoint, not a native paused Goal.
+
+Completed: baseline site commit `d0d5e01` preserves the prior September portfolio edits and a pre-refinement snapshot. Cortex CV baseline commit `aee1f68` preserves the September 25 CV and editable HTML snapshot. The root repository was not pushed. `work/index.html` has an uncommitted local first pass: shorter strategy/storytelling headline, revised subline, Michael byline, contact links, CV navigation, skip link, canonical/social metadata and a clarified Astroscale caption. The CV destination is not installed yet, so this draft must not be published as complete. CV authoring and PDF export have not begun.
+
+Luna/medium research completed and was verified through exact worker session metadata. The official Good Impressions form asks for actual previously sent email/Slack writing samples, so a newly invented application sample would not satisfy that request. Original samples must be selected and redacted with Michael. The live form also offers a separate AI Risk application that can opt into both roles; no role choice has been made. Main role evidence: https://www.goodimpressionsmedia.com/jobs/engagement-manager and https://forms.goodimpressionsmedia.com/engagement-manager, checked September 30.
+
+Observatory search at `http://100.126.14.35:8799/api/recall` refused all three provider requests; this is an endpoint connection failure, not evidence that transcripts are absent. No service restart was attempted. Browser preview connected successfully after starting scoped loopback-only local servers on ports 8123 and 8124; previews showed the existing assets. No post-edit responsive checks or PDF review have run. Next action: agree the work split/models with Michael, then resume the authorized design and application preparation. No application submission or external correspondence is authorized.
+
+
 ## Overnight continuation, 2026-09-30 04:15 WEST
 
 Codex session `01a0f04a-ec53-7b00-91e5-fa68140faedc`, gpt-6.1-sol/high, exact session metadata and turn-context witness.

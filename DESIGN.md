@@ -154,3 +154,8 @@ Archivo, image proportions, and existing marquee algorithm.
   translation so a suspended animation cannot make the text faint.
 - Existing versions remain historical comparisons; no new variant is needed for this pass.
 - Landing page remains unchanged at Michael’s explicit request.
+
+
+## Publication refinement, 2026-09-30 04:51 WEST
+
+Codex `01a0f04a-ec53-7b00-91e5-fa68140faedc`, gpt-6.1-sol/high, exact runtime witness. Michael authorized editorial/aesthetic discernment and publication. The quiet near-black Archivo/Work Sans direction stays in force. Header navigation now includes Services, Work and CV. The hero adds a restrained Michael Ketigian byline and text links for projects/contact. The footer adds professional contact and a CV download. Homepage content remains unchanged under his prior specific decision. Case descriptions are concise factual statements; corporate superlatives and unsubstantiated beverage-health claims are removed. The headline's purpose-driven positioning is retained as an editorial choice for review tomorrow. Public CV uses the related paper/terracotta design; sources remain privately editable.
