@@ -9,6 +9,166 @@ tags: [mxm-site, portfolio, iteration-log]
 
 # /work — iteration log
 
+## Overnight continuation, 2026-09-30 04:15 WEST
+
+Codex session `01a0f04a-ec53-7b00-91e5-fa68140faedc`, gpt-6.1-sol/high, exact session metadata and turn-context witness.
+
+Michael requested aesthetic and editorial improvements to the portfolio and CV, authorized saved snapshots and commits, and asked for the portfolio to be live by morning. This supersedes the earlier creative-review and publication gates for this pass. The homepage stays unchanged under his earlier explicit decision. Application preparation is authorized; submission and correspondence are not.
+
+Recovered the September 25 portfolio and CV sources locally. Observatory topic search is unavailable because its service refused the connection. Preserved the pre-refinement portfolio in `versions/2026-09-30-before-refinement.html` and CV HTML in `/Users/mac/cortex/action/positioning/cv/versions/2026-09-25-before-refinement.html`. Good Impressions research is a bounded read-only native Luna/medium assignment, `/root/job_research`, witnessed worker session `01a0f04c-6d7c-71f0-9b62-347c81580f88`. Current official job and form were inspected by the supervisor.
+
+Next: refine the portfolio within its existing design, rebuild the CV with client experience first, prepare unsent application drafts, verify browser/PDF output and publish through the existing GitHub Pages repository.
+
+
+## Technical review complete, 2026-09-25 16:43 WEST
+
+Provider: codex; PSID: 01a0c4df-7da9-7c61-9d4f-d655c4b7a0d7.
+Model: gpt-5.6-sol; reasoning: medium, fixed. Coordinating Codex session
+01a0d92e-74d2-7c21-9aa5-895d07fae62b independently verified the exact session_meta
+and turn_context for turn 01a0d936-9bc0-7100-af99-e7368c152552 after completion.
+This corrects the worker's initial generic model label and unknown effort.
+
+The revised local page is ready for Michael's design and copy review. This pass changed only
+`work/index.html` and this existing project record. `DESIGN.md` retains the September 21
+design decisions. The homepage remains unchanged. Nothing was committed, pushed, or published.
+
+### Exact viewport evidence
+
+| Width | Document width | Main layout | Result |
+|---|---:|---|---|
+| 375 CSS px | 375 px | Services, captions, Also grid, and Civic each use one column | Pass |
+| 768 CSS px | 768 px | Services and Also use two columns; featured captions use 278 / 402 px | Pass |
+| 1440 CSS px | 1440 px | 1080 px content wrap; 1440 px Astroscale image; two-column captions and Also grid | Pass |
+
+At all three widths, `scrollWidth` equalled `clientWidth`. No page-level horizontal overflow
+was present. The marquee remains the only intentionally wide internal track. All nine project
+images loaded, no `.ask` markers remained, and the browser reported no warnings or errors.
+
+### Interaction and visual review
+
+- At 375 px, both service disclosures began closed and opened through keyboard activation.
+  Enter opened Brand Strategy. Space opened Content. Focus remained on the active `summary`,
+  the focus outline was visible, and the document stayed 375 px wide with both panels open.
+- The full project sequence was inspected in viewport screenshots at phone, tablet, and desktop
+  sizes: Astroscale, Matter, Everyday Dose, Ursa Major, Meritech, OfferFit, Merlyn Mind,
+  Veryfi, Civic, and the footer.
+- A full-page phone screenshot repeated sections while stitching lazy-loaded content. DOM
+  measurements showed one instance of every project and a 6210 px document. Viewport screenshots
+  confirmed the page itself does not duplicate content.
+
+### Defects fixed during review
+
+- Service-role separators could wrap onto a line by themselves, most visibly before
+  `Operations` on the Everyday Dose phone layout. Each role is now a separate span. CSS adds
+  commas to the preceding item, so wrapping cannot strand a separator.
+- The first attempted balanced-text fix still produced a leading separator at 768 and 1440 px.
+  The span-based comma treatment replaced it and was rechecked at all three exact widths.
+
+### Review packet
+
+The remaining decisions are creative, not technical:
+
+1. Approve or revise Route A: "Authentic branding and content for purpose-driven companies."
+2. Approve or revise the current hero subline.
+3. Approve or revise the supplied Matter description.
+4. Approve the overall page design and content treatment.
+5. If approved, separately authorize a commit. Publishing still requires an explicit push request.
+
+Michael's settled choices remain in force: Symantic Studio header, Astroscale 2024-2025,
+homepage unchanged, supplied project copy and case-study links, and no further marquee review
+without new evidence from his browser.
+
+## Follow-up — 2026-09-21 20:29 WEST
+
+Provider: codex; PSID: 01a0c4df-7da9-7c61-9d4f-d655c4b7a0d7
+(environment-witnessed earlier in this session); exact effective model/reasoning unknown.
+
+Michael explicitly chose to **keep Route A, the hero subline, and the Matter description
+provisional for review**. These are not approved final copy choices.
+
+Michael is AFK and asked the agent to reopen the preview itself. The agent retried
+`preview_open` with a fresh tab: the tool reports no preview automation host. Computer Use
+confirmed T3 Code is running, but its `get_app_state` request has not returned. The local
+portfolio server still returns HTTP 200. Responsive/interaction checks remain unverified;
+no requirement for Michael to operate the UI has been added. No site content, homepage,
+commit, or publication change in this follow-up.
+
+## Current review — 2026-09-21 17:57 WEST
+
+Provider: **codex**; PSID: **01a0c4df-7da9-7c61-9d4f-d655c4b7a0d7**
+(environment-witnessed). Effective model and reasoning level: **unknown**;
+no exact runtime witness was available. Original Claude authorship below is preserved.
+
+**Current state: revised local page, not published.** Michael superseded the earlier
+“only five decisions / no redesign” constraint: he requested a header, stronger readability,
+a better service layout, and reconciliation of his pasted project copy without invented copy.
+
+### Michael’s decisions and working choices
+
+1. **Headline:** Michael is leaning toward Route A. Retained “Authentic branding and content
+   for purpose-driven companies.” Final copy confirmation requested, not yet received.
+2. **Hero subline:** existing option 1 retained provisionally. No new subline invented.
+3. **Astroscale dates:** Michael explicitly supplied **2024–2025**; applied, `.ask` removed.
+4. **Matter:** Michael supplied the full HardTech / AI infrastructure description; applied
+   verbatim. Current portfolio and Dakotomy case study support the focus. Confirmation that
+   the supplied line closes this decision is pending with the headline/subline review.
+5. **Landing link:** Michael explicitly chose **leave the landing page unchanged**.
+   The old acceptance requirement for a homepage link is therefore superseded. No `/work/`
+   homepage link was added; direct access is intentional for this pass.
+
+**Header:** Michael explicitly chose **Symantic Studio**. This supersedes “no header” and
+“not Symantic Studio” below. Footer uses his supplied “Authentic brands grounded in purpose.”
+
+### Applied changes
+
+- Retained Archivo and the near-black editorial layout. Raised body/secondary text contrast
+  and body weight to 400. Copy is fully opaque even while entrance motion runs.
+- Brand Strategy and Content are native, initially closed disclosures. Their component
+  headings remain visible; users expand the details themselves. No scroll-triggered expansion.
+- Project captions separate company/industry/role from description, collaboration credit,
+  case-study link and dated news. Preserved featured order and the full-width lead image.
+- Restored supplied project prose and all seven case-study links. Corrected Merlyn’s pasted
+  OfferFit destination to the Merlyn case study; corrected Civic’s pasted Merlyn destination
+  to the Civic case study, after inspecting both destinations.
+- Added Civic after the existing Also entries using its existing local image, per supplied copy.
+  Otoy remains marquee-only. The existing marquee algorithm was not changed or re-litigated.
+- Latest supplied Everyday Dose wording supersedes the previous compressed Years 1–3 / Year 5
+  text. Operations Years 1 & 2 and the science-first voice point are now explicit.
+- Project images have intrinsic dimensions and lazy loading. No image replacements.
+- No change to landing `index.html`, no commit, no push. Separate repo retained; recommendation
+  is to keep its independent publishing history, not migrate it during portfolio work.
+
+### Verification and remaining work
+
+Observed before the preview connection dropped: updated desktop header, hero, collapsed
+services, marquee band and Featured Projects render clearly. A service-summary click was
+accepted by the preview tool; its resulting state still needs readback. Last measured layout
+was **1728 CSS px**, with document scroll width also 1728; the host scaled the requested size.
+**Do not count that as the requested 1440px check.**
+
+- HTML nesting and anchor targets checked; no duplicate IDs or `.ask` markers.
+- Text contrast: secondary >= **7.62:1**, body >= **11.16:1**, heading >= **16.37:1**
+  against both page grounds (calculated from the CSS colors).
+- `/work/` and all nine local project images return HTTP 200.
+- All seven external case-study destinations return HTTP 200 (redirects followed).
+- Automated requests to Everyday Dose and Ursa Major return 403; SpaceNews and VentureBeat
+  return 429. Their supplied URLs are retained; these responses are not evidence of 404s.
+- Preview host disconnected mid-check. Exact **375 / 768 / 1440** measurements, expanded
+  mobile disclosures, complete project-section visual review, and keyboard activation remain
+  to be verified after reconnect. Michael has been asked to reopen the preview.
+- Copy approval is pending; no publication requested. Commit and push each still need approval.
+
+Sources checked September 21: [Matter portfolio](https://www.mattervp.com/portfolio),
+[Matter case study](https://dakotomy.com/work/matter),
+[Merlyn case study](https://future.works/case-studies/merlynmind/),
+[Civic case study](https://future.works/case-studies/civic/).
+
+Next action: finish responsive and interaction QA, receive copy/design feedback, then prepare
+approved explicit paths for commit only if Michael authorizes it. Publishing requires his
+explicit push instruction in this session. Linear M-60 updated with an append-only status comment at 17:59 WEST and read back successfully: comment `1ee3b208-3498-4568-97af-a5aa634b5c5d`, manager operation `op_297d54fc7c3b914d`. Issue status/priority were not changed; work is not claimed complete.
+
+---
+
 ## Overnight summary — 2026-09-01, passes 01-55 to 05-11
 
 Seven queue items, all complete. Nine commits. Nothing pushed. **Live `index.html` untouched.**
@@ -76,19 +236,21 @@ Snapshots: `work/versions/` — open any of them directly to compare.
 - **Audience:** people M is already in conversation with, or fellowship/grant/job applications. The page confirms, it doesn't convince.
 - **One belief:** he's done this work for serious companies and the work was good.
 - **No argument apparatus.** Present the work, let it speak. Killed: "the problem / the move", "same job higher stakes", the milestones caveat.
-- **Not "Symantic Studio"** at the top — company renaming to michaelXmachina eventually. No header for now.
+- ~~**Not "Symantic Studio"** at the top; no header.~~ Superseded 2026-09-21: Michael explicitly chose a Symantic Studio header.
 - **Title Case** everywhere except sentences.
 - **Featured Projects** (not Featured Work).
-- **Client order:** Astroscale, Matter, Everyday Dose, Ursa Major featured; Meritech, OfferFit, Merlyn Mind, Veryfi in Also; Otoy in marquee only.
+- **Client order:** Astroscale, Matter, Everyday Dose, Ursa Major featured; Meritech, OfferFit, Merlyn Mind, Veryfi in Also; Otoy in marquee only. September 21 supplied copy adds Civic after the existing Also entries.
 
 ## Open — needs M
 
-- [ ] **Headline.** Three comparable full pages now live at `work/versions/` — open `versions/index.html` first. Current: "Authentic branding and content for purpose-driven companies." M is chewing on branding+content vs strategy+storytelling, and on having two modifier pairs. See analysis below.
-- [ ] **Hero subline.** Five options drafted; option 1 is live.
-- [ ] **Astroscale years** — the only remaining `.ask` marker on the page.
-- [ ] **Matter one-liner** — M wants their thesis described beyond "backed by Kleiner Perkins". Needs their portfolio checked.
-- [ ] **Landing page link — DECISION NEEDED.** Compare `versions/landing-current.html` against `versions/landing-with-work-link.html`. Two sub-decisions: (a) does the past-work block come back at all (M hid it deliberately on 2026-07-13); (b) "technical poetry" pointed at `inverseK.com/services`, which is now a 404 for a deprecated identity — drop it, or repoint it where? Note this touches the live homepage of michaelxmachina.com, so it stays unadopted until M says.
-- [x] ~~**Font**~~ — Archivo, locked in `DESIGN.md`. Was: Archivo is the current pick after Instrument Serif was rejected as "too curvy and tall". Alternates: Newsreader, Bricolage Grotesque, Work Sans at extreme weights.
+- [ ] **Headline:** Route A retained in line with Michael’s stated leaning; final confirmation pending.
+- [ ] **Hero subline:** option 1 retained; final confirmation pending.
+- [x] ~~**Astroscale years**~~ — Michael confirmed **2024–2025**, September 21; applied.
+- [ ] **Matter one-liner:** Michael’s supplied HardTech / AI infrastructure copy applied;
+  supporting sources checked; confirmation that this closes the decision is pending.
+- [x] ~~**Landing page link**~~ — Michael explicitly chose **leave the landing page unchanged**,
+  September 21. No link added; earlier requirement for one is superseded by this choice.
+- [x] ~~**Font**~~ — Archivo retained. Readability colors and body weight revised at Michael’s request.
 
 ## The naming problem (M's open question)
 
@@ -103,7 +265,7 @@ Current headline stacks two pairs: *authentic* + *purpose-driven* (modifiers), *
 
 ## Known issues
 
-- **Marquee auto-scroll unverified.** Rebuilt as a real scroll container (drag/scroll left-right, no hover snap-back). Could not confirm motion — the browser pane was hidden, which suspends `requestAnimationFrame` and reports zero width. **Check this first.**
+- **Marquee question closed by Michael’s September 21 handoff.** DOM writes and wrap logic were proven in the earlier browser investigation; hidden-pane frame suspension is not a page bug. Do not reopen without new evidence from Michael’s own browser. Historical notes below preserve the earlier uncertainty.
 - Braze logo is the only raster (PNG); soft if the band ever scales up.
 - Meritech + Braze ship dark-only logos, so the whole band is forced white via CSS filter. Ursa Major's orange and Matter's green are flattened as a side effect.
 
