@@ -17,233 +17,239 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* Direction A: Client Worlds. The page chrome is neutral; every client panel carries its own sampled palette. */
+/* Client Worlds v2. The page is neutral graphite; each client panel carries a palette sampled from that client's own site. */
 :root{
-  --paper:#0f1011;--raised:#17191a;--ink:#f4f4f0;--body:#c9cbc6;--dim:#9b9e98;--line:#2b2d2e;
+  --ground:#121314;--ground-2:#1a1b1d;--ink:#f2f2ef;--body:#c9cac6;--dim:#9a9b97;--line:#2c2d30;
   --display:"Archivo",Arial,sans-serif;--sans:"Work Sans",Arial,sans-serif;--max:1280px;
-  /* three small sizes only */
-  --xs:.875rem;--sm:1rem;--md:1.125rem;
+  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;--s10:128px;
+  --gutter:48px;
+  --ease:cubic-bezier(.16,1,.3,1);
+  /* the only type sizes */
+  --t-hero:clamp(3rem,7vw,6rem);--t-section:clamp(2.25rem,4.5vw,3.75rem);--t-panel:clamp(2rem,3.4vw,3rem);
+  --t-strip:1.25rem;--t-lead:1.125rem;--t-body:1rem;--t-small:.875rem;
+  interpolate-size:allow-keywords;
+  color-scheme:dark;
+  scrollbar-color:#3d3e41 var(--ground);
+  caret-color:var(--ink);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;background:var(--paper);color:var(--body);font:400 var(--sm)/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit;text-underline-offset:.25em}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;background:var(--ground);color:var(--body);font:400 var(--t-body)/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
 img{max-width:100%;display:block}
 p,h1,h2,h3,h4,figure,ul{margin:0}
-.wrap{width:min(calc(100% - 6rem),var(--max));margin-inline:auto}
+ul{padding:0;list-style:none}
+p{text-wrap:pretty}
+h1,h2,h3,h4{text-wrap:balance}
+::selection{background:var(--ink);color:var(--ground)}
+.wrap{width:min(calc(100% - 2 * var(--gutter)),var(--max));margin-inline:auto}
 :focus-visible{outline:2px solid var(--ink);outline-offset:4px}
-.skip-link{position:fixed;top:-100px;left:1rem;z-index:30;background:var(--ink);color:var(--paper);padding:1rem}
-.skip-link:focus{top:1rem}
+.skip-link{position:fixed;top:-100px;left:var(--s4);z-index:30;background:var(--ink);color:var(--ground);padding:var(--s4)}
+.skip-link:focus{top:var(--s4)}
 
-/* Display type: Archivo, slightly expanded */
-.display,h1,h2,h3{font-family:var(--display);font-stretch:112%;font-weight:600;color:var(--ink)}
+/* icons: three drawn SVGs, one stroke */
+.icon{width:1em;height:1em;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.125em}
+.chev{font-size:1.5rem;transition:transform .3s var(--ease)}
+details[open]>summary .chev{transform:rotate(180deg)}
 
-/* Chrome */
-.site-header{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
-.site-nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
-.wordmark{display:inline-flex;gap:.75rem;align-items:center;color:var(--ink);text-decoration:none;font:600 1.125rem/1.2 var(--display);font-stretch:112%;letter-spacing:-.02em;min-height:44px;white-space:nowrap}
-.studio-mark{display:inline-grid;place-items:center;background:var(--ink);color:var(--paper);height:28px;width:28px;font-size:1rem;font-weight:700}
-.nav-links{display:flex;align-items:center;gap:1.75rem;font-size:var(--xs)}
+/* display type */
+h1,h2,h3{font-family:var(--display);font-stretch:112%;font-weight:600;color:var(--ink);letter-spacing:-.03em}
+
+/* chrome */
+.site-header{position:sticky;top:0;z-index:20;background:var(--ground);border-bottom:1px solid var(--line)}
+.site-nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:var(--s5)}
+.wordmark{display:inline-flex;gap:var(--s3);align-items:center;color:var(--ink);text-decoration:none;font:600 var(--t-lead)/1.2 var(--display);font-stretch:112%;letter-spacing:-.02em;min-height:44px;white-space:nowrap}
+.studio-mark{display:inline-grid;place-items:center;background:var(--ink);color:var(--ground);height:28px;width:28px;font-size:var(--t-body);font-weight:700;letter-spacing:0}
+.nav-links{display:flex;align-items:center;gap:var(--s5);font-size:var(--t-small)}
 .nav-links a{white-space:nowrap;display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--body)}
 .nav-links a:hover{color:var(--ink)}
-.nav-links .nav-contact{color:var(--ink);border:1px solid var(--ink);padding:0 1rem;min-height:44px}
-.nav-links .nav-contact:hover{background:var(--ink);color:var(--paper)}
+.nav-links .nav-contact{color:var(--ink);border:1px solid var(--ink);padding:0 var(--s4)}
+.nav-links .nav-contact:hover{background:var(--ink);color:var(--ground)}
 
-/* Hero */
-.hero{padding:5.5rem 0 4.5rem}
-.hero h1{font-size:clamp(3rem,8.3vw,7.6rem);line-height:.96;letter-spacing:-.05em;font-weight:650}
+/* hero */
+.hero{padding:var(--s9) 0 var(--s9)}
+.hero h1{font-size:var(--t-hero);line-height:1;font-weight:600}
 .hero h1 span{color:var(--dim)}
-.hero-bottom{margin-top:2.25rem}
-.clarify{font-size:1.375rem;line-height:1.5;max-width:40ch;color:var(--ink)}
-.project-index{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:4rem}
-.index-item{display:flex;flex-direction:column;min-width:0;text-decoration:none;background:var(--bg);color:var(--ink);overflow:hidden}
-.index-visual{overflow:hidden;aspect-ratio:1.96;background:var(--bg)}
-.index-visual img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
-.index-item:hover img{transform:scale(1.03)}
-.index-label{display:flex;justify-content:space-between;gap:.5rem;padding:.8rem 1rem .9rem;font-size:var(--xs);line-height:1.35;font-weight:500;flex:1}
-.index-label span:last-child{color:var(--acc);white-space:nowrap}
-.index-item:focus-visible{outline-color:var(--ink);outline-offset:4px}
+.clarify{margin-top:var(--s6);font-size:var(--t-lead);line-height:1.6;max-width:44ch;color:var(--ink)}
+.project-index{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s4);margin-top:var(--s8)}
+.mini{display:flex;flex-direction:column;min-width:0;text-decoration:none;overflow:hidden}
+.mini-shot{overflow:hidden;aspect-ratio:2/1}
+.mini-shot img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s var(--ease)}
+.mini:hover img{transform:scale(1.03)}
+.mini-label{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);padding:var(--s3) var(--s4);min-height:48px;font-size:var(--t-small);line-height:1.35;font-weight:500;color:var(--p-ink)}
+.mini-label .icon{color:var(--p-dim)}
 
-/* Client palettes: sampled from each screenshot, every pair checked to WCAG AA */
-.w-astro{--bg:#080d18;--ink:#f6efe9;--body:#cdc7c4;--dim:#a39da0;--acc:#f28b3d;--line:#273046}
-.w-matter{--bg:#e9ecdf;--ink:#20291c;--body:#34402d;--dim:#56634e;--acc:#405d22;--line:#bcc5af}
-.w-dose{--bg:#f2e6ee;--ink:#271a25;--body:#43303f;--dim:#6f5a69;--acc:#5a34c2;--line:#dcc5d4}
-.w-ursa{--bg:#e6d3b9;--ink:#2b1a10;--body:#43301f;--dim:#66503c;--acc:#8f3913;--line:#cbb393}
-.w-meritech{--bg:#111b21;--ink:#f1f5f4;--body:#c6d0d1;--dim:#9fb0b3;--acc:#79d2bf;--line:#26373e}
-.w-offerfit{--bg:#2c0f4d;--ink:#f6eefc;--body:#d9c9ea;--dim:#b9a2d3;--acc:#ff9a7d;--line:#4b2a73}
-.w-merlyn{--bg:#2a211c;--ink:#f6eee8;--body:#d5c9c0;--dim:#b0a196;--acc:#ff8c6e;--line:#47382f}
-.w-veryfi{--bg:#141a35;--ink:#eff2fb;--body:#c5cce2;--dim:#9ea8cc;--acc:#74e0aa;--line:#2c3562}
-.w-civic{--bg:#f1eeee;--ink:#1c1c22;--body:#35353d;--dim:#5c5c66;--acc:#a8421f;--line:#d9d3d3}
+/* client palettes: sampled from each client's own site, every pair checked to WCAG AA */
+.w-astro{--p-bg:#080d18;--p-ink:#f6efe9;--p-body:#cdc7c4;--p-dim:#a39da0;--p-accent:#f28b3d;--p-line:#273046}
+.w-matter{--p-bg:#e9ecdf;--p-ink:#20291c;--p-body:#34402d;--p-dim:#56634e;--p-accent:#405d22;--p-line:#bcc5af}
+.w-dose{--p-bg:#f2e6ee;--p-ink:#271a25;--p-body:#43303f;--p-dim:#6f5a69;--p-accent:#5a34c2;--p-line:#dcc5d4}
+.w-ursa{--p-bg:#e6d3b9;--p-ink:#2b1a10;--p-body:#43301f;--p-dim:#66503c;--p-accent:#8f3913;--p-line:#cbb393}
+.w-meritech{--p-bg:#111b21;--p-ink:#f1f5f4;--p-body:#c6d0d1;--p-dim:#9fb0b3;--p-accent:#79d2bf;--p-line:#26373e}
+.w-offerfit{--p-bg:#2c0f4d;--p-ink:#f6eefc;--p-body:#d9c9ea;--p-dim:#b9a2d3;--p-accent:#ff9a7d;--p-line:#4b2a73}
+.w-merlyn{--p-bg:#2a211c;--p-ink:#f6eee8;--p-body:#d5c9c0;--p-dim:#b0a196;--p-accent:#ff8c6e;--p-line:#47382f}
+.w-veryfi{--p-bg:#141a35;--p-ink:#eff2fb;--p-body:#c5cce2;--p-dim:#9ea8cc;--p-accent:#74e0aa;--p-line:#2c3562}
+.w-civic{--p-bg:#f1eeee;--p-ink:#1c1c22;--p-body:#35353d;--p-dim:#5c5c66;--p-accent:#a8421f;--p-line:#d9d3d3}
+.mini,.panel,.card{background:var(--p-bg);color:var(--p-body)}
+.mini :focus-visible,.panel :focus-visible,.card :focus-visible,.mini:focus-visible{outline-color:var(--p-ink)}
+.mini ::selection,.panel ::selection,.card ::selection{background:var(--p-ink);color:var(--p-bg)}
+.mini::selection{background:var(--p-ink);color:var(--p-bg)}
 
-/* Section titles */
-.section-title{font-size:clamp(2.75rem,6vw,5.25rem);line-height:1;letter-spacing:-.045em;font-weight:650}
+/* section titles */
+.section-title{font-size:var(--t-section);line-height:1.05;font-weight:600}
 
-/* Services */
-.services{padding:5rem 0 5rem;border-top:1px solid var(--line)}
-.offering{margin-top:3rem}
-.service{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.6fr);gap:3rem;padding:2.5rem 0;border-top:1px solid var(--line)}
-.service h3{font-size:clamp(1.75rem,2.6vw,2.375rem);line-height:1.05;letter-spacing:-.035em}
-.service-sub{margin-top:.75rem;font-size:var(--sm);color:var(--dim);max-width:26ch}
-.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.5rem}
-.tier h4{font:600 var(--md)/1.25 var(--sans);color:var(--ink);margin-bottom:.5rem}
-.tier .says{font-size:var(--sm);color:var(--body);max-width:30ch}
-.tier ul{list-style:none;padding:0;margin-top:1.25rem;font-size:var(--sm);color:var(--dim)}
-.tier li{padding:.55rem 0;border-top:1px solid var(--line)}
+/* services */
+.services{padding:var(--s9) 0;background:var(--ground-2);border-block:1px solid var(--line)}
+.offering{margin-top:var(--s7);border-top:1px solid var(--line)}
+.service{border-bottom:1px solid var(--line)}
+.service summary{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,5fr) auto;align-items:center;gap:var(--s5);min-height:56px;padding:var(--s6) 0;cursor:pointer;list-style:none;color:var(--ink)}
+.service summary::-webkit-details-marker{display:none}
+.service summary h3{font-size:var(--t-panel);line-height:1.05}
+.tier-names{display:flex;flex-wrap:wrap;gap:var(--s1) var(--s5);font-size:var(--t-body);color:var(--dim)}
+.service summary:hover .chev,.service summary:hover h3{color:var(--ink)}
+.service summary .chev{color:var(--dim)}
+.service summary:hover .chev{color:var(--ink)}
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s7);padding:var(--s2) 0 var(--s7)}
+.tier h4{font:600 var(--t-lead)/1.3 var(--sans);color:var(--ink);margin-bottom:var(--s2)}
+.tier .says{color:var(--body);max-width:34ch}
+.tier ul{margin-top:var(--s4);color:var(--dim)}
+.tier li{padding:var(--s2) 0;border-top:1px solid var(--line)}
 
-/* Work */
-.work-head{padding:2rem 0 3rem;border-top:1px solid var(--line)}
-.world{background:var(--bg);color:var(--body);padding:clamp(1.25rem,4vw,3.5rem);margin-bottom:1.25rem;scroll-margin-top:90px}
-.world :focus-visible{outline-color:var(--ink)}
-.world-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"head shot" "body shot";grid-template-rows:auto 1fr;column-gap:clamp(2rem,4vw,3.5rem);align-items:start}
-.world.flip .world-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"shot head" "shot body"}
-.world-head{grid-area:head;min-width:0}
-.world-shot{grid-area:shot;min-width:0;position:sticky;top:96px}
-.world-body{grid-area:body;min-width:0;align-self:start;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--line)}
-.case-number{display:block;font-size:var(--xs);font-weight:600;color:var(--acc);margin-bottom:1rem}
-.world h3{font-size:clamp(2.25rem,3.7vw,3.5rem);line-height:1;letter-spacing:-.04em;font-weight:650;overflow-wrap:break-word}
-.case-sector{font-size:var(--sm);color:var(--dim);margin-top:1rem}
-.role-label{font-size:var(--xs);color:var(--dim);margin-bottom:.25rem}
-.role{font-size:var(--md);line-height:1.4;color:var(--ink);font-weight:500;max-width:none}
-.project-copy{margin-top:1.5rem;max-width:52ch;font-size:var(--md);line-height:1.6}
-.project-copy p+p{margin-top:.75rem}
-.project-copy ul{padding-left:1.1rem;margin:1rem 0;font-size:var(--sm)}
-.project-copy li+li{margin-top:.6rem}
-.world .role+.credit,.world .role~.credit{margin-top:.5rem}
-.credit{font-size:var(--xs);color:var(--dim)}
-.project-copy .credit{margin-top:1rem}
-.credit a{color:inherit}
-.case-link{display:inline-flex;align-items:center;gap:.75rem;min-height:48px;margin-top:1.5rem;padding:0 1.25rem;background:var(--acc);color:var(--bg);font-size:var(--sm);font-weight:600;text-decoration:none;border:1px solid var(--acc);transition:background .2s,color .2s}
-.case-link:after{content:'↗'}
-.case-link:hover{background:transparent;color:var(--acc)}
-.project-copy .credit+.case-link{margin-top:1.25rem}
-.shot{display:block;overflow:hidden;text-decoration:none;background:var(--bg)}
-.shot img{width:100%;height:auto;transition:transform .5s}
+/* disclosure animation: native details, height eased where supported, instant elsewhere */
+@supports selector(::details-content){
+  details::details-content{block-size:0;overflow-y:clip;transition:block-size .4s var(--ease),content-visibility .4s var(--ease) allow-discrete}
+  details[open]::details-content{block-size:auto}
+}
+
+/* work */
+.work-head{padding-top:var(--s9);padding-bottom:var(--s7)}
+.panel{padding:var(--s7);margin-bottom:var(--s5);scroll-margin-top:96px}
+.panel-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"head shot" "body shot";grid-template-rows:auto 1fr;column-gap:var(--s8);align-items:start}
+.panel.flip .panel-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"shot head" "shot body"}
+.panel-head{grid-area:head;min-width:0}
+.panel-shot{grid-area:shot;min-width:0;position:sticky;top:96px}
+.panel-body{grid-area:body;min-width:0;margin-top:var(--s6)}
+.panel h3{font-size:var(--t-panel);line-height:1.05;color:var(--p-ink);overflow-wrap:break-word}
+.meta{margin-top:var(--s3);color:var(--p-dim);display:flex;flex-wrap:wrap;gap:0 var(--s5)}
+.role-block{margin-top:var(--s6)}
+.role-label{font-size:var(--t-small);color:var(--p-dim);margin-bottom:var(--s1)}
+.roles{display:flex;flex-wrap:wrap;gap:var(--s1) var(--s5);color:var(--p-ink);font-weight:500}
+.panel .roles{font-size:var(--t-lead);line-height:1.4}
+.action{display:inline-flex;align-items:center;gap:var(--s3);min-height:48px;padding:0 var(--s5);background:var(--p-accent);color:var(--p-bg);font-weight:600;text-decoration:none;border:1px solid var(--p-accent);transition:background .2s,color .2s}
+.action:hover{background:transparent;color:var(--p-accent)}
+.action .icon{vertical-align:0}
+.shot{display:block;overflow:hidden;text-decoration:none;background:var(--p-bg)}
+.shot img{width:100%;height:auto;transition:transform .5s var(--ease)}
 .shot:hover img{transform:scale(1.015)}
-.world-shot .shot{outline:1px solid var(--line);outline-offset:-1px}
-.case-detail{font-size:var(--xs);color:var(--dim);padding-top:.75rem}
+.panel-shot .shot{outline:1px solid var(--p-line);outline-offset:-1px}
 
-/* More Collaborations */
-.other-head{padding:5rem 0 3rem;margin-top:2.5rem;border-top:1px solid var(--line);display:flex;align-items:baseline;justify-content:space-between;gap:2rem}
-.other-head p{font-size:var(--md);color:var(--dim);max-width:26ch;text-align:right}
-.other-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1.25rem;padding-bottom:7rem}
-.other-grid article{grid-column:span 2;background:var(--bg);color:var(--body);padding:1.25rem 1.25rem 1.5rem;min-width:0;display:flex;flex-direction:column}
-.other-grid article:nth-child(-n+2){grid-column:span 3}
-.other-grid :focus-visible{outline-color:var(--ink)}
-.other-grid .shot{aspect-ratio:2.075;outline:1px solid var(--line);outline-offset:-1px}
-.other-grid .shot img{height:100%;object-fit:cover;object-position:top}
-.other-grid h3{font-size:1.625rem;line-height:1.15;letter-spacing:-.03em;margin:1.25rem 0 .6rem}
-.other-grid h3 a{text-decoration:none}
-.other-grid h3 a:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.2em}
-.other-grid .role{font-size:var(--sm);max-width:100%;font-weight:500}
-.other-grid .credit{margin-top:.75rem}
-.other-grid .credit a{min-height:44px;display:inline-flex;align-items:center;color:var(--acc);font-weight:600;text-decoration-thickness:1px}
-.other-grid .credit a:hover{text-decoration-thickness:2px}
+.more{margin-top:var(--s6);border-top:1px solid var(--p-line)}
+.more summary{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);min-height:56px;cursor:pointer;list-style:none;color:var(--p-ink);font-weight:600}
+.more summary::-webkit-details-marker{display:none}
+.more summary .chev{color:var(--p-dim)}
+.more summary:hover .chev{color:var(--p-ink)}
+.more-body{padding:var(--s2) 0 var(--s4);max-width:68ch}
+.more-body p+p,.more-body p+ul,.more-body ul+p{margin-top:var(--s4)}
+.more-body ul{list-style:disc;padding-left:var(--s5)}
+.more-body li+li{margin-top:var(--s3)}
+.more-body li::marker{color:var(--p-accent)}
+.credit,.case-detail{font-size:var(--t-small);color:var(--p-dim)}
+.more-body .credit,.more-body .case-detail{margin-top:var(--s4)}
 
+/* further work: lower in the hierarchy, five equal columns on wide screens, a scroll rail below */
+.further{margin-top:var(--s9);padding-bottom:var(--s10)}
+.rail{--pad:max(var(--gutter),calc((100% - var(--max)) / 2));display:flex;gap:var(--s4);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--pad);padding-inline:var(--pad);padding-bottom:var(--s4);overscroll-behavior-x:contain}
+.card{flex:0 0 min(78vw,24rem);scroll-snap-align:start;min-width:0;display:flex;flex-direction:column}
+.card .shot{aspect-ratio:2/1}
+.card .shot img{height:100%;object-fit:cover;object-position:top}
+.card-body{display:flex;flex-direction:column;flex:1;padding:var(--s4) var(--s4) var(--s3)}
+.card h3{font-size:var(--t-strip);line-height:1.2;letter-spacing:-.02em;color:var(--p-ink)}
+.card h3 a{text-decoration:none}
+.card h3 a:hover{text-decoration:underline}
+.card .roles{flex-direction:column;margin-top:var(--s3);gap:0;font-size:var(--t-body)}
+.card .credit{margin-top:var(--s3)}
+.card-link{display:inline-flex;align-items:center;gap:var(--s2);min-height:44px;margin-top:auto;padding-top:var(--s3);color:var(--p-accent);font-weight:600;font-size:var(--t-small)}
+.card-link:hover{text-decoration-thickness:2px}
+.card-link .icon{vertical-align:0}
+
+@media(min-width:1100px){
+  .rail{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));overflow:visible;scroll-snap-type:none;padding-bottom:0}
+  .card{flex:none}
+}
 @media(max-width:1000px){
-  .wrap{width:calc(100% - 3rem)}
-  .hero{padding:3.5rem 0 3.5rem}
-  .project-index{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .service{grid-template-columns:1fr;gap:1.75rem}
-  .service-sub{max-width:none}
-  .world-grid,.world.flip .world-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"head" "shot" "body";grid-template-rows:auto}
-  .world-shot{margin-top:2rem;position:static}
-  .world-body{margin-top:2rem}
-  .world h3{font-size:clamp(2.5rem,7vw,3.5rem)}
-  .other-grid article,.other-grid article:nth-child(-n+2){grid-column:span 3}
-  .other-grid article:last-child{grid-column:1 / -1}
+  :root{--gutter:24px}
+  .hero{padding:var(--s8) 0}
+  .service summary{grid-template-columns:minmax(0,1fr) auto;gap:var(--s3) var(--s4);padding:var(--s5) 0}
+  .service summary h3{grid-column:1}
+  .service summary .tier-names{grid-column:1;grid-row:2}
+  .service summary .chev{grid-column:2;grid-row:1 / span 2}
+  .tiers{grid-template-columns:1fr;gap:var(--s6);padding-bottom:var(--s6)}
+  .panel{padding:var(--s5)}
+  .panel-grid,.panel.flip .panel-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"head" "shot" "body";grid-template-rows:auto}
+  .panel-shot{margin-top:var(--s5);position:static}
+  .panel-body{margin-top:var(--s5)}
 }
 @media(max-width:700px){
-  html{scroll-padding-top:76px}
-  .wrap{width:calc(100% - 2.5rem)}
-  .site-nav{min-height:64px;gap:.75rem}
-  .wordmark{font-size:.9375rem;gap:.5rem}
-  .nav-links{gap:.6rem}
+  :root{--gutter:16px}
+  html{scroll-padding-top:80px}
+  .site-nav{min-height:64px;gap:var(--s3)}
+  .wordmark{font-size:var(--t-small);gap:var(--s2)}
+  .nav-links{gap:var(--s2)}
+  .nav-links a{padding:0 var(--s2)}
+  .nav-links .nav-contact{padding:0 var(--s3)}
   .nav-services{display:none!important}
-  .nav-links .nav-contact{padding:0 .7rem;font-size:.8125rem}
-  .hero{padding-top:2.75rem}
-  .hero h1{font-size:clamp(2.5rem,11.2vw,4rem);font-stretch:104%;letter-spacing:-.045em}
-  .hero-bottom{margin-top:1.5rem}
-  .clarify{font-size:var(--md)}
-  .project-index{gap:.75rem;margin-top:2.5rem}
-  .index-label{flex-direction:column;gap:.15rem;padding:.65rem .75rem .75rem}
-  .section-title{font-size:clamp(2.25rem,10.5vw,3rem)}
-  .services{padding:3.5rem 0 3.5rem}
-  .offering{margin-top:2rem}
-  .service{padding:2rem 0}
-  .tiers{grid-template-columns:1fr;gap:2rem}
-  .tier .says{max-width:none}
-  .work-head{padding:3.5rem 0 2rem}
-  .world{padding:1.25rem;margin-bottom:1rem}
-  .world h3{font-size:clamp(2.1rem,9.4vw,2.75rem);letter-spacing:-.035em;font-stretch:106%}
-  .world-body{padding-top:1.25rem}
-  .project-copy{font-size:var(--sm)}
-  .other-head{display:block;padding:3.5rem 0 2rem;margin-top:1.5rem}
-  .other-head p{margin-top:1rem;text-align:left;max-width:none}
-  .other-grid{grid-template-columns:1fr;gap:1rem;padding-bottom:4rem}
-  .other-grid article,.other-grid article:nth-child(-n+2),.other-grid article:last-child{grid-column:auto}
+  .hero{padding:var(--s7) 0 var(--s8)}
+  .hero h1{font-stretch:104%}
+  .clarify{margin-top:var(--s5)}
+  .project-index{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s3);margin-top:var(--s7)}
+  .mini-label{padding:var(--s3)}
+  .services{padding:var(--s8) 0}
+  .offering{margin-top:var(--s6)}
+  .panel h3{font-stretch:106%}
+  .work-head{padding-top:var(--s8);padding-bottom:var(--s6)}
+  .further{margin-top:var(--s8);padding-bottom:var(--s9)}
 }
-@media(min-width:1500px){.wrap{width:min(calc(100% - 8rem),1360px)}}
+@media(min-width:1500px){:root{--gutter:64px;--max:1360px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
 *,*::before,*::after{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+<symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-arrow-down-right" viewBox="0 0 24 24"><path d="m7 7 10 10"/><path d="M17 7v10H7"/></symbol>
+</svg>
 <a class="skip-link" href="#work">Skip to Projects</a>
 <header class="site-header" id="top">
 <nav class="wrap site-nav" aria-label="Main">
-<a class="wordmark" href="#top">
-<span class="studio-mark" aria-hidden="true">S</span>Symantic Studio</a>
+<a class="wordmark" href="#top"><span class="studio-mark" aria-hidden="true">S</span>Symantic Studio</a>
 <div class="nav-links">
 <a class="nav-services" href="#services">Services</a>
 <a href="#work">Work</a>
-<a class="nav-contact" href="mailto:m@mxm.ac">Get in Touch ↗</a>
+<a class="nav-contact" href="mailto:m@mxm.ac">Get in Touch</a>
 </div>
 </nav>
 </header>
 <main>
 <section class="wrap hero" aria-labelledby="headline">
-<h1 id="headline">Brand Strategy<br>
-<span>&amp; Storytelling.</span>
-</h1>
-<div class="hero-bottom">
+<h1 id="headline">Brand Strategy<br><span>&amp; Storytelling.</span></h1>
 <p class="clarify">I work with founders and executive teams to turn complex ideas into clear positioning, messaging and the words people see.</p>
-</div>
 <nav class="project-index" aria-label="Featured project index">
-<a class="index-item w-astro" href="#astroscale">
-<div class="index-visual">
-<img src="/assets/work/astroscale.jpg" width="1800" height="960" alt="Astroscale website, project preview" loading="eager" decoding="async">
-</div>
-<div class="index-label">
-<span>Astroscale</span>
-<span>01 ↘</span>
-</div>
+<a class="mini w-astro" href="#astroscale">
+<div class="mini-shot"><img src="/assets/work/astroscale.jpg" width="1800" height="960" alt="Astroscale website, project preview" loading="eager" decoding="async"></div>
+<div class="mini-label"><span>Astroscale</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-down-right"/></svg></div>
 </a>
-<a class="index-item w-matter" href="#matter">
-<div class="index-visual">
-<img src="/assets/work/matter.jpg" width="1263" height="608" alt="Matter Venture Partners website, project preview" loading="eager" decoding="async">
-</div>
-<div class="index-label">
-<span>Matter Venture Partners</span>
-<span>02 ↘</span>
-</div>
+<a class="mini w-matter" href="#matter">
+<div class="mini-shot"><img src="/assets/work/matter.jpg" width="1263" height="608" alt="Matter Venture Partners website, project preview" loading="eager" decoding="async"></div>
+<div class="mini-label"><span>Matter Venture Partners</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-down-right"/></svg></div>
 </a>
-<a class="index-item w-dose" href="#everyday-dose">
-<div class="index-visual">
-<img src="/assets/work/everyday-dose.jpg" width="2000" height="947" alt="Everyday Dose website, project preview" loading="eager" decoding="async">
-</div>
-<div class="index-label">
-<span>Everyday Dose</span>
-<span>03 ↘</span>
-</div>
+<a class="mini w-dose" href="#everyday-dose">
+<div class="mini-shot"><img src="/assets/work/everyday-dose.jpg" width="2000" height="947" alt="Everyday Dose website, project preview" loading="eager" decoding="async"></div>
+<div class="mini-label"><span>Everyday Dose</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-down-right"/></svg></div>
 </a>
-<a class="index-item w-ursa" href="#ursa-major">
-<div class="index-visual">
-<img src="/assets/work/ursa-major.jpg" width="1261" height="608" alt="Ursa Major website, project preview" loading="eager" decoding="async">
-</div>
-<div class="index-label">
-<span>Ursa Major</span>
-<span>04 ↘</span>
-</div>
+<a class="mini w-ursa" href="#ursa-major">
+<div class="mini-shot"><img src="/assets/work/ursa-major.jpg" width="1261" height="608" alt="Ursa Major website, project preview" loading="eager" decoding="async"></div>
+<div class="mini-label"><span>Ursa Major</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-down-right"/></svg></div>
 </a>
 </nav>
 </section>
@@ -251,83 +257,22 @@ p,h1,h2,h3,h4,figure,ul{margin:0}
 <div class="wrap">
 <h2 class="section-title" id="services-heading">How I Can Help</h2>
 <div class="offering">
-
-    <article class="service">
-      <header>
-<h3>Brand Strategy</h3>
-<p class="service-sub">Identity · Positioning · Expression</p>
-</header>
-      <div class="tiers">
-
-      <div class="tier">
-        <h4>Identity</h4>
-        <p class="says">The foundations of the brand.</p>
-        <ul>
-          <li>Purpose</li>
-<li>Vision</li>
-<li>Mission</li>
-<li>Values</li>
-        </ul>
-      </div>
-
-      <div class="tier">
-        <h4>Positioning</h4>
-        <p class="says">Where the company belongs in its market, and why someone would choose it.</p>
-        <ul>
-          <li>Market Research</li>
-<li>Market Overview</li>
-          <li>Competitive Analysis</li>
-<li>Differentiators</li>
-          <li>Positioning Recommendation</li>
-<li>Positioning Statement</li>
-        </ul>
-      </div>
-
-      <div class="tier">
-        <h4>Expression</h4>
-        <p class="says">How the brand looks, sounds, and tells its story.</p>
-        <ul>
-          <li>Story</li>
-<li>Personality</li>
-          <li>Voice</li>
-<li>Manifesto</li>
-          <li>Tagline</li>
-<li>Sample Messaging</li>
-        </ul>
-      </div>
-    </div>
-    </article>
-
-    <article class="service">
-      <header>
-<h3>Content &amp; Copy</h3>
-<p class="service-sub">Strategy · Copywriting · Video</p>
-</header>
-      <div class="tiers">
-
-      <div class="tier">
-        <h4>Strategy</h4>
-        <p class="says">A plan for what the company says, where it says it, and who needs to hear it.</p>
-      </div>
-
-      <div class="tier">
-        <h4>Copywriting</h4>
-        <p class="says">The words people read, hear and remember.</p>
-        <ul>
-          <li>Website</li>
-<li>Social Media</li>
-          <li>Packaging</li>
-<li>Merchandise</li>
-        </ul>
-      </div>
-
-      <div class="tier">
-        <h4>Video</h4>
-        <p class="says">Selected motion graphics and film projects.</p>
-      </div>
-    </div>
-    </article>
-
+<details class="service">
+<summary><h3>Brand Strategy</h3><span class="tier-names"><span>Identity</span><span>Positioning</span><span>Expression</span></span><svg class="icon chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+<div class="tiers">
+<div class="tier"><h4>Identity</h4><p class="says">The foundations of the brand.</p><ul><li>Purpose</li><li>Vision</li><li>Mission</li><li>Values</li></ul></div>
+<div class="tier"><h4>Positioning</h4><p class="says">Where the company belongs in its market, and why someone would choose it.</p><ul><li>Market Research</li><li>Market Overview</li><li>Competitive Analysis</li><li>Differentiators</li><li>Positioning Recommendation</li><li>Positioning Statement</li></ul></div>
+<div class="tier"><h4>Expression</h4><p class="says">How the brand looks, sounds, and tells its story.</p><ul><li>Story</li><li>Personality</li><li>Voice</li><li>Manifesto</li><li>Tagline</li><li>Sample Messaging</li></ul></div>
+</div>
+</details>
+<details class="service">
+<summary><h3>Content &amp; Copy</h3><span class="tier-names"><span>Strategy</span><span>Copywriting</span><span>Video</span></span><svg class="icon chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+<div class="tiers">
+<div class="tier"><h4>Strategy</h4><p class="says">A plan for what the company says, where it says it, and who needs to hear it.</p></div>
+<div class="tier"><h4>Copywriting</h4><p class="says">The words people read, hear and remember.</p><ul><li>Website</li><li>Social Media</li><li>Packaging</li><li>Merchandise</li></ul></div>
+<div class="tier"><h4>Video</h4><p class="says">Selected motion graphics and film projects.</p></div>
+</div>
+</details>
 </div>
 </div>
 </section>
@@ -335,68 +280,80 @@ p,h1,h2,h3,h4,figure,ul{margin:0}
 <div class="work-head">
 <h2 class="section-title">Selected Projects</h2>
 </div>
-<article class="world w-astro case" id="astroscale">
-<div class="world-grid">
-<div class="world-head">
-<span class="case-number">01 / Astroscale</span>
+<article class="panel w-astro" id="astroscale">
+<div class="panel-grid">
+<div class="panel-head">
 <h3>Astroscale</h3>
+
+<div class="role-block">
+<p class="role-label">My Role</p>
+<ul class="roles"><li>Brand Strategy</li><li>Content Strategy</li><li>Copywriting</li></ul>
 </div>
-<div class="world-shot">
+</div>
+<div class="panel-shot">
 <a class="shot" href="https://astroscale.com/" target="_blank" rel="noopener">
 <img src="/assets/work/astroscale.jpg" width="1800" height="960" alt="Astroscale website, with the headline Trusted in Orbit. Committed to Earth." loading="lazy" decoding="async">
 </a>
 </div>
-<div class="world-body">
-<div>
-<p class="role-label">My Role</p>
-<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
-</div>
-<div class="project-copy">
+<div class="panel-body">
+<a class="action" href="https://astroscale.com/" target="_blank" rel="noopener">Visit Astroscale<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+<details class="more">
+<summary><span>Project Details</span><svg class="icon chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+<div class="more-body">
 <p>Brand strategy, content strategy and copywriting for Astroscale's global and US brands.</p>
-<a class="case-link" href="https://astroscale.com/" target="_blank" rel="noopener">Visit Astroscale</a>
 </div>
+</details>
 </div>
 </div>
 </article>
-<article class="world w-matter flip case" id="matter">
-<div class="world-grid">
-<div class="world-head">
-<span class="case-number">02 / Matter Venture Partners</span>
+<article class="panel w-matter flip" id="matter">
+<div class="panel-grid">
+<div class="panel-head">
 <h3>Matter Venture<br>Partners</h3>
+
+<div class="role-block">
+<p class="role-label">My Role</p>
+<ul class="roles"><li>Brand Strategy</li><li>Content Strategy</li><li>Copywriting</li></ul>
 </div>
-<div class="world-shot">
+</div>
+<div class="panel-shot">
 <a class="shot" href="https://mattervp.com/" target="_blank" rel="noopener">
 <img src="/assets/work/matter.jpg" width="1263" height="608" alt="Matter Venture Partners website, with its HardTech positioning" loading="lazy" decoding="async">
 </a>
-<p class="case-detail">Brand and Content for Matter Venture Partners</p>
 </div>
-<div class="world-body">
-<p class="role-label">My Role</p>
-<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
-<div class="project-copy">
+<div class="panel-body">
+<a class="action" href="https://dakotomy.com/work/matter" target="_blank" rel="noopener">Read the Project Case Study<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+<details class="more">
+<summary><span>Project Details</span><svg class="icon chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+<div class="more-body">
 <p>Worked directly with the founders on brand strategy, messaging and copywriting for a venture capital firm focused on HardTech and the hardware infrastructure behind AI.</p>
 <p class="credit">In Collaboration with Dakotomy</p>
-<a class="case-link" href="https://dakotomy.com/work/matter" target="_blank" rel="noopener">Read the Project Case Study</a>
+<p class="case-detail">Brand and Content for Matter Venture Partners</p>
 </div>
+</details>
 </div>
 </div>
 </article>
-<article class="world w-dose case" id="everyday-dose">
-<div class="world-grid">
-<div class="world-head">
-<span class="case-number">03 / Everyday Dose</span>
+<article class="panel w-dose" id="everyday-dose">
+<div class="panel-grid">
+<div class="panel-head">
 <h3>Everyday Dose</h3>
-<p class="case-sector">Recurring Engagements · 2021–2026</p>
+<ul class="meta"><li>Recurring Engagements</li><li>2021–2026</li></ul>
+<div class="role-block">
+<p class="role-label">My Role</p>
+<ul class="roles"><li>Brand Strategy</li><li>Content Strategy</li><li>Copywriting</li><li>Operations</li></ul>
 </div>
-<div class="world-shot">
+</div>
+<div class="panel-shot">
 <a class="shot" href="https://everydaydose.com/" target="_blank" rel="noopener">
 <img src="/assets/work/everyday-dose.jpg" width="2000" height="947" alt="Everyday Dose website and functional coffee products" loading="lazy" decoding="async">
 </a>
 </div>
-<div class="world-body">
-<p class="role-label">My Role</p>
-<p class="role">Brand Strategy · Content Strategy · Copywriting · Operations</p>
-<div class="project-copy">
+<div class="panel-body">
+<a class="action" href="https://everydaydose.com/" target="_blank" rel="noopener">Visit Everyday Dose<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+<details class="more">
+<summary><span>Project Details</span><svg class="icon chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+<div class="more-body">
 <p>A functional coffee brand, with work across its voice, products and day-to-day operations.</p>
 <ul>
 <li>Established brand and content guidelines with the founder and core team in Year 1.</li>
@@ -404,113 +361,98 @@ p,h1,h2,h3,h4,figure,ul{margin:0}
 <li>Developed a science-first voice that kept the brand fun and accessible.</li>
 <li>Contributed to operational workflows in Years 1 and 2.</li>
 </ul>
-<a class="case-link" href="https://everydaydose.com/" target="_blank" rel="noopener">Visit Everyday Dose</a>
 </div>
+</details>
 </div>
 </div>
 </article>
-<article class="world w-ursa flip case" id="ursa-major">
-<div class="world-grid">
-<div class="world-head">
-<span class="case-number">04 / Ursa Major</span>
+<article class="panel w-ursa flip" id="ursa-major">
+<div class="panel-grid">
+<div class="panel-head">
 <h3>Ursa Major</h3>
-<p class="case-sector">Aerospace</p>
+<p class="meta">Aerospace</p>
+<div class="role-block">
+<p class="role-label">My Role</p>
+<ul class="roles"><li>Brand Strategy</li><li>Content Strategy</li><li>Copywriting</li></ul>
 </div>
-<div class="world-shot">
+</div>
+<div class="panel-shot">
 <a class="shot" href="https://ursamajor.com/" target="_blank" rel="noopener">
 <img src="/assets/work/ursa-major.jpg" width="1261" height="608" alt="Ursa Major propulsion website" loading="lazy" decoding="async">
 </a>
 </div>
-<div class="world-body">
-<div>
-<p class="role-label">My Role</p>
-<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
+<div class="panel-body">
+<a class="action" href="https://future.works/case-studies/ursa/" target="_blank" rel="noopener">Read the Project Case Study<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+<details class="more">
+<summary><span>Project Details</span><svg class="icon chev" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+<div class="more-body">
+<p>Refined brand strategy and messaging with Ursa Major's executive team, then developed the content and copy.</p>
 <p class="credit">In Collaboration with Future Works</p>
 </div>
-<div class="project-copy">
-<p>Refined brand strategy and messaging with Ursa Major's executive team, then developed the content and copy.</p>
-<a class="case-link" href="https://future.works/case-studies/ursa/" target="_blank" rel="noopener">Read the Project Case Study</a>
-</div>
+</details>
 </div>
 </div>
 </article>
-<div class="other-head">
-<h2 class="section-title">More Collaborations</h2>
-<p>Technology, Venture Capital and Digital Products</p>
 </div>
-<section class="other-grid" aria-label="More client projects">
-<article class="w-meritech">
+<section class="further" aria-label="More client projects">
+<div class="rail">
+<article class="card w-meritech">
 <a class="shot" href="https://www.meritechcapital.com/" target="_blank" rel="noopener">
 <img src="/assets/work/meritech.jpg" width="1278" height="606" alt="Meritech Capital website" loading="lazy" decoding="async">
 </a>
-<div>
-<h3>
-<a href="https://www.meritechcapital.com/" target="_blank" rel="noopener">Meritech Capital</a>
-</h3>
-<p class="role">Content Strategy · Copywriting</p>
-<p class="credit">In Collaboration with Future Works and Dakotomy<br>
-<a href="https://future.works/case-studies/meritech/" target="_blank" rel="noopener">Project Case Study ↗</a>
-</p>
+<div class="card-body">
+<h3><a href="https://www.meritechcapital.com/" target="_blank" rel="noopener">Meritech Capital</a></h3>
+<ul class="roles"><li>Content Strategy</li><li>Copywriting</li></ul>
+<p class="credit">In Collaboration with Future Works and Dakotomy</p>
+<a class="card-link" href="https://future.works/case-studies/meritech/" target="_blank" rel="noopener">Project Case Study<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
 </div>
 </article>
-<article class="w-offerfit">
+<article class="card w-offerfit">
 <a class="shot" href="https://www.offerfit.ai/" target="_blank" rel="noopener">
 <img src="/assets/work/offerfit.jpg" width="1263" height="609" alt="OfferFit website" loading="lazy" decoding="async">
 </a>
-<div>
-<h3>
-<a href="https://www.offerfit.ai/" target="_blank" rel="noopener">OfferFit</a>
-</h3>
-<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
-<p class="credit">In Collaboration with Dakotomy<br>
-<a href="https://www.dakotomy.com/work/offerfit" target="_blank" rel="noopener">Project Case Study ↗</a>
-</p>
+<div class="card-body">
+<h3><a href="https://www.offerfit.ai/" target="_blank" rel="noopener">OfferFit</a></h3>
+<ul class="roles"><li>Brand Strategy</li><li>Content Strategy</li><li>Copywriting</li></ul>
+<p class="credit">In Collaboration with Dakotomy</p>
+<a class="card-link" href="https://www.dakotomy.com/work/offerfit" target="_blank" rel="noopener">Project Case Study<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
 </div>
 </article>
-<article class="w-merlyn">
+<article class="card w-merlyn">
 <a class="shot" href="https://www.merlyn.org/" target="_blank" rel="noopener">
 <img src="/assets/work/merlyn-mind.jpg" width="1326" height="610" alt="Merlyn Mind website" loading="lazy" decoding="async">
 </a>
-<div>
-<h3>
-<a href="https://www.merlyn.org/" target="_blank" rel="noopener">Merlyn Mind</a>
-</h3>
-<p class="role">Brand Strategy · Copywriting</p>
-<p class="credit">In Collaboration with Future Works<br>
-<a href="https://future.works/case-studies/merlynmind/" target="_blank" rel="noopener">Project Case Study ↗</a>
-</p>
+<div class="card-body">
+<h3><a href="https://www.merlyn.org/" target="_blank" rel="noopener">Merlyn Mind</a></h3>
+<ul class="roles"><li>Brand Strategy</li><li>Copywriting</li></ul>
+<p class="credit">In Collaboration with Future Works</p>
+<a class="card-link" href="https://future.works/case-studies/merlynmind/" target="_blank" rel="noopener">Project Case Study<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
 </div>
 </article>
-<article class="w-veryfi">
+<article class="card w-veryfi">
 <a class="shot" href="https://veryfi.com/" target="_blank" rel="noopener">
 <img src="/assets/work/veryfi.jpg" width="1844" height="742" alt="Veryfi website" loading="lazy" decoding="async">
 </a>
-<div>
-<h3>
-<a href="https://veryfi.com/" target="_blank" rel="noopener">Veryfi</a>
-</h3>
-<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
-<p class="credit">In Collaboration with Future Works and Dakotomy<br>
-<a href="https://future.works/case-studies/veryfi/" target="_blank" rel="noopener">Project Case Study ↗</a>
-</p>
+<div class="card-body">
+<h3><a href="https://veryfi.com/" target="_blank" rel="noopener">Veryfi</a></h3>
+<ul class="roles"><li>Brand Strategy</li><li>Content Strategy</li><li>Copywriting</li></ul>
+<p class="credit">In Collaboration with Future Works and Dakotomy</p>
+<a class="card-link" href="https://future.works/case-studies/veryfi/" target="_blank" rel="noopener">Project Case Study<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
 </div>
 </article>
-<article class="w-civic">
+<article class="card w-civic">
 <a class="shot" href="https://www.civic.com/" target="_blank" rel="noopener">
 <img src="/assets/work/civic.jpg" width="1266" height="608" alt="Civic website" loading="lazy" decoding="async">
 </a>
-<div>
-<h3>
-<a href="https://www.civic.com/" target="_blank" rel="noopener">Civic</a>
-</h3>
-<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
-<p class="credit">In Collaboration with Future Works<br>
-<a href="https://future.works/case-studies/civic/" target="_blank" rel="noopener">Project Case Study ↗</a>
-</p>
+<div class="card-body">
+<h3><a href="https://www.civic.com/" target="_blank" rel="noopener">Civic</a></h3>
+<ul class="roles"><li>Brand Strategy</li><li>Content Strategy</li><li>Copywriting</li></ul>
+<p class="credit">In Collaboration with Future Works</p>
+<a class="card-link" href="https://future.works/case-studies/civic/" target="_blank" rel="noopener">Project Case Study<svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
 </div>
 </article>
-</section>
 </div>
+</section>
 </main>
 </body>
 </html>
