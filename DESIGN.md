@@ -24,7 +24,7 @@ Michael's September 30 request for an ambitious portfolio and CV supersedes the 
 | Work order | Astroscale, Matter Venture Partners, Everyday Dose, Ursa Major, then Meritech, OfferFit, Merlyn Mind, Veryfi and Civic. |
 | Evidence | Existing screenshots retain their natural aspect ratios in featured projects. My-role labels and collaborator credits sit with the work. Company fundraising news is omitted. |
 | Interaction | Sticky native navigation, project anchors, native service disclosures and image hover movement. No page JavaScript. Reduced motion disables smooth scrolling and transitions. |
-| Services | After the projects, so the first screen contains work evidence and hiring links. |
+| Services | Directly after the hero thumbnails and before Selected Projects, per Michael's 2026-10-10 request. Hero CTAs, eyebrow lines, closing section and footer removed the same day; the nav email link is the only contact path and stays visible on phones. |
 | CV | Archivo/Work Sans, white print pages, terracotta `#a74832`, 40pt name, 18pt Symantic heading, 10.5pt body. A single main reading order with explicit two-page pagination. |
 
 The portfolio carries imagery. The CV carries selectable text and linked evidence. Avoid decorative AI images, implied authorship of collaborators' visual design, fabricated outcome metrics and keyword stuffing. This is not a new brand-name decision; Symantic Studio remains the source spelling.
