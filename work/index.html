@@ -85,6 +85,9 @@ p,h1,h2,h3,h4,figure{margin:0}
 .case-light .case-heading{padding-top:0}
 .case-light .shot{background:#d3d9c9}
 .case-light .project-caption{border-bottom:0;padding-bottom:0}
+.case-light .case-sector{margin:-.4rem 0 1.4rem}
+.case-dose{background:#f2e6ee;color:#43303f;--line:#dcc5d4;--ink:#271a25;--dim:#6f5a69;--accent:#5a34c2}
+.case-dose .shot{background:#e8d5e1}
 .case-split{display:grid;grid-template-columns:.7fr 1.3fr;gap:3.5rem;align-items:start}
 .case-split .case-heading{display:block}
 .case-split h3{font-size:clamp(2.4rem,4.4vw,3.8rem);margin-bottom:1rem}
@@ -92,14 +95,6 @@ p,h1,h2,h3,h4,figure{margin:0}
 .case-split .role{margin-bottom:1.6rem}
 .case-split .shot{margin-top:.4rem}
 .case-split .project-caption{display:block;padding-top:1.4rem}
-.dose{grid-template-columns:1.18fr 1fr;padding-top:1.2rem;border-top:1px solid var(--line)}
-.dose .case-number{margin-top:.4rem}
-.dose .case-heading{padding:0 0 1.5rem}
-.dose .project-copy{padding-top:1.7rem}
-.dose h3{margin-bottom:1rem}
-.dose .role{margin-bottom:1rem}
-.dose .shot{margin-top:1.5rem}
-.dose .project-caption{border:0;padding:0}
 .case-detail{font-size:.81rem;color:var(--dim);padding-top:.8rem}
 .other-head{margin-top:1rem;padding:1rem 0 2rem;border-top:1px solid var(--line);display:flex;align-items:baseline;justify-content:space-between;gap:2rem}
 .other-head h2{font:500 2.3rem/1.1 var(--display);letter-spacing:-.04em;color:var(--ink)}
@@ -146,7 +141,6 @@ p,h1,h2,h3,h4,figure{margin:0}
 .case-split h3{max-width:none}
 .case-split .project-copy{max-width:none}
 .case-split .role{margin-bottom:1rem}
-.dose .project-copy{padding-top:0}
 .project-caption{gap:2rem}
 .other-grid{gap:2.5rem 1.5rem}
 .offering{gap:2rem}
@@ -178,7 +172,6 @@ p,h1,h2,h3,h4,figure{margin:0}
 .case-split .case-heading{display:block}
 .case-split{gap:.5rem}
 .case-split h3{font-size:2.4rem}
-.dose .project-copy{padding-top:.6rem}
 .case-split .role{margin-bottom:.8rem}
 .other-head{display:block}
 .other-head h2{font-size:2rem}
@@ -223,7 +216,7 @@ p,h1,h2,h3,h4,figure{margin:0}
 <nav class="project-index" aria-label="Featured project index">
 <a class="index-item" href="#astroscale">
 <div class="index-visual">
-<img src="/assets/work/astroscale.jpg" width="1800" height="933" alt="Astroscale website, project preview" loading="eager" decoding="async">
+<img src="/assets/work/astroscale.jpg" width="1800" height="960" alt="Astroscale website, project preview" loading="eager" decoding="async">
 </div>
 <div class="index-label">
 <span>Astroscale</span>
@@ -358,7 +351,7 @@ p,h1,h2,h3,h4,figure{margin:0}
 </div>
 </div>
 <a class="shot" href="https://astroscale.com/" target="_blank" rel="noopener">
-<img src="/assets/work/astroscale.jpg" width="1800" height="933" alt="Astroscale website, with the headline Trusted in Orbit. Committed to Earth." loading="lazy" decoding="async">
+<img src="/assets/work/astroscale.jpg" width="1800" height="960" alt="Astroscale website, with the headline Trusted in Orbit. Committed to Earth." loading="lazy" decoding="async">
 </a>
 <div class="project-caption">
 <div>
@@ -396,7 +389,8 @@ p,h1,h2,h3,h4,figure{margin:0}
 </div>
 </div>
 </article>
-<article class="case case-split dose" id="everyday-dose">
+<article class="case case-light case-dose" id="everyday-dose">
+<div class="case-split">
 <div>
 <div class="case-heading">
 <div>
@@ -405,13 +399,9 @@ p,h1,h2,h3,h4,figure{margin:0}
 <p class="case-sector">Recurring Engagements · 2021–2026</p>
 </div>
 </div>
-<a class="shot" href="https://everydaydose.com/" target="_blank" rel="noopener">
-<img src="/assets/work/everyday-dose.jpg" width="2000" height="947" alt="Everyday Dose website and functional coffee products" loading="lazy" decoding="async">
-</a>
-</div>
-<div class="project-copy">
 <p class="role-label">My Role</p>
 <p class="role">Brand Strategy · Content Strategy · Copywriting · Operations</p>
+<div class="project-copy">
 <p>A functional coffee brand, with work across its voice, products and day-to-day operations.</p>
 <ul>
 <li>Established brand and content guidelines with the founder and core team in Year 1.</li>
@@ -420,6 +410,13 @@ p,h1,h2,h3,h4,figure{margin:0}
 <li>Contributed to operational workflows in Years 1 and 2.</li>
 </ul>
 <a class="case-link" href="https://everydaydose.com/" target="_blank" rel="noopener">Visit Everyday Dose</a>
+</div>
+</div>
+<div>
+<a class="shot" href="https://everydaydose.com/" target="_blank" rel="noopener">
+<img src="/assets/work/everyday-dose.jpg" width="2000" height="947" alt="Everyday Dose website and functional coffee products" loading="lazy" decoding="async">
+</a>
+</div>
 </div>
 </article>
 <article class="case" id="ursa-major">
