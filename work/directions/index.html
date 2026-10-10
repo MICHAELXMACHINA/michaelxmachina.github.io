@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>/work · Three Directions</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500;62..125,700&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#11140f;color:#c8cec0;font:400 1rem/1.6 "Work Sans",Arial,sans-serif}
+.wrap{width:min(calc(100% - 3rem),1400px);margin-inline:auto;padding:3rem 0 5rem}
+h1{font:700 clamp(2.4rem,5vw,4rem)/1 "Archivo",Arial,sans-serif;letter-spacing:-.03em;color:#f1f1e7;margin:0 0 .6rem}
+.lede{max-width:60ch;margin:0 0 3rem;color:#a7b09d}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem}
+article{display:flex;flex-direction:column;border-top:1px solid #394232;padding-top:1.2rem}
+.thumb{display:block;border:1px solid #394232;overflow:hidden}
+.thumb img{width:100%;height:auto;display:block;transition:transform .4s}
+.thumb:hover img{transform:scale(1.02)}
+.tag{font-size:.85rem;color:#d7ef9b;margin:1.2rem 0 .2rem}
+h2{font:700 1.9rem/1.1 "Archivo",Arial,sans-serif;font-stretch:100%;letter-spacing:-.02em;color:#f1f1e7;margin:0 0 .6rem}
+p{margin:0 0 .8rem}
+dl{margin:.4rem 0 1.2rem;font-size:.93rem}
+dt{color:#f1f1e7;font-weight:500;margin-top:.7rem}
+dd{margin:0;color:#a7b09d}
+.open{margin-top:auto;display:inline-flex;align-items:center;justify-content:space-between;min-height:48px;padding:.7rem 1.1rem;background:#f1f1e7;color:#11140f;text-decoration:none;font-weight:500}
+.open:hover{background:#d7ef9b}
+.foot{margin-top:3rem;font-size:.9rem;color:#a7b09d}
+.foot a{color:#f1f1e7}
+:focus-visible{outline:2px solid #d7ef9b;outline-offset:4px}
+@media(max-width:1000px){.grid{grid-template-columns:1fr;gap:3rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Three Directions for /work</h1>
+<p class="lede">Same words, links and section order in each. Only the look and feel changes. Each opens as a full working page.</p>
+<div class="grid">
+
+<article>
+<a class="thumb" href="client-worlds/"><img src="previews/client-worlds.jpg" width="960" height="733" alt="Client Worlds direction, top of page"></a>
+<p class="tag">A</p>
+<h2>Client Worlds</h2>
+<p>The Matter panel becomes the system. Every project lives in a panel coloured from its own screenshot; the site's own chrome stays neutral.</p>
+<dl>
+<dt>Strongest at</dt><dd>Color and variety with one consistent template. Closest to what you already liked.</dd>
+<dt>Tradeoff</dt><dd>Many client palettes on one page; the studio's own identity is quieter.</dd>
+</dl>
+<a class="open" href="client-worlds/">Open Client Worlds <span aria-hidden="true">→</span></a>
+</article>
+
+<article>
+<a class="thumb" href="journal/"><img src="previews/journal.jpg" width="960" height="733" alt="Journal direction, top of page"></a>
+<p class="tag">B</p>
+<h2>Journal</h2>
+<p>A light studio monograph on the CV's paper and terracotta. Strict grid, hairline rules, screenshots framed like plates.</p>
+<dl>
+<dt>Strongest at</dt><dd>Reads as a writer's practice: calm, precise, and visually one system with the CV.</dd>
+<dt>Tradeoff</dt><dd>Least dramatic of the three; it earns attention through restraint.</dd>
+</dl>
+<a class="open" href="journal/">Open Journal <span aria-hidden="true">→</span></a>
+</article>
+
+<article>
+<a class="thumb" href="index-studio/"><img src="previews/index-studio.jpg" width="960" height="733" alt="Index direction, top of page with a project preview on hover"></a>
+<p class="tag">C</p>
+<h2>Index</h2>
+<p>Dark and type-led. Client names become a huge condensed index with hover previews; projects run as full-bleed tinted bands.</p>
+<dl>
+<dt>Strongest at</dt><dd>Personality and confidence. The most memorable first screen.</dd>
+<dt>Tradeoff</dt><dd>Loudest typography; on desktop the first screen shows names, not screenshots, until you hover.</dd>
+</dl>
+<a class="open" href="index-studio/">Open Index <span aria-hidden="true">→</span></a>
+</article>
+
+</div>
+<p class="foot">Current live version: <a href="/work/">/work</a>. Brief: <a href="BRIEF.md">BRIEF.md</a>.</p>
+</div>
+</body>
+</html>
