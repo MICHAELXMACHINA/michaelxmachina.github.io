@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Brand strategy and storytelling for purpose-driven companies. Past work with Astroscale, Matter Venture Partners, Everyday Dose, Ursa Major, Meritech Capital, OfferFit, Merlyn Mind, Veryfi, and Otoy.">
+  <link rel="canonical" href="https://michaelxmachina.com/work/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Michael Ketigian | Brand Strategy &amp; Storytelling">
+  <meta property="og:description" content="Selected brand and content work for Astroscale, Matter Venture Partners, Everyday Dose and Ursa Major.">
+  <meta property="og:url" content="https://michaelxmachina.com/work/">
+  <meta property="og:image" content="https://michaelxmachina.com/assets/work/matter.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Michael Ketigian | Symantic Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Direction A: Client Worlds. The page chrome is neutral; every client panel carries its own sampled palette. */
+:root{
+  --paper:#0f1011;--raised:#17191a;--ink:#f4f4f0;--body:#c9cbc6;--dim:#9b9e98;--line:#2b2d2e;
+  --display:"Archivo",Arial,sans-serif;--sans:"Work Sans",Arial,sans-serif;--max:1280px;
+  /* three small sizes only */
+  --xs:.875rem;--sm:1rem;--md:1.125rem;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--paper);color:var(--body);font:400 var(--sm)/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-underline-offset:.25em}
+img{max-width:100%;display:block}
+p,h1,h2,h3,h4,figure,ul{margin:0}
+.wrap{width:min(calc(100% - 6rem),var(--max));margin-inline:auto}
+:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+.skip-link{position:fixed;top:-100px;left:1rem;z-index:30;background:var(--ink);color:var(--paper);padding:1rem}
+.skip-link:focus{top:1rem}
+
+/* Display type: Archivo, slightly expanded */
+.display,h1,h2,h3{font-family:var(--display);font-stretch:112%;font-weight:600;color:var(--ink)}
+
+/* Chrome */
+.site-header{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+.site-nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.wordmark{display:inline-flex;gap:.75rem;align-items:center;color:var(--ink);text-decoration:none;font:600 1.125rem/1.2 var(--display);font-stretch:112%;letter-spacing:-.02em;min-height:44px;white-space:nowrap}
+.studio-mark{display:inline-grid;place-items:center;background:var(--ink);color:var(--paper);height:28px;width:28px;font-size:1rem;font-weight:700}
+.nav-links{display:flex;align-items:center;gap:1.75rem;font-size:var(--xs)}
+.nav-links a{white-space:nowrap;display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--body)}
+.nav-links a:hover{color:var(--ink)}
+.nav-links .nav-contact{color:var(--ink);border:1px solid var(--ink);padding:0 1rem;min-height:44px}
+.nav-links .nav-contact:hover{background:var(--ink);color:var(--paper)}
+
+/* Hero */
+.hero{padding:5.5rem 0 4.5rem}
+.hero h1{font-size:clamp(3rem,8.3vw,7.6rem);line-height:.96;letter-spacing:-.05em;font-weight:650}
+.hero h1 span{color:var(--dim)}
+.hero-bottom{margin-top:2.25rem}
+.clarify{font-size:1.375rem;line-height:1.5;max-width:40ch;color:var(--ink)}
+.project-index{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin-top:4rem}
+.index-item{display:flex;flex-direction:column;min-width:0;text-decoration:none;background:var(--bg);color:var(--ink);overflow:hidden}
+.index-visual{overflow:hidden;aspect-ratio:1.96;background:var(--bg)}
+.index-visual img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s}
+.index-item:hover img{transform:scale(1.03)}
+.index-label{display:flex;justify-content:space-between;gap:.5rem;padding:.8rem 1rem .9rem;font-size:var(--xs);line-height:1.35;font-weight:500;flex:1}
+.index-label span:last-child{color:var(--acc);white-space:nowrap}
+.index-item:focus-visible{outline-color:var(--ink);outline-offset:4px}
+
+/* Client palettes: sampled from each screenshot, every pair checked to WCAG AA */
+.w-astro{--bg:#080d18;--ink:#f6efe9;--body:#cdc7c4;--dim:#a39da0;--acc:#f28b3d;--line:#273046}
+.w-matter{--bg:#e9ecdf;--ink:#20291c;--body:#34402d;--dim:#56634e;--acc:#405d22;--line:#bcc5af}
+.w-dose{--bg:#f2e6ee;--ink:#271a25;--body:#43303f;--dim:#6f5a69;--acc:#5a34c2;--line:#dcc5d4}
+.w-ursa{--bg:#e6d3b9;--ink:#2b1a10;--body:#43301f;--dim:#66503c;--acc:#8f3913;--line:#cbb393}
+.w-meritech{--bg:#111b21;--ink:#f1f5f4;--body:#c6d0d1;--dim:#9fb0b3;--acc:#79d2bf;--line:#26373e}
+.w-offerfit{--bg:#2c0f4d;--ink:#f6eefc;--body:#d9c9ea;--dim:#b9a2d3;--acc:#ff9a7d;--line:#4b2a73}
+.w-merlyn{--bg:#2a211c;--ink:#f6eee8;--body:#d5c9c0;--dim:#b0a196;--acc:#ff8c6e;--line:#47382f}
+.w-veryfi{--bg:#141a35;--ink:#eff2fb;--body:#c5cce2;--dim:#9ea8cc;--acc:#74e0aa;--line:#2c3562}
+.w-civic{--bg:#f1eeee;--ink:#1c1c22;--body:#35353d;--dim:#5c5c66;--acc:#a8421f;--line:#d9d3d3}
+
+/* Section titles */
+.section-title{font-size:clamp(2.75rem,6vw,5.25rem);line-height:1;letter-spacing:-.045em;font-weight:650}
+
+/* Services */
+.services{padding:5rem 0 5rem;border-top:1px solid var(--line)}
+.offering{margin-top:3rem}
+.service{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.6fr);gap:3rem;padding:2.5rem 0;border-top:1px solid var(--line)}
+.service h3{font-size:clamp(1.75rem,2.6vw,2.375rem);line-height:1.05;letter-spacing:-.035em}
+.service-sub{margin-top:.75rem;font-size:var(--sm);color:var(--dim);max-width:26ch}
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.5rem}
+.tier h4{font:600 var(--md)/1.25 var(--sans);color:var(--ink);margin-bottom:.5rem}
+.tier .says{font-size:var(--sm);color:var(--body);max-width:30ch}
+.tier ul{list-style:none;padding:0;margin-top:1.25rem;font-size:var(--sm);color:var(--dim)}
+.tier li{padding:.55rem 0;border-top:1px solid var(--line)}
+
+/* Work */
+.work-head{padding:2rem 0 3rem;border-top:1px solid var(--line)}
+.world{background:var(--bg);color:var(--body);padding:clamp(1.25rem,4vw,3.5rem);margin-bottom:1.25rem;scroll-margin-top:90px}
+.world :focus-visible{outline-color:var(--ink)}
+.world-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"head shot" "body shot";grid-template-rows:auto 1fr;column-gap:clamp(2rem,4vw,3.5rem);align-items:start}
+.world.flip .world-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"shot head" "shot body"}
+.world-head{grid-area:head;min-width:0}
+.world-shot{grid-area:shot;min-width:0;position:sticky;top:96px}
+.world-body{grid-area:body;min-width:0;align-self:start;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.case-number{display:block;font-size:var(--xs);font-weight:600;color:var(--acc);margin-bottom:1rem}
+.world h3{font-size:clamp(2.25rem,3.7vw,3.5rem);line-height:1;letter-spacing:-.04em;font-weight:650;overflow-wrap:break-word}
+.case-sector{font-size:var(--sm);color:var(--dim);margin-top:1rem}
+.role-label{font-size:var(--xs);color:var(--dim);margin-bottom:.25rem}
+.role{font-size:var(--md);line-height:1.4;color:var(--ink);font-weight:500;max-width:none}
+.project-copy{margin-top:1.5rem;max-width:52ch;font-size:var(--md);line-height:1.6}
+.project-copy p+p{margin-top:.75rem}
+.project-copy ul{padding-left:1.1rem;margin:1rem 0;font-size:var(--sm)}
+.project-copy li+li{margin-top:.6rem}
+.world .role+.credit,.world .role~.credit{margin-top:.5rem}
+.credit{font-size:var(--xs);color:var(--dim)}
+.project-copy .credit{margin-top:1rem}
+.credit a{color:inherit}
+.case-link{display:inline-flex;align-items:center;gap:.75rem;min-height:48px;margin-top:1.5rem;padding:0 1.25rem;background:var(--acc);color:var(--bg);font-size:var(--sm);font-weight:600;text-decoration:none;border:1px solid var(--acc);transition:background .2s,color .2s}
+.case-link:after{content:'↗'}
+.case-link:hover{background:transparent;color:var(--acc)}
+.project-copy .credit+.case-link{margin-top:1.25rem}
+.shot{display:block;overflow:hidden;text-decoration:none;background:var(--bg)}
+.shot img{width:100%;height:auto;transition:transform .5s}
+.shot:hover img{transform:scale(1.015)}
+.world-shot .shot{outline:1px solid var(--line);outline-offset:-1px}
+.case-detail{font-size:var(--xs);color:var(--dim);padding-top:.75rem}
+
+/* More Collaborations */
+.other-head{padding:5rem 0 3rem;margin-top:2.5rem;border-top:1px solid var(--line);display:flex;align-items:baseline;justify-content:space-between;gap:2rem}
+.other-head p{font-size:var(--md);color:var(--dim);max-width:26ch;text-align:right}
+.other-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1.25rem;padding-bottom:7rem}
+.other-grid article{grid-column:span 2;background:var(--bg);color:var(--body);padding:1.25rem 1.25rem 1.5rem;min-width:0;display:flex;flex-direction:column}
+.other-grid article:nth-child(-n+2){grid-column:span 3}
+.other-grid :focus-visible{outline-color:var(--ink)}
+.other-grid .shot{aspect-ratio:2.075;outline:1px solid var(--line);outline-offset:-1px}
+.other-grid .shot img{height:100%;object-fit:cover;object-position:top}
+.other-grid h3{font-size:1.625rem;line-height:1.15;letter-spacing:-.03em;margin:1.25rem 0 .6rem}
+.other-grid h3 a{text-decoration:none}
+.other-grid h3 a:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.2em}
+.other-grid .role{font-size:var(--sm);max-width:100%;font-weight:500}
+.other-grid .credit{margin-top:.75rem}
+.other-grid .credit a{min-height:44px;display:inline-flex;align-items:center;color:var(--acc);font-weight:600;text-decoration-thickness:1px}
+.other-grid .credit a:hover{text-decoration-thickness:2px}
+
+@media(max-width:1000px){
+  .wrap{width:calc(100% - 3rem)}
+  .hero{padding:3.5rem 0 3.5rem}
+  .project-index{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .service{grid-template-columns:1fr;gap:1.75rem}
+  .service-sub{max-width:none}
+  .world-grid,.world.flip .world-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"head" "shot" "body";grid-template-rows:auto}
+  .world-shot{margin-top:2rem;position:static}
+  .world-body{margin-top:2rem}
+  .world h3{font-size:clamp(2.5rem,7vw,3.5rem)}
+  .other-grid article,.other-grid article:nth-child(-n+2){grid-column:span 3}
+  .other-grid article:last-child{grid-column:1 / -1}
+}
+@media(max-width:700px){
+  html{scroll-padding-top:76px}
+  .wrap{width:calc(100% - 2.5rem)}
+  .site-nav{min-height:64px;gap:.75rem}
+  .wordmark{font-size:.9375rem;gap:.5rem}
+  .nav-links{gap:.6rem}
+  .nav-services{display:none!important}
+  .nav-links .nav-contact{padding:0 .7rem;font-size:.8125rem}
+  .hero{padding-top:2.75rem}
+  .hero h1{font-size:clamp(2.5rem,11.2vw,4rem);font-stretch:104%;letter-spacing:-.045em}
+  .hero-bottom{margin-top:1.5rem}
+  .clarify{font-size:var(--md)}
+  .project-index{gap:.75rem;margin-top:2.5rem}
+  .index-label{flex-direction:column;gap:.15rem;padding:.65rem .75rem .75rem}
+  .section-title{font-size:clamp(2.25rem,10.5vw,3rem)}
+  .services{padding:3.5rem 0 3.5rem}
+  .offering{margin-top:2rem}
+  .service{padding:2rem 0}
+  .tiers{grid-template-columns:1fr;gap:2rem}
+  .tier .says{max-width:none}
+  .work-head{padding:3.5rem 0 2rem}
+  .world{padding:1.25rem;margin-bottom:1rem}
+  .world h3{font-size:clamp(2.1rem,9.4vw,2.75rem);letter-spacing:-.035em;font-stretch:106%}
+  .world-body{padding-top:1.25rem}
+  .project-copy{font-size:var(--sm)}
+  .other-head{display:block;padding:3.5rem 0 2rem;margin-top:1.5rem}
+  .other-head p{margin-top:1rem;text-align:left;max-width:none}
+  .other-grid{grid-template-columns:1fr;gap:1rem;padding-bottom:4rem}
+  .other-grid article,.other-grid article:nth-child(-n+2),.other-grid article:last-child{grid-column:auto}
+}
+@media(min-width:1500px){.wrap{width:min(calc(100% - 8rem),1360px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+*,*::before,*::after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#work">Skip to Projects</a>
+<header class="site-header" id="top">
+<nav class="wrap site-nav" aria-label="Main">
+<a class="wordmark" href="#top">
+<span class="studio-mark" aria-hidden="true">S</span>Symantic Studio</a>
+<div class="nav-links">
+<a class="nav-services" href="#services">Services</a>
+<a href="#work">Work</a>
+<a class="nav-contact" href="mailto:m@mxm.ac">Get in Touch ↗</a>
+</div>
+</nav>
+</header>
+<main>
+<section class="wrap hero" aria-labelledby="headline">
+<h1 id="headline">Brand Strategy<br>
+<span>&amp; Storytelling.</span>
+</h1>
+<div class="hero-bottom">
+<p class="clarify">I work with founders and executive teams to turn complex ideas into clear positioning, messaging and the words people see.</p>
+</div>
+<nav class="project-index" aria-label="Featured project index">
+<a class="index-item w-astro" href="#astroscale">
+<div class="index-visual">
+<img src="/assets/work/astroscale.jpg" width="1800" height="960" alt="Astroscale website, project preview" loading="eager" decoding="async">
+</div>
+<div class="index-label">
+<span>Astroscale</span>
+<span>01 ↘</span>
+</div>
+</a>
+<a class="index-item w-matter" href="#matter">
+<div class="index-visual">
+<img src="/assets/work/matter.jpg" width="1263" height="608" alt="Matter Venture Partners website, project preview" loading="eager" decoding="async">
+</div>
+<div class="index-label">
+<span>Matter Venture Partners</span>
+<span>02 ↘</span>
+</div>
+</a>
+<a class="index-item w-dose" href="#everyday-dose">
+<div class="index-visual">
+<img src="/assets/work/everyday-dose.jpg" width="2000" height="947" alt="Everyday Dose website, project preview" loading="eager" decoding="async">
+</div>
+<div class="index-label">
+<span>Everyday Dose</span>
+<span>03 ↘</span>
+</div>
+</a>
+<a class="index-item w-ursa" href="#ursa-major">
+<div class="index-visual">
+<img src="/assets/work/ursa-major.jpg" width="1261" height="608" alt="Ursa Major website, project preview" loading="eager" decoding="async">
+</div>
+<div class="index-label">
+<span>Ursa Major</span>
+<span>04 ↘</span>
+</div>
+</a>
+</nav>
+</section>
+<section class="services" id="services" aria-labelledby="services-heading">
+<div class="wrap">
+<h2 class="section-title" id="services-heading">How I Can Help</h2>
+<div class="offering">
+
+    <article class="service">
+      <header>
+<h3>Brand Strategy</h3>
+<p class="service-sub">Identity · Positioning · Expression</p>
+</header>
+      <div class="tiers">
+
+      <div class="tier">
+        <h4>Identity</h4>
+        <p class="says">The foundations of the brand.</p>
+        <ul>
+          <li>Purpose</li>
+<li>Vision</li>
+<li>Mission</li>
+<li>Values</li>
+        </ul>
+      </div>
+
+      <div class="tier">
+        <h4>Positioning</h4>
+        <p class="says">Where the company belongs in its market, and why someone would choose it.</p>
+        <ul>
+          <li>Market Research</li>
+<li>Market Overview</li>
+          <li>Competitive Analysis</li>
+<li>Differentiators</li>
+          <li>Positioning Recommendation</li>
+<li>Positioning Statement</li>
+        </ul>
+      </div>
+
+      <div class="tier">
+        <h4>Expression</h4>
+        <p class="says">How the brand looks, sounds, and tells its story.</p>
+        <ul>
+          <li>Story</li>
+<li>Personality</li>
+          <li>Voice</li>
+<li>Manifesto</li>
+          <li>Tagline</li>
+<li>Sample Messaging</li>
+        </ul>
+      </div>
+    </div>
+    </article>
+
+    <article class="service">
+      <header>
+<h3>Content &amp; Copy</h3>
+<p class="service-sub">Strategy · Copywriting · Video</p>
+</header>
+      <div class="tiers">
+
+      <div class="tier">
+        <h4>Strategy</h4>
+        <p class="says">A plan for what the company says, where it says it, and who needs to hear it.</p>
+      </div>
+
+      <div class="tier">
+        <h4>Copywriting</h4>
+        <p class="says">The words people read, hear and remember.</p>
+        <ul>
+          <li>Website</li>
+<li>Social Media</li>
+          <li>Packaging</li>
+<li>Merchandise</li>
+        </ul>
+      </div>
+
+      <div class="tier">
+        <h4>Video</h4>
+        <p class="says">Selected motion graphics and film projects.</p>
+      </div>
+    </div>
+    </article>
+
+</div>
+</div>
+</section>
+<div class="wrap" id="work">
+<div class="work-head">
+<h2 class="section-title">Selected Projects</h2>
+</div>
+<article class="world w-astro case" id="astroscale">
+<div class="world-grid">
+<div class="world-head">
+<span class="case-number">01 / Astroscale</span>
+<h3>Astroscale</h3>
+</div>
+<div class="world-shot">
+<a class="shot" href="https://astroscale.com/" target="_blank" rel="noopener">
+<img src="/assets/work/astroscale.jpg" width="1800" height="960" alt="Astroscale website, with the headline Trusted in Orbit. Committed to Earth." loading="lazy" decoding="async">
+</a>
+</div>
+<div class="world-body">
+<div>
+<p class="role-label">My Role</p>
+<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
+</div>
+<div class="project-copy">
+<p>Brand strategy, content strategy and copywriting for Astroscale's global and US brands.</p>
+<a class="case-link" href="https://astroscale.com/" target="_blank" rel="noopener">Visit Astroscale</a>
+</div>
+</div>
+</div>
+</article>
+<article class="world w-matter flip case" id="matter">
+<div class="world-grid">
+<div class="world-head">
+<span class="case-number">02 / Matter Venture Partners</span>
+<h3>Matter Venture<br>Partners</h3>
+</div>
+<div class="world-shot">
+<a class="shot" href="https://mattervp.com/" target="_blank" rel="noopener">
+<img src="/assets/work/matter.jpg" width="1263" height="608" alt="Matter Venture Partners website, with its HardTech positioning" loading="lazy" decoding="async">
+</a>
+<p class="case-detail">Brand and Content for Matter Venture Partners</p>
+</div>
+<div class="world-body">
+<p class="role-label">My Role</p>
+<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
+<div class="project-copy">
+<p>Worked directly with the founders on brand strategy, messaging and copywriting for a venture capital firm focused on HardTech and the hardware infrastructure behind AI.</p>
+<p class="credit">In Collaboration with Dakotomy</p>
+<a class="case-link" href="https://dakotomy.com/work/matter" target="_blank" rel="noopener">Read the Project Case Study</a>
+</div>
+</div>
+</div>
+</article>
+<article class="world w-dose case" id="everyday-dose">
+<div class="world-grid">
+<div class="world-head">
+<span class="case-number">03 / Everyday Dose</span>
+<h3>Everyday Dose</h3>
+<p class="case-sector">Recurring Engagements · 2021–2026</p>
+</div>
+<div class="world-shot">
+<a class="shot" href="https://everydaydose.com/" target="_blank" rel="noopener">
+<img src="/assets/work/everyday-dose.jpg" width="2000" height="947" alt="Everyday Dose website and functional coffee products" loading="lazy" decoding="async">
+</a>
+</div>
+<div class="world-body">
+<p class="role-label">My Role</p>
+<p class="role">Brand Strategy · Content Strategy · Copywriting · Operations</p>
+<div class="project-copy">
+<p>A functional coffee brand, with work across its voice, products and day-to-day operations.</p>
+<ul>
+<li>Established brand and content guidelines with the founder and core team in Year 1.</li>
+<li>Led copywriting for the website, social media, products and merchandise.</li>
+<li>Developed a science-first voice that kept the brand fun and accessible.</li>
+<li>Contributed to operational workflows in Years 1 and 2.</li>
+</ul>
+<a class="case-link" href="https://everydaydose.com/" target="_blank" rel="noopener">Visit Everyday Dose</a>
+</div>
+</div>
+</div>
+</article>
+<article class="world w-ursa flip case" id="ursa-major">
+<div class="world-grid">
+<div class="world-head">
+<span class="case-number">04 / Ursa Major</span>
+<h3>Ursa Major</h3>
+<p class="case-sector">Aerospace</p>
+</div>
+<div class="world-shot">
+<a class="shot" href="https://ursamajor.com/" target="_blank" rel="noopener">
+<img src="/assets/work/ursa-major.jpg" width="1261" height="608" alt="Ursa Major propulsion website" loading="lazy" decoding="async">
+</a>
+</div>
+<div class="world-body">
+<div>
+<p class="role-label">My Role</p>
+<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
+<p class="credit">In Collaboration with Future Works</p>
+</div>
+<div class="project-copy">
+<p>Refined brand strategy and messaging with Ursa Major's executive team, then developed the content and copy.</p>
+<a class="case-link" href="https://future.works/case-studies/ursa/" target="_blank" rel="noopener">Read the Project Case Study</a>
+</div>
+</div>
+</div>
+</article>
+<div class="other-head">
+<h2 class="section-title">More Collaborations</h2>
+<p>Technology, Venture Capital and Digital Products</p>
+</div>
+<section class="other-grid" aria-label="More client projects">
+<article class="w-meritech">
+<a class="shot" href="https://www.meritechcapital.com/" target="_blank" rel="noopener">
+<img src="/assets/work/meritech.jpg" width="1278" height="606" alt="Meritech Capital website" loading="lazy" decoding="async">
+</a>
+<div>
+<h3>
+<a href="https://www.meritechcapital.com/" target="_blank" rel="noopener">Meritech Capital</a>
+</h3>
+<p class="role">Content Strategy · Copywriting</p>
+<p class="credit">In Collaboration with Future Works and Dakotomy<br>
+<a href="https://future.works/case-studies/meritech/" target="_blank" rel="noopener">Project Case Study ↗</a>
+</p>
+</div>
+</article>
+<article class="w-offerfit">
+<a class="shot" href="https://www.offerfit.ai/" target="_blank" rel="noopener">
+<img src="/assets/work/offerfit.jpg" width="1263" height="609" alt="OfferFit website" loading="lazy" decoding="async">
+</a>
+<div>
+<h3>
+<a href="https://www.offerfit.ai/" target="_blank" rel="noopener">OfferFit</a>
+</h3>
+<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
+<p class="credit">In Collaboration with Dakotomy<br>
+<a href="https://www.dakotomy.com/work/offerfit" target="_blank" rel="noopener">Project Case Study ↗</a>
+</p>
+</div>
+</article>
+<article class="w-merlyn">
+<a class="shot" href="https://www.merlyn.org/" target="_blank" rel="noopener">
+<img src="/assets/work/merlyn-mind.jpg" width="1326" height="610" alt="Merlyn Mind website" loading="lazy" decoding="async">
+</a>
+<div>
+<h3>
+<a href="https://www.merlyn.org/" target="_blank" rel="noopener">Merlyn Mind</a>
+</h3>
+<p class="role">Brand Strategy · Copywriting</p>
+<p class="credit">In Collaboration with Future Works<br>
+<a href="https://future.works/case-studies/merlynmind/" target="_blank" rel="noopener">Project Case Study ↗</a>
+</p>
+</div>
+</article>
+<article class="w-veryfi">
+<a class="shot" href="https://veryfi.com/" target="_blank" rel="noopener">
+<img src="/assets/work/veryfi.jpg" width="1844" height="742" alt="Veryfi website" loading="lazy" decoding="async">
+</a>
+<div>
+<h3>
+<a href="https://veryfi.com/" target="_blank" rel="noopener">Veryfi</a>
+</h3>
+<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
+<p class="credit">In Collaboration with Future Works and Dakotomy<br>
+<a href="https://future.works/case-studies/veryfi/" target="_blank" rel="noopener">Project Case Study ↗</a>
+</p>
+</div>
+</article>
+<article class="w-civic">
+<a class="shot" href="https://www.civic.com/" target="_blank" rel="noopener">
+<img src="/assets/work/civic.jpg" width="1266" height="608" alt="Civic website" loading="lazy" decoding="async">
+</a>
+<div>
+<h3>
+<a href="https://www.civic.com/" target="_blank" rel="noopener">Civic</a>
+</h3>
+<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
+<p class="credit">In Collaboration with Future Works<br>
+<a href="https://future.works/case-studies/civic/" target="_blank" rel="noopener">Project Case Study ↗</a>
+</p>
+</div>
+</article>
+</section>
+</div>
+</main>
+</body>
+</html>
