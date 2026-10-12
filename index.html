@@ -163,6 +163,21 @@
     .past-work a:hover {
       color: #999;
     }
+    .page-links {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .page-links a {
+      color: #777;
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      transition: color 0.2s ease;
+    }
+    .page-links a::before { content: '[ '; }
+    .page-links a::after  { content: ' ]'; }
+    .page-links a:hover {
+      color: #dadada;
+    }
   </style>
 </head>
 <body>
@@ -195,6 +210,9 @@
       <img src="https://img.icons8.com/ios-filled/50/dadada/youtube-play.png" alt="YouTube">
     </a>
   </div>
+  <nav class="page-links">
+    <a href="/video/">videos</a>
+  </nav>
   <!-- past work section hidden per M 2026-07-13 (label + links + top divider line)
   <div class="past-work">
     <span class="past-work-label">past work</span>

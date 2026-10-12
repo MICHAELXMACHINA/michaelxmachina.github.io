@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>michaelXmachina — videos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Work Sans', sans-serif;
+      background-color: #060606;
+      color: #dadada;
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 2rem);
+    }
+    .home-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+      color: #777;
+      text-decoration: none;
+    }
+    .home-link:hover { color: #dadada; }
+    h1 {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 500;
+      margin: 0 0 1.5rem;
+      color: #dadada;
+    }
+    /* responsive 16:9 embed frame — works for YouTube and Google Drive */
+    .video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #111;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem 2rem;
+    }
+    @media (max-width: 640px) {
+      .video-grid { grid-template-columns: 1fr; }
+    }
+    .cap-title {
+      margin: 0.6rem 0 0;
+      font-size: 0.9rem;
+      color: #ccc;
+      font-weight: 500;
+    }
+    .cap-sub {
+      margin: 0.15rem 0 0;
+      font-size: 0.8rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="home-link" href="/">&larr; michaelXmachina</a>
+    <h1>Videos</h1>
+
+    <!-- To add a video, duplicate one of the grid items below. -->
+    <div class="video-grid">
+
+      <!-- ROW 1 -->
+      <div>
+        <div class="video">
+          <iframe
+            src="https://drive.google.com/file/d/1NUf3CeZThbPM5proFNphCK6bC7LlOcuz/preview"
+            title="CHT Video, Original"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="cap-title">CHT Video, Original</p>
+      </div>
+
+      <div>
+        <div class="video">
+          <iframe
+            src="https://drive.google.com/file/d/1zu28guyQiZefFQfTQFU5tgkHwYi507PF/preview"
+            title="CHT Video, Rap Translation"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="cap-title">CHT Video, Rap Translation | 2020</p>
+      </div>
+
+      <!-- ROW 2 -->
+      <div>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/06k2HY3JXqM"
+            title="Homo Deus (Some Technology Required)"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="cap-title">Homo Deus (Some Technology Required) | 2018</p>
+        <p class="cap-sub">Pre-widespread-AI technoutopian optimism.</p>
+        <p class="cap-sub">2018, Web Summit side event hosted by Ben Goertzel's SingularityNET</p>
+      </div>
+
+      <div>
+        <div class="video">
+          <iframe
+            src="https://drive.google.com/file/d/1h4CqE2hK8Z5Qf8TaVl7KjW5ukQzD1jqI/preview"
+            title="Precipice"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="cap-title">Precipice | 2024</p>
+        <p class="cap-sub">A concerned response to Homo Deus written ~15 months after the release of ChatGPT.</p>
+        <p class="cap-sub">2025, Davos</p>
+      </div>
+
+      <!-- ROW 3 -->
+      <div>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/hRJ65o_pL0k?start=2059"
+            title="Regenerative Roadshow"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="cap-title">Regenerative Roadshow | 2025</p>
+        <p class="cap-sub">Davos Climate Hub</p>
+      </div>
+
+      <div>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/3vpj7Xq4Ip4"
+            title="Digital Cooperation Rap Up"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="cap-title">Digital Cooperation Rap Up | 2020</p>
+        <p class="cap-sub">UN General Assembly 75</p>
+      </div>
+
+      <!-- ROW 4 -->
+      <div>
+        <div class="video">
+          <iframe
+            src="https://drive.google.com/file/d/1Nidsft2BlXXsB0eyeTehZtGsMZ8J2mgL/preview"
+            title="Obsidian Sanctum"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="cap-title">Obsidian Sanctum | 2022</p>
+        <p class="cap-sub">Reflections on social media and identity.</p>
+        <p class="cap-sub">AI video experiment in the early days of Stable Diffusion.</p>
+      </div>
+
+      <div>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/6FQ6UUzdwOw"
+            title="Hamilton Anti-Vax Parody"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="cap-title">Hamilton Anti-Vax Parody | 2021</p>
+        <p class="cap-sub">(Pro-COVID-Vaccine PSA)</p>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
