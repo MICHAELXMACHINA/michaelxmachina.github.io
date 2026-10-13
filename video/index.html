@@ -49,6 +49,16 @@
       height: 100%;
       border: 0;
     }
+    /* hero — the lead video, full width */
+    .hero .video {
+      border-radius: 12px;
+      box-shadow: 0 0 0 1px #222, 0 20px 50px rgba(0,0,0,0.5);
+    }
+    .spacer {
+      height: clamp(2.5rem, 6vw, 4rem);
+      border-bottom: 1px solid #222;
+      margin-bottom: clamp(2.5rem, 6vw, 4rem);
+    }
     .video-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -75,77 +85,26 @@
     <a class="home-link" href="/">&larr; michaelXmachina</a>
     <h1>Videos</h1>
 
+    <div class="hero">
+    <div class="video">
+      <iframe
+        src="https://drive.google.com/file/d/1h4CqE2hK8Z5Qf8TaVl7KjW5ukQzD1jqI/preview"
+        title="Precipice"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+        allowfullscreen
+        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+    <p class="cap-title">Precipice | 2024</p>
+    <p class="cap-sub">A concerned response to Homo Deus written ~15 months after the release of ChatGPT.</p>
+    <p class="cap-sub">2025, Davos</p>
+    </div>
+
+    <div class="spacer"></div>
+
     <!-- To add a video, duplicate one of the grid items below. -->
     <div class="video-grid">
 
       <!-- ROW 1 -->
-      <div>
-        <div class="video">
-          <iframe
-            src="https://drive.google.com/file/d/1NUf3CeZThbPM5proFNphCK6bC7LlOcuz/preview"
-            title="CHT Video, Original"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-            allowfullscreen
-            referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
-        <p class="cap-title">CHT Video, Original</p>
-      </div>
-
-      <div>
-        <div class="video">
-          <iframe
-            src="https://drive.google.com/file/d/1zu28guyQiZefFQfTQFU5tgkHwYi507PF/preview"
-            title="CHT Video, Rap Translation"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-            allowfullscreen
-            referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
-        <p class="cap-title">CHT Video, Rap Translation | 2020</p>
-      </div>
-
-      <!-- ROW 2 -->
-      <div>
-        <div class="video">
-          <iframe
-            src="https://www.youtube.com/embed/06k2HY3JXqM"
-            title="Homo Deus (Some Technology Required)"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-            allowfullscreen
-            referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
-        <p class="cap-title">Homo Deus (Some Technology Required) | 2018</p>
-        <p class="cap-sub">Pre-widespread-AI technoutopian optimism.</p>
-        <p class="cap-sub">2018, Web Summit side event hosted by Ben Goertzel's SingularityNET</p>
-      </div>
-
-      <div>
-        <div class="video">
-          <iframe
-            src="https://drive.google.com/file/d/1h4CqE2hK8Z5Qf8TaVl7KjW5ukQzD1jqI/preview"
-            title="Precipice"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-            allowfullscreen
-            referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
-        <p class="cap-title">Precipice | 2024</p>
-        <p class="cap-sub">A concerned response to Homo Deus written ~15 months after the release of ChatGPT.</p>
-        <p class="cap-sub">2025, Davos</p>
-      </div>
-
-      <!-- ROW 3 -->
-      <div>
-        <div class="video">
-          <iframe
-            src="https://www.youtube.com/embed/hRJ65o_pL0k?start=2059"
-            title="Regenerative Roadshow"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-            allowfullscreen
-            referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
-        <p class="cap-title">Regenerative Roadshow | 2025</p>
-        <p class="cap-sub">Davos Climate Hub</p>
-      </div>
-
       <div>
         <div class="video">
           <iframe
@@ -159,7 +118,59 @@
         <p class="cap-sub">UN General Assembly 75</p>
       </div>
 
-      <!-- ROW 4 -->
+      <div>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/hRJ65o_pL0k?start=2059"
+            title="Regenerative Roadshow"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="cap-title">Regenerative Roadshow | 2025</p>
+        <p class="cap-sub">Davos Climate Hub</p>
+      </div>
+
+      <!-- ROW 2 -->
+      <div>
+        <div class="video">
+          <iframe
+            src="https://drive.google.com/file/d/1NUf3CeZThbPM5proFNphCK6bC7LlOcuz/preview"
+            title="CHT Video, Original"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="cap-title">Center for Humane Technology video | Original</p>
+      </div>
+
+      <div>
+        <div class="video">
+          <iframe
+            src="https://drive.google.com/file/d/1zu28guyQiZefFQfTQFU5tgkHwYi507PF/preview"
+            title="CHT Video, Rap Translation"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="cap-title">Rap Translation | 2020</p>
+        <p class="cap-sub">In 2020, after meeting Tristan Harris at the UN, I worked with the CHT team on a rap version of their video. Then COVID shifted their priorities, and neither version was released.</p>
+      </div>
+
+      <!-- ROW 3 -->
+      <div>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/6FQ6UUzdwOw"
+            title="Hamilton Anti-Vax Parody"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <p class="cap-title">Hamilton Anti-Vax Parody | 2021</p>
+        <p class="cap-sub">(Pro-COVID-Vaccine PSA)</p>
+      </div>
+
       <div>
         <div class="video">
           <iframe
@@ -174,17 +185,19 @@
         <p class="cap-sub">AI video experiment in the early days of Stable Diffusion.</p>
       </div>
 
+      <!-- ROW 4 -->
       <div>
         <div class="video">
           <iframe
-            src="https://www.youtube.com/embed/6FQ6UUzdwOw"
-            title="Hamilton Anti-Vax Parody"
+            src="https://www.youtube.com/embed/06k2HY3JXqM"
+            title="Homo Deus (Some Technology Required)"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
             allowfullscreen
             referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
-        <p class="cap-title">Hamilton Anti-Vax Parody | 2021</p>
-        <p class="cap-sub">(Pro-COVID-Vaccine PSA)</p>
+        <p class="cap-title">Homo Deus (Some Technology Required) | 2018</p>
+        <p class="cap-sub">Pre-widespread-AI technoutopian optimism.</p>
+        <p class="cap-sub">2018, Web Summit side event hosted by Ben Goertzel's SingularityNET</p>
       </div>
 
     </div>
