@@ -19,9 +19,9 @@
     }
     /* Fixed-width column so browser zoom scales the whole page evenly.
        The logo, heading and subtitle span it edge to edge. */
-    :root { --head-font: 'Share Tech Mono', monospace; --head-weight: 400; --head-advance: 0.54; }
+    :root { --head-font: 'Share Tech Mono', monospace; --head-weight: 400; --head-advance: 0.54; --column-width: 340px; --logo-size: 102.24%; --body-size: min(16px, calc((100vw - 24px) / 24.6)); --body-line-height: 1.4; --section-spacing: 0.8em;  }
     .col {
-      width: min(80vw, 340px);
+      width: min(80vw, var(--column-width));
       container-type: inline-size;
       margin: auto; /* centers on screen, but scrolls normally (no clipped top) when zoomed in */
       padding: 0.75rem 0;
@@ -31,7 +31,7 @@
        center line); scale and shift so the wordmark lines up with the column edges. */
     .logo {
       display: block;
-      width: 102.24%;
+      width: var(--logo-size);
       height: auto;
       margin-left: -1.6%;
     }
@@ -61,8 +61,8 @@
       transform: translateX(-50%);
     }
     .body {
-      font-size: min(16px, calc((100vw - 24px) / 24.6));
-      line-height: 1.4;
+      font-size: var(--body-size);
+      line-height: var(--body-line-height);
     }
     .body p {
       margin: 0 0 0.5em;
@@ -76,7 +76,7 @@
       justify-content: center;
       gap: 0.25em 1.25em;
       font-size: min(15px, calc((100vw - 24px) / 24.6));
-      margin: 0.8em 0 1em;
+      margin: var(--section-spacing) 0 1em;
     }
     .page-links a {
       color: #888;
