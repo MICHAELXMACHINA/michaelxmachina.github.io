@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>michaelXmachina</title>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=Share+Tech+Mono&family=JetBrains+Mono:wght@500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@600&family=Share+Tech+Mono&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
   <style>
     html, body {
       margin: 0;
@@ -15,16 +15,19 @@
       background-color: #000; /* matches the logo's own black so its edges disappear */
       color: #dadada;
       min-height: 100vh;
+      min-height: 100svh; /* the visible height on phones, excluding browser toolbars */
       display: flex;
     }
     /* Fixed-width column so browser zoom scales the whole page evenly.
        The logo, heading and subtitle span it edge to edge. */
-    :root { --head-font: 'Share Tech Mono', monospace; --head-weight: 400; --head-advance: 0.54; --column-width: 340px; --logo-size: 102.24%; --body-size: min(16px, calc((100vw - 24px) / 24.6)); --body-line-height: 1.4; --section-spacing: 0.8em;  }
+    :root { --head-font: 'JetBrains Mono', monospace; --head-weight: 600; --head-advance: 0.6; --column-width: 340px; --logo-size: 90%; --body-size: 14.5px; --body-line-height: 1.4; --section-spacing: 0.7rem;  }
     .col {
-      width: min(80vw, var(--column-width));
-      container-type: inline-size;
+      /* --col is the column width; heading and subtitle sizes derive from it directly.
+         (Container-query units were dropped: some browsers mis-scale them under page zoom.) */
+      --col: min(80vw, var(--column-width));
+      width: var(--col);
       margin: auto; /* centers on screen, but scrolls normally (no clipped top) when zoomed in */
-      padding: 0.75rem 0;
+      padding: 0.25rem 0 0.75rem;
       text-align: center;
     }
     /* The wordmark spans 15-951 of the logo's 957px width (the X sits on the image's
@@ -33,50 +36,66 @@
       display: block;
       width: var(--logo-size);
       height: auto;
-      margin-left: -1.6%;
+      /* centered on the column at any size; the X sits on the image's center line */
+      margin-left: calc((100% - var(--logo-size)) / 2);
     }
     /* Monospaced, so "stories" and "systems" are the same width and the + lands
-       under the logo's X. 17 characters fill the column: size = 100cqw / (17 × advance). */
+       under the logo's X. 17 characters fill the column: size = column / (17 × advance). */
     .tagline {
       font-family: var(--head-font);
       font-weight: var(--head-weight);
-      font-size: calc(100cqw / (17 * var(--head-advance)));
+      font-size: calc(var(--col) / (17 * var(--head-advance)));
       white-space: pre;
       line-height: 1.1;
       margin: 0.3em 0 0.05em;
     }
     .tagline-sub {
-      font-size: 6.8cqw;
+      font-size: calc(var(--col) * 0.068);
       text-align: justify;
       text-align-last: justify;
       line-height: 1.2;
       margin: 0 0 0.9em;
     }
-    /* body and links may run wider than the column on phones so single lines fit */
-    .body, .page-links {
+    /* body, rules and links may run a little wider than the column on phones */
+    .body, hr, .page-links {
       width: max-content;
       max-width: calc(100vw - 24px);
       position: relative;
       left: 50%;
       transform: translateX(-50%);
     }
+    .body, hr {
+      width: min(calc(100vw - 24px), 345px);
+    }
     .body {
       font-size: var(--body-size);
       line-height: var(--body-line-height);
     }
     .body p {
-      margin: 0 0 0.5em;
+      margin: 0 0 0.4em;
       text-wrap: balance;
     }
-    .body .first { max-width: 25em; margin-inline: auto; }
-    .body .one-line { white-space: nowrap; }
+    .body p + p {
+      margin-top: 0.9em;
+    }
+    /* hairline rules, full column width, framing the status line and links like a newspaper band */
+    hr {
+      border: 0;
+      border-top: 1px solid #333;
+      margin-block: var(--section-spacing);
+    }
+    .status {
+      font-size: var(--body-size);
+      line-height: var(--body-line-height);
+      margin: 0 0 0.35em;
+    }
     .page-links {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 0.25em 1.25em;
-      font-size: min(15px, calc((100vw - 24px) / 24.6));
-      margin: var(--section-spacing) 0 1em;
+      gap: 0.25em 1em;
+      font-size: 14px;
+      margin: 0;
     }
     .page-links a {
       color: #888;
@@ -114,17 +133,19 @@
 <body>
   <main class="col">
     <img src="assets/mxm-logo-2026-10-19.jpg" alt="Michael X Machina logo, half neural network and half circuit board" width="957" height="1139" class="logo" />
-    <h1 class="tagline">stories + systems</h1>
+    <h1 class="tagline">STORIES + SYSTEMS</h1>
     <p class="tagline-sub">in service of a safe singularity</p>
     <div class="body">
-      <p class="first">i tell stories that make AI risk easier to understand and harder to ignore, using the very systems that cause the concern.</p>
-      <p class="one-line">this double edge is exactly why AI safety matters.</p>
-      <p>first works in progress. past work below.</p>
+      <p class="first">i translate AI risk into stories that are easier to understand and harder to ignore, powered by the very systems causing the concern</p>
+      <p>this dual-use dilemma is why AI safety matters</p>
     </div>
+    <hr>
+    <p class="status">first works in progress, past work below</p>
     <nav class="page-links">
       <a href="/work/">branding + content</a>
       <a href="/video/">performance + media</a>
     </nav>
+    <hr>
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/michaelxmachina" target="_blank">
         <img src="https://img.icons8.com/ios-filled/50/dadada/linkedin.png" alt="LinkedIn">
