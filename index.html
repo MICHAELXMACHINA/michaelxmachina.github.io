@@ -18,16 +18,17 @@
       min-height: 100svh; /* the visible height on phones, excluding browser toolbars */
       display: flex;
     }
-    /* Fixed-width column so browser zoom scales the whole page evenly.
-       The logo, heading and subtitle span it edge to edge. */
-    :root { --head-font: 'JetBrains Mono', monospace; --head-weight: 600; --head-advance: 0.6; --column-width: 340px; --logo-size: 90%; --body-size: 14.5px; --body-line-height: 1.4; --section-spacing: 0.7rem;  }
+    /* One column that scales to fill the screen: as wide as a phone allows, as tall as a
+       desktop allows. Every size below derives from --col; the editor's values act as minimums.
+       The page is about 2.1 columns tall, hence the height cap. */
+    :root { --head-font: 'JetBrains Mono', monospace; --head-weight: 600; --head-advance: 0.6; --column-width: 600px; --logo-size: 90%; --body-size: 12px; --body-line-height: 1.4; --section-spacing: 0.5rem;  }
     .col {
       /* --col is the column width; heading and subtitle sizes derive from it directly.
          (Container-query units were dropped: some browsers mis-scale them under page zoom.) */
-      --col: min(80vw, var(--column-width));
+      --col: max(280px, min(88vw, var(--column-width), calc((100svh - 1.5rem) / 2.1)));
       width: var(--col);
       margin: auto; /* centers on screen, but scrolls normally (no clipped top) when zoomed in */
-      padding: 0.25rem 0 0.75rem;
+      padding: 0.5rem 0 0.75rem;
       text-align: center;
     }
     /* The wordmark spans 15-951 of the logo's 957px width (the X sits on the image's
@@ -47,7 +48,7 @@
       font-size: calc(var(--col) / (17 * var(--head-advance)));
       white-space: pre;
       line-height: 1.1;
-      margin: 0.3em 0 0.05em;
+      margin: 0.55em 0 0.05em;
     }
     .tagline-sub {
       font-size: calc(var(--col) * 0.068);
@@ -65,10 +66,10 @@
       transform: translateX(-50%);
     }
     .body, hr {
-      width: min(calc(100vw - 24px), 345px);
+      width: min(calc(100vw - 24px), calc(var(--col) * 1.106));
     }
     .body {
-      font-size: var(--body-size);
+      font-size: max(var(--body-size), calc(var(--col) * 0.0465));
       line-height: var(--body-line-height);
     }
     .body p {
@@ -82,10 +83,10 @@
     hr {
       border: 0;
       border-top: 1px solid #333;
-      margin-block: var(--section-spacing);
+      margin-block: max(var(--section-spacing), calc(var(--col) * 0.036));
     }
     .status {
-      font-size: var(--body-size);
+      font-size: max(var(--body-size), calc(var(--col) * 0.0465));
       line-height: var(--body-line-height);
       margin: 0 0 0.35em;
     }
@@ -94,7 +95,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 0.25em 1em;
-      font-size: 14px;
+      font-size: calc(var(--col) * 0.045);
       margin: 0;
     }
     .page-links a {
@@ -113,20 +114,26 @@
     }
     .social-icons a { display: block; line-height: 0; }
     .social-icons a img {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
+      width: calc(var(--col) * 0.115);
+      height: calc(var(--col) * 0.115);
+      border-radius: 22%;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     /* the YouTube glyph is shorter inside its square image; enlarge it to match the others' height */
     .social-icons a img.yt {
-      width: 47px;
-      height: 47px;
-      margin: -5.5px 0;
+      width: calc(var(--col) * 0.15);
+      height: calc(var(--col) * 0.15);
+      margin: calc(var(--col) * -0.0175) 0;
     }
     .social-icons a img:hover {
       transform: scale(1.15);
       box-shadow: 0 0 6px rgba(218, 218, 218, 0.5);
+    }
+    /* Phones: start at the top. Some mobile browsers lay their toolbar over the page,
+       so centering in the screen height leaves a gap above and dead scroll space below. */
+    @media (max-width: 600px) {
+      body { min-height: 0; }
+      .col { margin: 0 auto; }
     }
   </style>
 </head>
