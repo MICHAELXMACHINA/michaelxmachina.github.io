@@ -27,7 +27,7 @@
          (Container-query units were dropped: some browsers mis-scale them under page zoom.) */
       --col: max(280px, min(80vw, var(--column-width), calc((100svh - 4rem) / 2.1)));
       width: var(--col);
-      margin: auto; /* centers on screen, but scrolls normally (no clipped top) when zoomed in */
+      margin: 0 auto; /* top-aligned; scrolls normally when zoomed in */
       /* top padding matches the gap between the logo and the heading */
       padding: calc(var(--col) * 0.054) 0 0.75rem;
       text-align: center;
