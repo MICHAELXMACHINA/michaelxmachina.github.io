@@ -22,6 +22,8 @@ Claude Code supervisor (Opus 5.5, session 882f2939); implementation by delegated
 
 Status: committed locally, not pushed. Next: Michael reviews the preview and picks a headline; push on his go-ahead.
 
+Follow-up, 2026-10-19 evening: Michael asked for press proof points in his doc's format ("News: <headline link> —Source, Mon YYYY") and said "implement and push". Luna (T3 task `mxm-work-2026-10-19-news-r1`) added a shared `.news` line to Matter (TechCrunch, Mar 2024), Ursa Major (SpaceNews, Nov 2023) and OfferFit (VentureBeat, Nov 2023). The supervisor checked the dates at the source; VentureBeat's came from an archived copy because the live site blocked the request. The commit also includes two edits Michael saved through the site editor at 21:24–21:25: the H1 period removed, and "various" changed to "diverse". Browser checks: three news lines at 1280px and 375px, no horizontal overflow. Pushed as a8c2a61; the live /work served all three news lines about 50s later. Open: the headline (still "Brand Strategy & Storytelling"); whether to adopt the Matter and Ursa Major descriptions from Michael's doc; the OfferFit card now sits one line taller than Veryfi's.
+
 
 ## Supervisor acceptance, 2026-09-30 05:30 WEST
 
