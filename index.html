@@ -25,10 +25,11 @@
     .col {
       /* --col is the column width; heading and subtitle sizes derive from it directly.
          (Container-query units were dropped: some browsers mis-scale them under page zoom.) */
-      --col: max(280px, min(88vw, var(--column-width), calc((100svh - 1.5rem) / 2.1)));
+      --col: max(280px, min(80vw, var(--column-width), calc((100svh - 4rem) / 2.1)));
       width: var(--col);
       margin: auto; /* centers on screen, but scrolls normally (no clipped top) when zoomed in */
-      padding: 0.5rem 0 0.75rem;
+      /* top padding matches the gap between the logo and the heading */
+      padding: calc(var(--col) * 0.054) 0 0.75rem;
       text-align: center;
     }
     /* The wordmark spans 15-951 of the logo's 957px width (the X sits on the image's
@@ -133,7 +134,7 @@
        so centering in the screen height leaves a gap above and dead scroll space below. */
     @media (max-width: 600px) {
       body { min-height: 0; }
-      .col { margin: 0 auto; }
+      .col { margin: 0 auto; padding-top: 0.5rem; }
     }
   </style>
 </head>
