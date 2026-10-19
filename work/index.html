@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Brand strategy and storytelling for purpose-driven companies. Past work with Astroscale, Matter Venture Partners, Everyday Dose, Ursa Major, Meritech Capital, OfferFit, Merlyn Mind, Veryfi, and Otoy.">
+  <meta name="description" content="I help executives and founders build authentic brands, develop communication strategies, and tell their stories with clarity, style, and impact. Past work with Astroscale, Matter Venture Partners, Ursa Major, Everyday Dose, Meritech Capital, Merlyn Mind, Veryfi and OfferFit.">
   <link rel="canonical" href="https://michaelxmachina.com/work/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Michael Ketigian | Brand Strategy &amp; Storytelling">
@@ -41,8 +41,12 @@ p,h1,h2,h3,h4,figure{margin:0}
 .hero{padding:5.2rem 0 3rem}
 .hero h1{font:500 clamp(3.5rem,7.85vw,7.1rem)/.98 var(--display);letter-spacing:-.06em;color:var(--ink);max-width:17ch}
 .hero h1 span{color:var(--accent)}
-.hero-bottom{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-top:2.3rem}
-.clarify{font-size:1.14rem;line-height:1.55;max-width:44ch}
+.hero-bottom{display:grid;grid-template-columns:1fr;align-items:end;margin-top:2.3rem}
+.clarify{font-size:1.14rem;line-height:1.55;max-width:48ch}
+.clarify-list{font-size:1.14rem;line-height:1.55;max-width:48ch;list-style:none;padding:0;margin:.35rem 0 0}
+.clarify-list li{position:relative;padding-left:1.2rem}
+.clarify-list li+li{margin-top:.35rem}
+.clarify-list li::before{content:"";position:absolute;left:0;top:.78em;width:.55rem;height:2px;background:var(--accent)}
 .text-link{display:inline-flex;align-items:center;justify-content:space-between;gap:2.4rem;min-height:48px;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;font-size:.91rem}
 .text-link:hover{border-color:var(--accent);color:var(--accent)}
 .primary-link{background:var(--accent);border:1px solid var(--accent);color:var(--paper);padding:.8rem 1.2rem}
@@ -55,11 +59,10 @@ p,h1,h2,h3,h4,figure{margin:0}
 .index-label{display:flex;justify-content:space-between;gap:.5rem;margin-top:.7rem;font-size:.8rem;color:var(--dim)}
 .index-label span:first-child{color:var(--ink)}
 
-.work-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;padding:5rem 0 2rem;border-top:1px solid var(--line);margin-top:1.8rem}
+.work-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;padding:5rem 0 2rem;margin-top:1.8rem}
 .work-head h2{font:500 2.4rem/1.1 var(--display);letter-spacing:-.04em;color:var(--ink)}
 .case{margin-bottom:5rem;scroll-margin-top:100px}
 .case-heading{display:flex;justify-content:space-between;align-items:baseline;gap:2rem;padding:1.2rem 0 1.5rem}
-.case-number{font-size:.87rem;color:var(--accent);display:block;margin-bottom:.6rem}
 .case h3{font:500 clamp(2.4rem,4.8vw,4rem)/1.02 var(--display);letter-spacing:-.045em;color:var(--ink)}
 .case-title{text-decoration:none}
 .case-title:hover{color:var(--accent)}
@@ -68,8 +71,12 @@ p,h1,h2,h3,h4,figure{margin:0}
 .shot img{width:100%;height:auto;transition:transform .5s}
 .shot:hover img{transform:scale(1.012)}
 .project-caption{display:grid;grid-template-columns:1fr 1.35fr;gap:4rem;padding:1.75rem 0;border-bottom:1px solid var(--line)}
-.role-label{font-size:.78rem;color:var(--dim);margin-bottom:.4rem}
-.role{font-size:.96rem;color:var(--ink);max-width:33ch}
+.role-chips{display:flex;flex-wrap:wrap;gap:.55rem 1rem;list-style:none;padding:0;margin:0;color:var(--accent)}
+.role-chips li{display:inline-flex;align-items:center;gap:.4rem;color:var(--ink);font-size:.9rem;line-height:1.4}
+.role-chips svg{width:20px;height:20px;flex:none;color:var(--accent)}
+.role-chips-small{gap:.45rem .8rem}
+.role-chips-small li{font-size:.8rem}
+.role-chips-small svg{width:18px;height:18px}
 .project-copy p+p{margin-top:.75rem}
 .project-copy{max-width:58ch}
 .project-copy ul{padding-left:1.1rem;margin:1rem 0}
@@ -80,7 +87,7 @@ p,h1,h2,h3,h4,figure{margin:0}
 .case-link:after{content:'↗'}
 .case-link:hover{color:var(--accent)}
 
-.case-light{background:var(--light);color:#34402d;padding:2.8rem;margin-inline:-2.8rem;--line:#bcc5af;--ink:#20291c;--dim:#56634e;--accent:#405d22}
+.case-light{background:var(--light);color:#34402d;padding:2.8rem;--line:#bcc5af;--ink:#20291c;--dim:#56634e;--accent:#405d22}
 .case-light h3{max-width:12ch}
 .case-light .case-heading{padding-top:0}
 .case-light .shot{background:#d3d9c9}
@@ -92,26 +99,21 @@ p,h1,h2,h3,h4,figure{margin:0}
 .case-split .case-heading{display:block}
 .case-split h3{font-size:clamp(2.4rem,4.4vw,3.8rem);margin-bottom:1rem}
 .case-split .project-copy{font-size:.97rem;line-height:1.6}
-.case-split .role{margin-bottom:1.6rem}
+.case-split .role-chips{margin-bottom:1.6rem}
 .case-split .shot{margin-top:.4rem}
 .case-split .project-caption{display:block;padding-top:1.4rem}
 .case-detail{font-size:.81rem;color:var(--dim);padding-top:.8rem}
-.other-head{margin-top:1rem;padding:1rem 0 2rem;border-top:1px solid var(--line);display:flex;align-items:baseline;justify-content:space-between;gap:2rem}
-.other-head h2{font:500 2.3rem/1.1 var(--display);letter-spacing:-.04em;color:var(--ink)}
-.other-head p{font-size:.85rem;color:var(--dim)}
 .other-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem 2.5rem}
+.other-grid article{min-width:0}
 .other-grid h3{font:500 1.7rem/1.2 var(--display);letter-spacing:-.035em;color:var(--ink);margin:1.2rem 0 .6rem}
 .other-grid h3 a{text-decoration:none}
-.other-grid .role{font-size:.88rem;max-width:100%}
 .other-grid .credit{margin-top:.55rem}
 .other-grid .credit a{min-height:44px;display:inline-flex;align-items:center}
 .other-grid .shot{aspect-ratio:2.075}
 .other-grid .shot img{height:100%;object-fit:cover;object-position:top}
-.other-grid article:last-child{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;border-top:1px solid var(--line);padding-top:2.5rem}
-.other-grid article:last-child h3{margin-top:.3rem}
 
 .services-section{padding-top:6rem}
-.services-title{font:500 2.4rem/1.1 var(--display);color:var(--ink);letter-spacing:-.04em;margin-bottom:2rem}
+.services-title{font:500 2.4rem/1.1 var(--display);color:var(--ink);letter-spacing:-.04em;margin:0;padding:2rem 0 1rem}
 .band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--raised)}
 .offering{display:grid;grid-template-columns:1fr 1fr;gap:4rem;padding-block:1.2rem}
 .service summary{cursor:pointer;list-style:none;position:relative;padding:1rem 3rem 1rem 0;min-height:90px}
@@ -134,13 +136,12 @@ p,h1,h2,h3,h4,figure{margin:0}
 @media(max-width:1000px){.wrap{width:calc(100% - 3rem)}
 .hero{padding-top:3.5rem}
 .hero h1{font-size:clamp(3.5rem,9vw,6rem)}
-.hero-bottom{gap:2rem}
-.case-light{margin-inline:-1rem;padding:2rem 1rem}
+.case-light{padding:2rem}
 .case-split{grid-template-columns:1fr;gap:1.5rem}
 .case-split .case-heading{display:flex;gap:2rem;align-items:start}
 .case-split h3{max-width:none}
 .case-split .project-copy{max-width:none}
-.case-split .role{margin-bottom:1rem}
+.case-split .role-chips{margin-bottom:1rem}
 .project-caption{gap:2rem}
 .other-grid{gap:2.5rem 1.5rem}
 .offering{gap:2rem}
@@ -168,19 +169,14 @@ p,h1,h2,h3,h4,figure{margin:0}
 .case h3{font-size:2.4rem}
 .project-caption{grid-template-columns:1fr;gap:1.2rem;padding-top:1.2rem}
 .project-copy{font-size:.94rem}
-.case-light{padding:1.3rem 1rem;margin-inline:-1rem}
+.case-light{padding:1.3rem}
 .case-split .case-heading{display:block}
 .case-split{gap:.5rem}
 .case-split h3{font-size:2.4rem}
-.case-split .role{margin-bottom:.8rem}
-.other-head{display:block}
-.other-head h2{font-size:2rem}
-.other-head p{margin-top:.75rem}
+.case-split .role-chips{margin-bottom:.8rem}
 .other-grid{grid-template-columns:1fr;gap:2.5rem}
-.other-grid article:last-child{display:block;padding-top:0;border:0}
-.other-grid article:last-child h3{margin-top:1.2rem}
 .services-section{padding-top:3.5rem}
-.services-title{font-size:2rem}
+.services-title{font-size:2rem;padding:1.5rem 0 .75rem}
 .offering{grid-template-columns:1fr;gap:0;padding-block:.5rem}
 .service+.service{border-top:1px solid var(--line)}
 .service summary{padding-block:1.25rem}
@@ -193,6 +189,11 @@ p,h1,h2,h3,h4,figure{margin:0}
 </style>
 </head>
 <body>
+<svg style="display:none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+<symbol id="i-brand" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m12 5 2.2 6.8L12 19l-2.2-7.2L12 5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-content" viewBox="0 0 24 24"><rect x="8.5" y="3" width="7" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="16" width="7" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="16" width="7" height="5" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v6m-5.5 2v-2h11v2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><path d="m5 19 3.2-.8L19 7.4 16.6 5 5.8 15.8 5 19Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="m14.8 6.8 2.4 2.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="m5 19 4-1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+</svg>
 <a class="skip-link" href="#work">Skip to Projects</a>
 <header class="site-header" id="top">
 <nav class="wrap site-nav" aria-label="Main">
@@ -211,7 +212,7 @@ p,h1,h2,h3,h4,figure{margin:0}
 <span>&amp; Storytelling.</span>
 </h1>
 <div class="hero-bottom">
-<p class="clarify">I work with founders and executive teams to turn complex ideas into clear positioning, messaging and the words people see.</p>
+<div class="hero-copy"><p class="clarify">I help executives and founders:</p><ul class="clarify-list"><li>build authentic brands with distinct positioning</li><li>develop strategies for effective communication across various touchpoints</li><li>tell their stories with clarity, style, and impact</li></ul></div>
 </div>
 <nav class="project-index" aria-label="Featured project index">
 <a class="index-item" href="#astroscale">
@@ -220,7 +221,7 @@ p,h1,h2,h3,h4,figure{margin:0}
 </div>
 <div class="index-label">
 <span>Astroscale</span>
-<span>01 ↘</span>
+<span>↘</span>
 </div>
 </a>
 <a class="index-item" href="#matter">
@@ -229,16 +230,7 @@ p,h1,h2,h3,h4,figure{margin:0}
 </div>
 <div class="index-label">
 <span>Matter Venture Partners</span>
-<span>02 ↘</span>
-</div>
-</a>
-<a class="index-item" href="#everyday-dose">
-<div class="index-visual">
-<img src="/assets/work/everyday-dose.jpg" width="2000" height="947" alt="Everyday Dose website, project preview" loading="eager" decoding="async">
-</div>
-<div class="index-label">
-<span>Everyday Dose</span>
-<span>03 ↘</span>
+<span>↘</span>
 </div>
 </a>
 <a class="index-item" href="#ursa-major">
@@ -247,17 +239,25 @@ p,h1,h2,h3,h4,figure{margin:0}
 </div>
 <div class="index-label">
 <span>Ursa Major</span>
-<span>04 ↘</span>
+<span>↘</span>
+</div>
+</a>
+<a class="index-item" href="#everyday-dose">
+<div class="index-visual">
+<img src="/assets/work/everyday-dose.jpg" width="2000" height="947" alt="Everyday Dose website, project preview" loading="eager" decoding="async">
+</div>
+<div class="index-label">
+<span>Everyday Dose</span>
+<span>↘</span>
 </div>
 </a>
 </nav>
 </section>
 <section class="services-section" aria-labelledby="services-heading">
-<div class="wrap">
-<h2 class="services-title" id="services-heading">How I Can Help</h2>
-</div>
 <div class="band" id="services">
-  <div class="wrap offering">
+  <div class="wrap">
+<h2 class="services-title" id="services-heading">Services</h2>
+<div class="offering">
 
     <details class="service">
       <summary>
@@ -335,18 +335,17 @@ p,h1,h2,h3,h4,figure{margin:0}
     </div>
     </details>
 
+</div>
   </div>
-
 </div>
 </section>
 <div class="wrap" id="work">
 <div class="work-head">
-<h2>Selected Projects</h2>
+<h2>Selected Work</h2>
 </div>
 <article class="case" id="astroscale">
 <div class="case-heading">
 <div>
-<span class="case-number">01 / Astroscale</span>
 <h3>Astroscale</h3>
 </div>
 </div>
@@ -355,8 +354,7 @@ p,h1,h2,h3,h4,figure{margin:0}
 </a>
 <div class="project-caption">
 <div>
-<p class="role-label">My Role</p>
-<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
+<ul class="role-chips"><li><svg aria-hidden="true"><use href="#i-brand"></use></svg><span>Brand Strategy</span></li><li><svg aria-hidden="true"><use href="#i-content"></use></svg><span>Content Strategy</span></li><li><svg aria-hidden="true"><use href="#i-copy"></use></svg><span>Copywriting</span></li></ul>
 </div>
 <div class="project-copy">
 <p>Brand strategy, content strategy and copywriting for Astroscale's global and US brands.</p>
@@ -369,16 +367,14 @@ p,h1,h2,h3,h4,figure{margin:0}
 <div>
 <div class="case-heading">
 <div>
-<span class="case-number">02 / Matter Venture Partners</span>
 <h3>Matter Venture<br>Partners</h3>
 </div>
 </div>
-<p class="role-label">My Role</p>
-<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
+<ul class="role-chips"><li><svg aria-hidden="true"><use href="#i-brand"></use></svg><span>Brand Strategy</span></li><li><svg aria-hidden="true"><use href="#i-content"></use></svg><span>Content Strategy</span></li><li><svg aria-hidden="true"><use href="#i-copy"></use></svg><span>Copywriting</span></li></ul>
 <div class="project-copy">
 <p>Worked directly with the founders on brand strategy, messaging and copywriting for a venture capital firm focused on HardTech and the hardware infrastructure behind AI.</p>
 <p class="credit">In Collaboration with Dakotomy</p>
-<a class="case-link" href="https://dakotomy.com/work/matter" target="_blank" rel="noopener">Read the Project Case Study</a>
+<a class="case-link" href="https://dakotomy.com/work/matter" target="_blank" rel="noopener">Case Study</a>
 </div>
 </div>
 <div>
@@ -389,18 +385,37 @@ p,h1,h2,h3,h4,figure{margin:0}
 </div>
 </div>
 </article>
+<article class="case" id="ursa-major">
+<div class="case-heading">
+<div>
+<h3>Ursa Major</h3>
+</div>
+<p class="case-sector">Aerospace</p>
+</div>
+<a class="shot" href="https://ursamajor.com/" target="_blank" rel="noopener">
+<img src="/assets/work/ursa-major.jpg" width="1261" height="608" alt="Ursa Major propulsion website" loading="lazy" decoding="async">
+</a>
+<div class="project-caption">
+<div>
+<ul class="role-chips"><li><svg aria-hidden="true"><use href="#i-brand"></use></svg><span>Brand Strategy</span></li><li><svg aria-hidden="true"><use href="#i-content"></use></svg><span>Content Strategy</span></li><li><svg aria-hidden="true"><use href="#i-copy"></use></svg><span>Copywriting</span></li></ul>
+<p class="credit">In Collaboration with Future Works</p>
+</div>
+<div class="project-copy">
+<p>Refined brand strategy and messaging with Ursa Major's executive team, then developed the content and copy.</p>
+<a class="case-link" href="https://future.works/case-studies/ursa/" target="_blank" rel="noopener">Case Study</a>
+</div>
+</div>
+</article>
 <article class="case case-light case-dose" id="everyday-dose">
 <div class="case-split">
 <div>
 <div class="case-heading">
 <div>
-<span class="case-number">03 / Everyday Dose</span>
 <h3>Everyday Dose</h3>
 <p class="case-sector">Recurring Engagements · 2021–2026</p>
 </div>
 </div>
-<p class="role-label">My Role</p>
-<p class="role">Brand Strategy · Content Strategy · Copywriting · Operations</p>
+<ul class="role-chips"><li><svg aria-hidden="true"><use href="#i-brand"></use></svg><span>Brand Strategy</span></li><li><svg aria-hidden="true"><use href="#i-content"></use></svg><span>Content Strategy</span></li><li><svg aria-hidden="true"><use href="#i-copy"></use></svg><span>Copywriting</span></li></ul>
 <div class="project-copy">
 <p>A functional coffee brand, with work across its voice, products and day-to-day operations.</p>
 <ul>
@@ -419,34 +434,7 @@ p,h1,h2,h3,h4,figure{margin:0}
 </div>
 </div>
 </article>
-<article class="case" id="ursa-major">
-<div class="case-heading">
-<div>
-<span class="case-number">04 / Ursa Major</span>
-<h3>Ursa Major</h3>
-</div>
-<p class="case-sector">Aerospace</p>
-</div>
-<a class="shot" href="https://ursamajor.com/" target="_blank" rel="noopener">
-<img src="/assets/work/ursa-major.jpg" width="1261" height="608" alt="Ursa Major propulsion website" loading="lazy" decoding="async">
-</a>
-<div class="project-caption">
-<div>
-<p class="role-label">My Role</p>
-<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
-<p class="credit">In Collaboration with Future Works</p>
-</div>
-<div class="project-copy">
-<p>Refined brand strategy and messaging with Ursa Major's executive team, then developed the content and copy.</p>
-<a class="case-link" href="https://future.works/case-studies/ursa/" target="_blank" rel="noopener">Read the Project Case Study</a>
-</div>
-</div>
-</article>
-<div class="other-head">
-<h2>More Collaborations</h2>
-<p>Technology, Venture Capital and Digital Products</p>
-</div>
-<section class="other-grid" aria-label="More client projects">
+<section class="other-grid" aria-label="Additional client projects">
 <article>
 <a class="shot" href="https://www.meritechcapital.com/" target="_blank" rel="noopener">
 <img src="/assets/work/meritech.jpg" width="1278" height="606" alt="Meritech Capital website" loading="lazy" decoding="async">
@@ -455,23 +443,9 @@ p,h1,h2,h3,h4,figure{margin:0}
 <h3>
 <a href="https://www.meritechcapital.com/" target="_blank" rel="noopener">Meritech Capital</a>
 </h3>
-<p class="role">Content Strategy · Copywriting</p>
+<ul class="role-chips role-chips-small"><li><svg aria-hidden="true"><use href="#i-content"></use></svg><span>Content Strategy</span></li><li><svg aria-hidden="true"><use href="#i-copy"></use></svg><span>Copywriting</span></li></ul>
 <p class="credit">In Collaboration with Future Works and Dakotomy<br>
-<a href="https://future.works/case-studies/meritech/" target="_blank" rel="noopener">Project Case Study ↗</a>
-</p>
-</div>
-</article>
-<article>
-<a class="shot" href="https://www.offerfit.ai/" target="_blank" rel="noopener">
-<img src="/assets/work/offerfit.jpg" width="1263" height="609" alt="OfferFit website" loading="lazy" decoding="async">
-</a>
-<div>
-<h3>
-<a href="https://www.offerfit.ai/" target="_blank" rel="noopener">OfferFit</a>
-</h3>
-<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
-<p class="credit">In Collaboration with Dakotomy<br>
-<a href="https://www.dakotomy.com/work/offerfit" target="_blank" rel="noopener">Project Case Study ↗</a>
+<a href="https://future.works/case-studies/meritech/" target="_blank" rel="noopener">Case Study ↗</a>
 </p>
 </div>
 </article>
@@ -483,9 +457,9 @@ p,h1,h2,h3,h4,figure{margin:0}
 <h3>
 <a href="https://www.merlyn.org/" target="_blank" rel="noopener">Merlyn Mind</a>
 </h3>
-<p class="role">Brand Strategy · Copywriting</p>
+<ul class="role-chips role-chips-small"><li><svg aria-hidden="true"><use href="#i-brand"></use></svg><span>Brand Strategy</span></li><li><svg aria-hidden="true"><use href="#i-content"></use></svg><span>Content Strategy</span></li><li><svg aria-hidden="true"><use href="#i-copy"></use></svg><span>Copywriting</span></li></ul>
 <p class="credit">In Collaboration with Future Works<br>
-<a href="https://future.works/case-studies/merlynmind/" target="_blank" rel="noopener">Project Case Study ↗</a>
+<a href="https://future.works/case-studies/merlynmind/" target="_blank" rel="noopener">Case Study ↗</a>
 </p>
 </div>
 </article>
@@ -497,28 +471,36 @@ p,h1,h2,h3,h4,figure{margin:0}
 <h3>
 <a href="https://veryfi.com/" target="_blank" rel="noopener">Veryfi</a>
 </h3>
-<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
+<ul class="role-chips role-chips-small"><li><svg aria-hidden="true"><use href="#i-brand"></use></svg><span>Brand Strategy</span></li><li><svg aria-hidden="true"><use href="#i-content"></use></svg><span>Content Strategy</span></li><li><svg aria-hidden="true"><use href="#i-copy"></use></svg><span>Copywriting</span></li></ul>
 <p class="credit">In Collaboration with Future Works and Dakotomy<br>
-<a href="https://future.works/case-studies/veryfi/" target="_blank" rel="noopener">Project Case Study ↗</a>
+<a href="https://future.works/case-studies/veryfi/" target="_blank" rel="noopener">Case Study ↗</a>
 </p>
 </div>
 </article>
 <article>
-<a class="shot" href="https://www.civic.com/" target="_blank" rel="noopener">
-<img src="/assets/work/civic.jpg" width="1266" height="608" alt="Civic website" loading="lazy" decoding="async">
+<a class="shot" href="https://www.offerfit.ai/" target="_blank" rel="noopener">
+<img src="/assets/work/offerfit.jpg" width="1263" height="609" alt="OfferFit website" loading="lazy" decoding="async">
 </a>
 <div>
 <h3>
-<a href="https://www.civic.com/" target="_blank" rel="noopener">Civic</a>
+<a href="https://www.offerfit.ai/" target="_blank" rel="noopener">OfferFit</a>
 </h3>
-<p class="role">Brand Strategy · Content Strategy · Copywriting</p>
-<p class="credit">In Collaboration with Future Works<br>
-<a href="https://future.works/case-studies/civic/" target="_blank" rel="noopener">Project Case Study ↗</a>
+<ul class="role-chips role-chips-small"><li><svg aria-hidden="true"><use href="#i-brand"></use></svg><span>Brand Strategy</span></li><li><svg aria-hidden="true"><use href="#i-content"></use></svg><span>Content Strategy</span></li><li><svg aria-hidden="true"><use href="#i-copy"></use></svg><span>Copywriting</span></li></ul>
+<p class="credit">In Collaboration with Dakotomy<br>
+<a href="https://www.dakotomy.com/work/offerfit" target="_blank" rel="noopener">Case Study ↗</a>
 </p>
 </div>
 </article>
 </section>
 </div>
 </main>
+<script>
+const services = [...document.querySelectorAll('details.service')];
+services.forEach((detail) => detail.addEventListener('toggle', () => {
+  services.forEach((other) => {
+    if (other !== detail && other.open !== detail.open) other.open = detail.open;
+  });
+}));
+</script>
 </body>
 </html>

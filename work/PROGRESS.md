@@ -9,6 +9,19 @@ tags: [mxm-site, portfolio, iteration-log]
 
 # /work — iteration log
 
+## Revision from Michael's notes, 2026-10-19
+
+Claude Code supervisor (Opus 5.5, session 882f2939); implementation by delegated Codex `gpt-6-luna` / medium (T3 task `mxm-work-2026-10-19-r1`). Pre-change snapshot: `versions/2026-10-19-before-revision.html`.
+
+- Hero copy replaced with Michael's "I help executives and founders:" + three bullets. H1 unchanged pending his headline choice (alternatives offered in chat).
+- "How I Can Help" → "Services", heading moved inside the raised band; both disclosures open/close together (small inline script).
+- "Selected Work"; numbering removed; order Astroscale, Matter, Ursa Major, Everyday Dose (index thumbnails too). Light panels no longer bleed past the content width: all four featured sections measure 48–1232px at 1280 and 20–355px at 375.
+- "My Role" replaced by icon role chips (compass = Brand Strategy, flowchart = Content Strategy, pen = Copywriting), max three; Everyday Dose drops "Operations" from chips (bullet keeps it).
+- "More Collaborations" heading, subtitle and lines removed; Civic removed; grid is 2×2: Meritech, Merlyn (+Content Strategy), Veryfi, OfferFit. Case-study links read "Case Study".
+- Supervisor removed the redundant rule under the Services band. Supervisor browser check at 1280 and 375: no horizontal overflow, service sync works, grid order/roles/links correct.
+
+Status: committed locally, not pushed. Next: Michael reviews the preview and picks a headline; push on his go-ahead.
+
 
 ## Supervisor acceptance, 2026-09-30 05:30 WEST
 
