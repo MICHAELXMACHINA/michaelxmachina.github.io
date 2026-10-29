@@ -219,7 +219,18 @@ a.ext,.play-chip.ext{text-decoration-line:underline;text-decoration-thickness:1p
 .client-card .blurb-toggle{display:block;width:fit-content;height:28px;line-height:1}
 /* Candid caveat intro: "projects" ends line 1 and "were" opens line 2 (line 1 is ~497px, with "were" ~548px at 20px). */
 @media(min-width:701px){.projects-caveat>p:not(.caveat-kicker){max-width:520px}}
-</style></head><body>
+</style>
+<style id="carousel-clipping">
+/* Clip decoration without creating nested scroll containers inside each slide.
+   Keep overflow:auto on the tracks that actually scroll. */
+@supports(overflow:clip){
+  .card,.client-media:not(.media-swap),.video-media,.card-blurb,.story-copy,
+  .venture-logos .logo-link,.social-sample,.social-track>li{overflow:clip}
+  html.mxm-editing .card-blurb,html.mxm-editing .dose-story .story-copy{overflow:visible}
+}
+.swap-track{overscroll-behavior-x:auto}
+</style>
+</head><body>
 
 <svg style="display:none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
 <symbol id="i-brand" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m12 5 2.2 6.8L12 19l-2.2-7.2L12 5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/ class="edited-multiline"></symbol>
